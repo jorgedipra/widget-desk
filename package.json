@@ -1,0 +1,21 @@
+{
+  "name": "app1",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "dev": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "electron": "^31.3.0",
+    "electron-reload": "^2.0.0-alpha.1",
+    "standard": "^17.1.0"
+  },
+  "dependencies": {
+    "install": "^0.13.0"
+  }
+}

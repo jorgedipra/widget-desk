@@ -1,0 +1,85 @@
+@import url('../font/Orbitron/css.css');
+html,
+body{
+    background-color: #ffffff00;
+    /* background-color: #353535; */
+    font-family: Orbitron;
+    overflow: hidden;
+}
+iframe {
+    border: none;
+    width: 100%; /* Ajusta el iframe al ancho del contenedor */
+    height: 100%; /* Ajusta la altura del iframe al 100% del contenedor */
+}
+
+/* ventana flotante */
+.draggable {
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    padding: 10px;
+    cursor: move; /* Cambia el cursor cuando se pasa sobre el elemento */
+}
+.header-transparente,
+.header {
+    background-color: #2196F3;
+    color: #fff;
+    padding: 10px;
+    cursor: move;
+}
+.header-transparente{
+    background-color: #f1f1f100;
+}
+.header-circle {
+    background-color: #17D4FE;
+    color: #fff;
+    cursor: move;
+    border-radius: 100%;
+    width: 5px;
+    height: 5px;
+    padding: 5px;
+    position: absolute;
+    top: 35px;
+    left: 2px;
+    box-shadow: 
+                0 0 5px rgba(255, 255, 255, 0.7), /* Sombra blanca clara */
+                0 0 10px rgba(255, 255, 255, 0.5), /* Sombra blanca menos intensa */
+                0 0 15px rgba(255, 255, 255, 0.3); /* Resplandor blanco más suave */
+}
+.gadget-clock>p>iframe{
+    height: 90px;
+}
+
+.draggable-free {
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    background-color: #f1f1f100;
+    border: 1px solid #dddddd02;
+    padding: 10px;
+    cursor: move; /* Cambia el cursor cuando se pasa sobre el elemento */
+}
+.contenedor-draggable{
+    border: solid 1px #ddd;
+    border-radius: 4px;
+    background-color: #000000af;
+    width: 110%;
+    height: 122%;
+    display: block;
+    margin: 0 auto;
+    cursor: auto;
+    margin-top: -5%;
+    margin-left: -5%;
+}
+
+.gadget-clock{
+    width: 440px; 
+    height: 140px;  
+}
+
+.border-bottom{
+    padding-bottom: 0px;
+    border-bottom: solid 2px #ffff;
+}

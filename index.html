@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+        <meta
+            http-equiv="Content-Security-Policy"
+            content="default-src 'self'; script-src 'self'"
+        />
+        <meta
+            http-equiv="X-Content-Security-Policy"
+            content="default-src 'self'; script-src 'self'"
+        />
+        <meta
+            http-equiv="Content-Security-Policy"
+            content="script-src 'self' 'unsafe-inline';"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./stylos/bulma/css/bulma.min.css" />
+        <link rel="stylesheet" href="./stylos/principal.css" />
+        <link rel="stylesheet" href="./stylos/menu.css" />
+    </head>
+    <body>
+        <div id="nav-icon2">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>        
+        <!-- Modal -->
+        <div id="myModal00" class="draggable gadget-config" >
+            <div class="header">🛠 CONFIGURACIÓN</div>
+            <span class="contenedor-draggable">
+                <div id="component-Menu"></div>
+            </span>
+        </div>
+
+        <div id="myModal01" class="draggable-free gadget-clock">
+            <div class="header-transparente">
+                <span class="header-circle"></span>
+            </div>
+            <div id="component-Clock"></div>
+        </div>
+
+        <div id="myModal02" class="draggable">
+            <div class="header"></div>
+            <h1>Programas</h1>
+            <button id="openChrome">Abrir Google Chrome</button>
+            <button id="openSublime">Abrir Sublime Text</button>
+        </div>
+        <!--  -->
+    </body>
+    <script src="./js/renderer.js"></script>
+    <script src="./js/menu.js"></script>
+</html>
