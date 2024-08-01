@@ -1,4 +1,6 @@
 # widget-desk
 ## Captura de pantalla
-![image](https://github.com/user-attachments/assets/5d789839-bd91-4f90-8a98-c0f20b6066a1)
+
+![image](https://github.com/user-attachments/assets/7863a7d2-0604-4f60-8457-d728481b014e)
+
 
