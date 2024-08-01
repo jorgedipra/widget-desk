@@ -303,14 +303,39 @@
 }
 
 .gadget-config .header{
-  clip-path: polygon(0.25em 0, calc(100% - 1em) 0, 100% 100%, 0.33em 100%, 0 100%, 0 0.25em);
+  clip-path: polygon(0.25em 0, calc(85% - 1em) 0, 100% 100%, 0.33em 100%, 0 100%, 0 0.25em);
   font-weight: bold;
-  width: 200px;
+  width: 220px;
   border-radius: 5px 0px 0px 0px;
   position: absolute;
   top: -45px;
   left: -1px;
 }
+
+.cerar {
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-top: 40px solid #2196F3;
+  position: absolute;
+  transform: translateX(100%);
+  position: absolute;
+  top: -45px;
+  left: 98px;
+  cursor: pointer;
+}
+.cerar p{
+  color: #cfc4f7;
+  font-size: 22px;
+  font-family: Orbitron;
+  font-weight: bold;
+  position: absolute;
+  top: -42px;
+  left: -8px;
+}
+
 
 .gadget-config {
   opacity: 0;

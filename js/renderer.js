@@ -12,15 +12,20 @@ function loadComponent(url, containerId) {
 // Llamar a la función para cargar el componente
 loadComponent('./components/Menu-component.html', 'component-Menu');
 loadComponent('./components/Clock-component.html', 'component-Clock');
+loadComponent('./components/Programas-component.html', 'component-Programas');
 
 
 /**
  * llamdo de programas 
  */
-document.getElementById('openChrome').addEventListener('click', () => {
-  window.electron.sendOpenProgram('chrome');
-});
+document.addEventListener('DOMContentLoaded', function() {
 
-document.getElementById('openSublime').addEventListener('click', () => {
-  window.electron.sendOpenProgram('sublime');
+  document.getElementById('openChrome').addEventListener('click', () => {
+    window.electron.sendOpenProgram('chrome');
+  });
+
+  document.getElementById('openSublime').addEventListener('click', () => {
+    window.electron.sendOpenProgram('sublime');
+  });
+  
 });

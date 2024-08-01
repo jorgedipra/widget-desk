@@ -48,6 +48,7 @@ iframe {
                 0 0 10px rgba(255, 255, 255, 0.5), /* Sombra blanca menos intensa */
                 0 0 15px rgba(255, 255, 255, 0.3); /* Resplandor blanco más suave */
 }
+
 .gadget-clock>p>iframe{
     height: 90px;
 }

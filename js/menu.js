@@ -2,9 +2,23 @@
  * MENU::CONFIG
  */
 var modal00 = document.getElementById("myModal00");
+var cerarmodal00 = document.getElementById("cerrarModal00");
+
 makeDraggable(modal00);
 modal00.style.top = "250px";
 modal00.style.left = "432px";
+
+// Función para cerrar el modal
+function cerrarModal() {
+  var icons = document.querySelectorAll('#nav-icon1, #nav-icon2, #nav-icon3, #nav-icon4');
+  icons.forEach(function(icon) {
+    icon.click();
+  });
+  
+  if (modal00.classList.contains('visible')) {
+      modal00.classList.remove('visible');
+  }
+}
 
 document.addEventListener('DOMContentLoaded', function () {
   // Selecciona los elementos con los IDs específicos
@@ -23,11 +37,13 @@ document.addEventListener('DOMContentLoaded', function () {
       } else {
         // modal00.style.display = 'block';
         modal00.classList.toggle('visible');
-
-
       }
     });
   });
+
+// Asignar el evento click al botón de cerrar
+cerarmodal00.addEventListener('click', cerrarModal);
+
 });
 /**
  * VENTANA FLOTANTE
@@ -82,22 +98,28 @@ modal02.style.left = "1180px";
  */
 document.addEventListener('DOMContentLoaded', function() {
   // Función para manejar la visibilidad del modal
-  function toggleVisibility_relog() {
-      var modal = document.getElementById('myModal01');
-      var radioYes = document.getElementById('rf-relog-digital');
-      var radioNo = document.getElementById('re-relog-digital');
+  function toggleVisibility(id, condition) {
+    var element = document.getElementById(id);
+    element.style.display = condition ? 'block' : 'none';
+  }
 
-      if (radioYes.checked) {
-          modal.style.display = 'block';  // Muestra el modal
-      } else {
-          modal.style.display = 'none';   // Oculta el modal
-      }
+  function toggleVisibility_relog() {
+      // Configurar el estado de los modales basado en los radio buttons
+      toggleVisibility('myModal01', document.getElementById('rf-relog-digital').checked);
+      toggleVisibility('myModal02', document.getElementById('rf-Programas01').checked);
   }
 
   // Asignar el evento de cambio a los botones de radio
-  document.getElementById('rf-relog-digital').addEventListener('change', toggleVisibility_relog);
-  document.getElementById('re-relog-digital').addEventListener('change', toggleVisibility_relog);
+  var radios = [
+      'rf-relog-digital',
+      're-relog-digital',
+      'rf-Programas01',
+      're-Programas01'
+  ];
 
-  // Inicializa la visibilidad al cargar la página
-  toggleVisibility_relog();
+  radios.forEach(function(id) {
+      document.getElementById(id).addEventListener('change', toggleVisibility_relog);
+  });
+
+  // modal00.classList.toggle('visible');
 });
