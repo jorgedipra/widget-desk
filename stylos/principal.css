@@ -1,4 +1,7 @@
 @import url('../font/Orbitron/css.css');
+/* importaciónes */
+@import url('./componets/Lanzador-component.css');
+/* Principal.css */
 html,
 body{
     background-color: #ffffff00;
@@ -84,3 +87,4 @@ iframe {
     padding-bottom: 0px;
     border-bottom: solid 2px #ffff;
 }
+

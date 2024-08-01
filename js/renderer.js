@@ -13,6 +13,7 @@ function loadComponent(url, containerId) {
 loadComponent('./components/Menu-component.html', 'component-Menu');
 loadComponent('./components/Clock-component.html', 'component-Clock');
 loadComponent('./components/Programas-component.html', 'component-Programas');
+loadComponent('./components/Lanzador-component.html', 'component-Lanzador');
 
 
 /**

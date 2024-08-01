@@ -9,7 +9,6 @@ require('electron-reload')(__dirname, {
     electron: path.join(__dirname, 'node_modules', '.bin', 'electron')
   });
 
-
 const createWindow = () => {
     // Obtén la información de las pantallas
     const displays = screen.getAllDisplays();
@@ -59,13 +58,18 @@ ipcMain.on('open-program', (event, programName) => {
         const programs = JSON.parse(data);
         const programPath = programs[programName];
         if (programPath) {
-            const formattedPath = `"${programPath}"`; // Envolver la ruta entre comillas
-            exec(formattedPath, (error, stdout, stderr) => {
+            // Asegúrate de que la ruta esté bien formateada
+            // No es necesario agregar comillas adicionales aquí
+            exec(`"${programPath}"`, (error, stdout, stderr) => {
                 if (error) {
-                    console.error(`Error al abrir el programa: ${error}`);
+                    console.error(`Error al ejecutar el programa: ${error.message}`);
                     return;
                 }
-                console.log(`Programa abierto: ${stdout}`);
+                if (stderr) {
+                    console.error(`stderr: ${stderr}`);
+                    return;
+                }
+                console.log(`stdout: ${stdout}`);
             });
         } else {
             console.error(`Programa no encontrado: ${programName}`);

@@ -19,7 +19,7 @@ function cerrarModal() {
       modal00.classList.remove('visible');
   }
 }
-
+// Icono de Menu interaccion
 document.addEventListener('DOMContentLoaded', function () {
   // Selecciona los elementos con los IDs específicos
   var icons = document.querySelectorAll('#nav-icon1, #nav-icon2, #nav-icon3, #nav-icon4');
@@ -92,6 +92,11 @@ makeDraggable(modal02);
 modal02.style.top = "16px";
 modal02.style.left = "1180px";
 
+var modal03 = document.getElementById("myModal03");
+makeDraggable(modal03);
+modal03.style.top = "684px";
+modal03.style.left = "5px";
+
 
 /**
  * Widget
@@ -120,6 +125,6 @@ document.addEventListener('DOMContentLoaded', function() {
   radios.forEach(function(id) {
       document.getElementById(id).addEventListener('change', toggleVisibility_relog);
   });
-
+  toggleVisibility_relog();
   // modal00.classList.toggle('visible');
 });
