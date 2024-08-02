@@ -68,6 +68,32 @@
     /* Resplandor blanco más suave */
 }
 
+/* Animación de expansión con retraso */
+@keyframes expand {
+    0% {
+        transform: scale(1);
+        background-color: #555;
+    }
+    50% {
+        transform: scale(1.3); /* Agranda el círculo */
+        background-color: #666; /* Cambia el color */
+    }
+    100% {
+        transform: scale(1);
+        background-color: #555;
+    }
+}
+
+/* Estilo cuando el círculo está siendo presionado */
+.circle:active {
+    background-color: #555; /* Cambia el color al presionar */
+    animation: expand 1s ease forwards; /* Aplica la animación */
+    animation-delay: 0.5s; /* Retrasa la animación 0.5 segundos */
+    border: 5px solid #2196f3; /* Cambia el borde al presionar */
+    background-position: center 2px; /* Ajusta la posición del fondo */
+}
+
+
 .SublimeText {
     background-image: url("../../images/Component-lanzador/sublime_text.png");
 }
@@ -77,5 +103,5 @@
 }
 
 .alert {
-    background-image: url("https://cdn.icon-icons.com/icons2/3919/PNG/96/google_chrome_icon_249841.png");
+    background-image: url("../../images/Component-lanzador/pr.png");
 }
