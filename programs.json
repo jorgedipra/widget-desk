@@ -1,4 +1,5 @@
 {
     "chrome": "D:\\www\\Python\\gadgets\\panelAplicaiones.py\\chrome.bat",
-    "sublime": "E:\\Program Files\\Sublime Text\\sublime_text.exe"
+    "sublime": "E:\\Program Files\\Sublime Text\\sublime_text.exe",
+    "pomodoro": "D:\\www\\Python\\gadgets\\pomodoro\\pomodoro.bat"
 }

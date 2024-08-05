@@ -81,17 +81,22 @@ function makeDraggable(element) {
   }
 }
 
-// Aplica la funcionalidad de arrastre a la ventana
+/**
+ * Aplica la funcionalidad de arrastre a la ventana
+ */
+//Relog 
 var modal01 = document.getElementById("myModal01");
 makeDraggable(modal01);
-modal01.style.top = "-6px";
-modal01.style.left = "22px";
+modal01.style.top = "-32px";
+modal01.style.left = "3px";
 
+// Programas
 var modal02 = document.getElementById("myModal02");
 makeDraggable(modal02);
 modal02.style.top = "16px";
 modal02.style.left = "1180px";
 
+// Lanzador
 var modal03 = document.getElementById("myModal03");
 makeDraggable(modal03);
 modal03.style.top = "684px";

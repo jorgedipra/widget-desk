@@ -28,5 +28,9 @@ document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('openSublime').addEventListener('click', () => {
     window.electron.sendOpenProgram('sublime');
   });
+
+  document.getElementById('openPomodoro').addEventListener('click', () => {
+    window.electron.sendOpenProgram('pomodoro');
+  });
   
 });

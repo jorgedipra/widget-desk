@@ -1,3 +1,6 @@
+/**
+ * Lanzador-components
+ */
 let wrapper = document.querySelector(".usermenu"),
     children = document.querySelectorAll(".usermenu a");
 const noOfCircles = children.length;
