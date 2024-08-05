@@ -13,6 +13,8 @@
   "devDependencies": {
     "electron": "^31.3.0",
     "electron-reload": "^2.0.0-alpha.1",
+    "gulp": "^5.0.0",
+    "gulp-concat": "^2.6.1",
     "standard": "^17.1.0"
   },
   "dependencies": {
