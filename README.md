@@ -31,6 +31,9 @@ para correr el proyecto:
 ## TOOL
 ![gulp](https://img.shields.io/badge/gulp-%23e14a4d.svg?style=for-the-badge&logo=gulp&logoColor=white)&nbsp; 
 
+## LINKS
+https://bulma.io/documentation/  
+
 ## Authors
 
 - [@jorgedipra](https://jorgedipra.github.io/)
