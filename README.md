@@ -22,14 +22,8 @@ para correr el proyecto:
 ```bash
   npm run dev
 ```
-para correr el proyecto:
-```bash
-  npm run dev
-```
-sí se hace algun cambio en los js de los componentes ejecutar:
-```bash
-  gulp
-```
+
+
 ## Authors
 
 - [@jorgedipra](https://jorgedipra.github.io/)
