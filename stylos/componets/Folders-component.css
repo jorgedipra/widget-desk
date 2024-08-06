@@ -1,0 +1,156 @@
+.container {
+  position: relative;
+  transition: all 0.3s ease-out;
+  height: 200px;
+  width: 500px;
+  perspective: 700px;
+  z-index: 10;
+  overflow: hidden;
+}
+.container .honeycomb {
+  display: block;
+  position: absolute;
+  margin-top: -35px;
+  margin-left: -125px;
+  padding-left: 18px;
+  left: 50%;
+  text-align: center;
+  height: 450px;
+  width: 930px;
+  transform: rotateX(45deg) rotateY(0deg);
+  transform-style: preserve-3d;
+  transform-origin: center 65%;
+  z-index: 5;
+}
+.container .honeycomb .column {
+  display: block;
+  float: left;
+  width: 62px;
+  transform-style: preserve-3d;
+}
+.container .honeycomb .column:nth-child(odd) {
+  margin-top: 36px;
+}
+.container .honeycomb .hex {
+  display: block;
+  position: relative;
+  float: left;
+  margin: 0;
+  height: 72px;
+  width: 62px;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+  transform-style: preserve-3d;
+  transition: all 0.3s ease-out;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 1;
+  filter: drop-shadow(
+          0 0 5px rgba(255, 255, 255, 0.7), /* Sombra blanca clara */
+          0 0 10px rgba(255, 255, 255, 0.5), /* Sombra blanca menos intensa */
+          0 0 15px rgba(255, 255, 255, 0.3)  /* Resplandor blanco más suave */
+    );
+}
+.container .honeycomb .hex span img{
+    width: 40px;
+    z-index: 999;
+    position: absolute;
+    top: 12px;
+    left: 0px;
+    filter: invert(100%);
+    filter: drop-shadow(
+          0 0 5px rgba(255, 255, 255, 0.7), /* Sombra blanca clara */
+          0 0 10px rgba(255, 255, 255, 0.5), /* Sombra blanca menos intensa */
+          0 0 15px rgba(255, 255, 255, 0.3)  /* Resplandor blanco más suave */
+    );
+}
+.container .honeycomb .hex:hover {
+  opacity: 1;
+  transform: translateZ(20px);
+  transition-duration: 200ms;
+}
+.container .honeycomb .hex:hover .content {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+  transform: rotateX(-50deg) translateZ(-40px) translateY(-50px);
+  background-color: #333333ab;
+  padding: 5px 0 10px 0;
+  margin-top:-10px
+}
+.container .honeycomb .hex .wrapper {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.container .honeycomb .hex .wrapper .color-1 {
+  background: #2196F3;
+}
+.container .honeycomb .hex .wrapper .color-1:before {
+  border-right-color: #2196F3;
+}
+.container .honeycomb .hex .wrapper .color-1:after {
+  border-left-color: #2196F3;
+}
+.container .honeycomb .hex .content {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -80px;
+  text-align: center;
+  width: 200px;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -moz-transition: all 0.3s ease-out 0.1s;
+  -o-transition: all 0.3s ease-out 0.1s;
+  -webkit-transition: all 0.3s ease-out;
+  -webkit-transition-delay: 0.1s;
+  transition: all 0.3s ease-out 0.1s;
+  transform: rotateX(-90deg) translateZ(-40px) translateY(-40px);
+  pointer-events: none;
+  -webkit-font-smoothing: antialiased;
+}
+.container .honeycomb .hex .content strong {
+  display: block;
+  font: 600 26px/1.1 "Orbitron", sans-serif;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-shadow: -1px -1px 2px rgba(0, 0, 0, 0.8);
+}
+.container .honeycomb .hex .content small {
+  display: block;
+  font: 15px/1.1 "Orbitron", sans-serif;
+}
+.hexagon {
+  display: block;
+  position: absolute;
+  width: 36px;
+  height: 62px;
+  background-color: #ffffff;
+     box-shadow: 
+                0 0 5px rgba(255, 255, 255, 0.1), /* Sombra blanca clara */
+                0 0 10px rgba(255, 255, 255, 0.1), /* Sombra blanca menos intensa */
+                0 0 15px rgba(255, 255, 255, 0.5); /* Resplandor blanco más suave */
+}
+.hexagon:before, .hexagon:after {
+  content: "";
+  position: relative;
+  float: left;
+  border-top: 31px solid transparent;
+  border-bottom: 31px solid transparent;
+}
+.hexagon:before {
+  border-right: 18px solid #ffffff;
+  left: -17px;
+}
+.hexagon:after {
+  border-left: 18px solid #ffffff;
+  right: -18px;
+}
+
+.hidden {
+  display: none;
+}

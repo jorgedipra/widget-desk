@@ -2,5 +2,12 @@
     "chrome":   "D:\\www\\Python\\gadgets\\panelAplicaiones.py\\chrome.bat",
     "sublime":  "E:\\Program Files\\Sublime Text\\sublime_text.exe",
     "pomodoro": "D:\\www\\Python\\gadgets\\pomodoro\\pomodoro.bat",
-    "lectorVoz":"D:\\www\\Python\\gadgets\\lector.py\\lector.py"
+    "lectorVoz":"D:\\www\\Python\\gadgets\\lector.py\\lector.py",
+    "Folder-www":"D:\\www\\Electron\\app1\\gadget\\Folders\\www.bat",
+    "Folder-document":"D:\\www\\Electron\\app1\\gadget\\Folders\\document.bat",
+    "Folder-descargas":"D:\\www\\Electron\\app1\\gadget\\Folders\\descargas.bat",
+    "Folder-imagenes":"D:\\www\\Electron\\app1\\gadget\\Folders\\imagenes.bat",
+    "Folder-musica":"D:\\www\\Electron\\app1\\gadget\\Folders\\musica.bat",
+    "Folder-video":"D:\\www\\Electron\\app1\\gadget\\Folders\\video.bat",
+    "Folder-trabajo":"D:\\www\\Electron\\trabajo.bat"
 }

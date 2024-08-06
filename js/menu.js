@@ -132,6 +132,11 @@ var modal03 = document.getElementById("myModal03");
 makeDraggable(modal03);
 initializeModalPosition(modal03, "myModal03");
 
+//component-Folders
+var modal04 = document.getElementById("myModal04");
+makeDraggable(modal04);
+initializeModalPosition(modal04, "myModal04");
+
 /**
  * Widget
  */
@@ -147,6 +152,7 @@ document.addEventListener('DOMContentLoaded', function() {
       toggleVisibility('myModal01', document.getElementById('rf-relog-digital').checked);
       toggleVisibility('myModal02', document.getElementById('rf-Programas01').checked);
       toggleVisibility('myModal03', document.getElementById('rf-Lanzador').checked);
+      toggleVisibility('myModal04', document.getElementById('rf-Folders').checked);
   }
 
   // Asignar el evento de cambio a los botones de radio
@@ -156,7 +162,9 @@ document.addEventListener('DOMContentLoaded', function() {
       're-Programas01',
       'rf-Programas01',
       're-Lanzador',
-      'rf-Lanzador'
+      'rf-Lanzador',
+      're-Folders',
+      'rf-Folders'
   ];
 
   radios.forEach(function(id) {
@@ -182,7 +190,9 @@ function saveRadioButtonState() {
       're-Programas01',
       'rf-Programas01',
       're-Lanzador',
-      'rf-Lanzador'
+      'rf-Lanzador',
+      're-Folders',
+      'rf-Folders'
   ];
 
   radios.forEach(function(id) {
@@ -203,7 +213,9 @@ function restoreRadioButtonsState() {
       're-Programas01',
       'rf-Programas01',
       're-Lanzador',
-      'rf-Lanzador'
+      'rf-Lanzador',
+      're-Folders',
+      'rf-Folders'
   ];
 
   radios.forEach(function(id) {

@@ -22,7 +22,11 @@ para correr el proyecto:
 ```bash
   npm run dev
 ```
+## Framework 
+![bulma](https://img.shields.io/badge/bulma-%23008080.svg?style=for-the-badge&logo=bulma&logoColor=white)&nbsp; ![Electron](https://img.shields.io/badge/Electron-%23303143.svg?style=for-the-badge&logo=Electron&logoColor=white)&nbsp;
 
+## TOOL
+![gulp](https://img.shields.io/badge/gulp-%23e14a4d.svg?style=for-the-badge&logo=gulp&logoColor=white)&nbsp; 
 
 ## Authors
 

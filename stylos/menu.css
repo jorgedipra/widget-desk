@@ -281,7 +281,11 @@
     bottom: -20px;
     right: 30px;
 }
-
+#Componets{
+  height: 170px;
+  overflow: auto;
+  margin-top: -10px;
+}
 .gadget-config{
   background-color: rgba(255, 255, 255, 0.45);
   display: flex;
@@ -446,8 +450,8 @@
 .switch--horizontal .toggle-outside {
   background: #fff;
   position: absolute;
-  width: 6rem;
-  left: 6rem;
+  width: 5rem;
+  left: 5rem;
 }
 .switch--horizontal .toggle-inside {
   height: 12px;
@@ -457,7 +461,7 @@
   left: 0.25rem;
 }
 .switch--horizontal input ~ input:checked ~ .toggle-outside .toggle-inside {
-  left: 3.25rem;
+  left: 2.25rem;
 }
 .switch--vertical {
   width: 12rem;
