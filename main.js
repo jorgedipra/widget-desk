@@ -2,12 +2,12 @@ const { app, BrowserWindow, ipcMain, screen } = require('electron');
 const { exec } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-
+const windowManager = require('electron-window-manager');
 
 // Configura electron-reload
 require('electron-reload')(__dirname, {
     electron: path.join(__dirname, 'node_modules', '.bin', 'electron')
-  });
+});
 
 const createWindow = () => {
     // Obtén la información de las pantallas
@@ -34,6 +34,17 @@ const createWindow = () => {
     win.loadFile('index.html');
     win.setAlwaysOnTop(false);
 
+    // Mueve la ventana detrás de todos los elementos, como un fondo de pantalla
+    win.once('ready-to-show', () => {
+        win.setAlwaysOnTop(true, 'screen-saver');
+        win.show();
+        win.setAlwaysOnTop(false);
+    });
+
+    // Evento adicional para asegurarse de que la ventana siempre se mantenga atrás
+    win.on('focus', () => {
+        win.blur();
+    });
 }
 
 app.whenReady().then(() => {
@@ -48,7 +59,6 @@ app.on('window-all-closed', () => {
     if (process.platform !== 'darwin') app.quit();
 });
 
-
 ipcMain.on('open-program', (event, programName) => {
     fs.readFile('programs.json', 'utf8', (err, data) => {
         if (err) {
@@ -59,7 +69,6 @@ ipcMain.on('open-program', (event, programName) => {
         const programPath = programs[programName];
         if (programPath) {
             // Asegúrate de que la ruta esté bien formateada
-            // No es necesario agregar comillas adicionales aquí
             exec(`"${programPath}"`, (error, stdout, stderr) => {
                 if (error) {
                     console.error(`Error al ejecutar el programa: ${error.message}`);

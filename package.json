@@ -21,6 +21,9 @@
     "standard": "^17.1.0"
   },
   "dependencies": {
+    "electron-win-state": "^1.1.22",
+    "electron-window": "^0.8.1",
+    "electron-window-manager": "^1.0.6",
     "install": "^0.13.0"
   }
 }
