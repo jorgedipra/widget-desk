@@ -41,6 +41,8 @@ document.addEventListener('DOMContentLoaded', function () {
   // Asignar el evento click al botón de cerrar
   cerarmodal00.addEventListener('click', cerrarModal);
 
+  // Recuperar el estado de los radio buttons desde localStorage
+  restoreRadioButtonsState();
 });
 
 /**
@@ -144,18 +146,71 @@ document.addEventListener('DOMContentLoaded', function() {
       // Configurar el estado de los modales basado en los radio buttons
       toggleVisibility('myModal01', document.getElementById('rf-relog-digital').checked);
       toggleVisibility('myModal02', document.getElementById('rf-Programas01').checked);
+      toggleVisibility('myModal03', document.getElementById('rf-Lanzador').checked);
   }
 
   // Asignar el evento de cambio a los botones de radio
   var radios = [
-      'rf-relog-digital',
       're-relog-digital',
+      'rf-relog-digital',
+      're-Programas01',
       'rf-Programas01',
-      're-Programas01'
+      're-Lanzador',
+      'rf-Lanzador'
   ];
 
   radios.forEach(function(id) {
-      document.getElementById(id).addEventListener('change', toggleVisibility_relog);
+      document.getElementById(id).addEventListener('change', function() {
+          // Guarda el estado del radio button en localStorage
+          saveRadioButtonState();
+          // Actualiza la visibilidad del modal
+          toggleVisibility_relog();
+      });
   });
+
+  // Recuperar el estado de los radio buttons y aplicar
   toggleVisibility_relog();
 });
+
+/**
+ * Guarda el estado de los radio buttons en localStorage
+ */
+function saveRadioButtonState() {
+  const radios = [
+      're-relog-digital',
+      'rf-relog-digital',
+      're-Programas01',
+      'rf-Programas01',
+      're-Lanzador',
+      'rf-Lanzador'
+  ];
+
+  radios.forEach(function(id) {
+    const radio = document.getElementById(id);
+    if (radio) {
+      localStorage.setItem(id, radio.checked.toString());
+    }
+  });
+}
+
+/**
+ * Recupera el estado de los radio buttons desde localStorage
+ */
+function restoreRadioButtonsState() {
+  const radios = [
+      're-relog-digital',
+      'rf-relog-digital',
+      're-Programas01',
+      'rf-Programas01',
+      're-Lanzador',
+      'rf-Lanzador'
+  ];
+
+  radios.forEach(function(id) {
+    const checked = localStorage.getItem(id) === 'true';
+    const radio = document.getElementById(id);
+    if (radio) {
+      radio.checked = checked;
+    }
+  });
+}
