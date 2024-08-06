@@ -5,8 +5,7 @@ var modal00 = document.getElementById("myModal00");
 var cerarmodal00 = document.getElementById("cerrarModal00");
 
 makeDraggable(modal00);
-modal00.style.top = "250px";
-modal00.style.left = "432px";
+initializeModalPosition(modal00, "myModal00");
 
 // Función para cerrar el modal
 function cerrarModal() {
@@ -19,6 +18,7 @@ function cerrarModal() {
       modal00.classList.remove('visible');
   }
 }
+
 // Icono de Menu interaccion
 document.addEventListener('DOMContentLoaded', function () {
   // Selecciona los elementos con los IDs específicos
@@ -31,20 +31,18 @@ document.addEventListener('DOMContentLoaded', function () {
       this.classList.toggle('open');
       // Alterna la visibilidad del modal
       if (modal00.style.display === 'block') {
-        // modal00.style.display = 'none';
         modal00.classList.remove('visible');
-        
       } else {
-        // modal00.style.display = 'block';
         modal00.classList.toggle('visible');
       }
     });
   });
 
-// Asignar el evento click al botón de cerrar
-cerarmodal00.addEventListener('click', cerrarModal);
+  // Asignar el evento click al botón de cerrar
+  cerarmodal00.addEventListener('click', cerrarModal);
 
 });
+
 /**
  * VENTANA FLOTANTE
  * @param {} element 
@@ -54,7 +52,6 @@ function makeDraggable(element) {
   let offsetX = 0, offsetY = 0, mouseX = 0, mouseY = 0;
 
   element.onmousedown = function (e) {
-    // e.preventDefault();
     // Obtén la posición del mouse al hacer clic en el elemento
     mouseX = e.clientX;
     mouseY = e.clientY;
@@ -78,30 +75,60 @@ function makeDraggable(element) {
     // Detén el arrastre cuando se suelta el mouse
     document.onmousemove = null;
     document.onmouseup = null;
+    // Guarda la posición en localStorage
+    savePosition(element.id);
   }
 }
 
 /**
- * Aplica la funcionalidad de arrastre a la ventana
+ * Inicializa la posición del modal desde localStorage [Del Menu de Configuración]
+ * @param {HTMLElement} modal El modal a inicializar
+ * @param {string} id El ID del modal para usar en localStorage
  */
-//Relog 
+function initializeModalPosition(modal, id) {
+  const position = JSON.parse(localStorage.getItem(id));
+  if (position) {
+    modal.style.top = position.top || "0px";
+    modal.style.left = position.left || "0px";
+  } else {
+    // Posiciones predeterminadas si no hay datos en localStorage
+    modal.style.top = "250px";
+    modal.style.left = "432px";
+  }
+}
+
+/**
+ * Guarda la posición del modal en localStorage[del resto de ventanas]
+ * @param {string} modalId El ID del modal a guardar
+ */
+function savePosition(modalId) {
+  const modal = document.getElementById(modalId);
+  if (modal) {
+    const position = {
+      top: modal.style.top,
+      left: modal.style.left
+    };
+    localStorage.setItem(modalId, JSON.stringify(position));
+  }
+}
+
+/**
+ * Aplica la funcionalidad de arrastre a los modales
+ */
+//component-Clock
 var modal01 = document.getElementById("myModal01");
 makeDraggable(modal01);
-modal01.style.top = "-32px";
-modal01.style.left = "3px";
+initializeModalPosition(modal01, "myModal01");
 
-// Programas
+//component-Programas
 var modal02 = document.getElementById("myModal02");
 makeDraggable(modal02);
-modal02.style.top = "16px";
-modal02.style.left = "1180px";
+initializeModalPosition(modal02, "myModal02");
 
-// Lanzador
+//component-Lanzador
 var modal03 = document.getElementById("myModal03");
 makeDraggable(modal03);
-modal03.style.top = "684px";
-modal03.style.left = "5px";
-
+initializeModalPosition(modal03, "myModal03");
 
 /**
  * Widget
@@ -131,5 +158,4 @@ document.addEventListener('DOMContentLoaded', function() {
       document.getElementById(id).addEventListener('change', toggleVisibility_relog);
   });
   toggleVisibility_relog();
-  // modal00.classList.toggle('visible');
 });
