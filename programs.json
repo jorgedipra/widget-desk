@@ -1,5 +1,13 @@
 {
-    "chrome": "D:\\www\\Python\\gadgets\\panelAplicaiones.py\\chrome.bat",
-    "sublime": "E:\\Program Files\\Sublime Text\\sublime_text.exe",
-    "pomodoro": "D:\\www\\Python\\gadgets\\pomodoro\\pomodoro.bat"
+    "chrome":   "D:\\www\\Python\\gadgets\\panelAplicaiones.py\\chrome.bat",
+    "sublime":  "E:\\Program Files\\Sublime Text\\sublime_text.exe",
+    "pomodoro": "D:\\www\\Python\\gadgets\\pomodoro\\pomodoro.bat",
+    "lectorVoz":"D:\\www\\Python\\gadgets\\lector.py\\lector.py"
 }
+
+
+
+
+
+
+

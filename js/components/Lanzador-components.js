@@ -63,3 +63,45 @@ wrapper.addEventListener('touchstart', (e) => {
     }
     toggle(state = !state);
 });
+
+//[Mostrar la imagenes en cada circulo y al pasar por el mosrar en el lanzador o cirsulo mayor]
+
+// Obtén todos los enlaces dentro de .usermenu
+const links = document.querySelectorAll(".usermenu a");
+
+// Obtén el div cuyo fondo queremos cambiar
+const targetDiv = document.querySelector(".usermenu > div");
+
+// Define las imágenes de fondo para cada enlace
+const images = {
+    'SublimeText': './images/Component-lanzador/sublime_text.png',
+    'ChromeDev': './images/Component-lanzador/google_chrome_dev.png',
+    'Pomodoro': './images/Component-lanzador/pomodoro.png',
+    'LectorVoz': './images/Component-lanzador/LectorVoz.png',
+    'alert': './images/Component-lanzador/pr.png'
+};
+
+// Función para cambiar el fondo del div
+function changeBackgroundImage(url) {
+    targetDiv.style.backgroundImage = `url(${url})`;
+}
+
+// Configura los eventos hover para cada enlace
+links.forEach(link => {
+    // Establece el background-image al cargar la página
+    const linkClass = link.classList[0];
+    if (images[linkClass]) {
+        link.style.backgroundImage = `url(${images[linkClass]})`;
+    }
+
+    link.addEventListener('mouseover', () => {
+        // Obtén la imagen de fondo asociada al enlace
+        const backgroundImage = link.classList[0];
+        changeBackgroundImage(images[backgroundImage]);
+    });
+
+    link.addEventListener('mouseout', () => {
+        // Restaura la imagen de fondo original o déjala en blanco
+        targetDiv.style.backgroundImage = '';
+    });
+});

@@ -32,5 +32,9 @@ document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('openPomodoro').addEventListener('click', () => {
     window.electron.sendOpenProgram('pomodoro');
   });
+
+  document.getElementById('openLectorVoz').addEventListener('click', () => {
+    window.electron.sendOpenProgram('lectorVoz');
+  });
   
 });
