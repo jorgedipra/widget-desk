@@ -30,10 +30,12 @@ document.addEventListener('DOMContentLoaded', function () {
       // Alterna la clase 'open' en el elemento clicado
       this.classList.toggle('open');
       // Alterna la visibilidad del modal
-      if (modal00.style.display === 'block') {
+      if (modal00.classList.contains('visible')) {
         modal00.classList.remove('visible');
+        modal00.classList.toggle('hidden');
       } else {
         modal00.classList.toggle('visible');
+        modal00.classList.remove('hidden');
       }
     });
   });
