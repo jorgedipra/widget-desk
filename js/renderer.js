@@ -22,48 +22,35 @@ loadComponent('./components/Folders-component.html', 'component-Folders');
  */
 document.addEventListener('DOMContentLoaded', function() {
 
-  document.getElementById('openChrome').addEventListener('click', () => {
-    window.electron.sendOpenProgram('chrome');
-  });
+// Mapeo de IDs a programas
+const programMap = {
+  'openChrome': 'chrome',
+  'openSublime': 'sublime',
+  'openPomodoro': 'pomodoro',
+  'openLectorVoz': 'lectorVoz',
+  'openFolder-www': 'Folder-www',
+  'openFolder-document': 'Folder-document',
+  'openFolder-descargas': 'Folder-descargas',
+  'openFolder-imagenes': 'Folder-imagenes',
+  'openFolder-musica': 'Folder-musica',
+  'openFolder-video': 'Folder-video',
+  'openFolder-trabajo': 'Folder-trabajo'
+};
 
-  document.getElementById('openSublime').addEventListener('click', () => {
-    window.electron.sendOpenProgram('sublime');
+// Función para configurar los eventos de clic
+function setupEventListeners() {
+  Object.keys(programMap).forEach(id => {
+      const button = document.getElementById(id);
+      if (button) {
+          button.addEventListener('click', () => {
+              window.electron.sendOpenProgram(programMap[id]);
+          });
+      }
   });
+}
 
-  document.getElementById('openPomodoro').addEventListener('click', () => {
-    window.electron.sendOpenProgram('pomodoro');
-  });
+// Configuración de eventos de clic
+setupEventListeners();
 
-  document.getElementById('openLectorVoz').addEventListener('click', () => {
-    window.electron.sendOpenProgram('lectorVoz');
-  });
-
-  document.getElementById('openFolder-www').addEventListener('click', () => {
-    window.electron.sendOpenProgram('Folder-www');
-  });
-
-  document.getElementById('openFolder-document').addEventListener('click', () => {
-    window.electron.sendOpenProgram('Folder-document');
-  });
-
-  document.getElementById('openFolder-descargas').addEventListener('click', () => {
-    window.electron.sendOpenProgram('Folder-descargas');
-  });
-
-  document.getElementById('openFolder-imagenes').addEventListener('click', () => {
-    window.electron.sendOpenProgram('Folder-imagenes');
-  });
-
-  document.getElementById('openFolder-musica').addEventListener('click', () => {
-    window.electron.sendOpenProgram('Folder-musica');
-  });
-
-  document.getElementById('openFolder-video').addEventListener('click', () => {
-    window.electron.sendOpenProgram('Folder-video');
-  });
-
-  document.getElementById('openFolder-trabajo').addEventListener('click', () => {
-    window.electron.sendOpenProgram('Folder-trabajo');
-  });
   
 });

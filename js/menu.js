@@ -119,29 +119,41 @@ function savePosition(modalId) {
 /**
  * Aplica la funcionalidad de arrastre a los modales
  */
-//component-Clock
-var modal01 = document.getElementById("myModal01");
-makeDraggable(modal01);
-initializeModalPosition(modal01, "myModal01");
+// Lista de IDs de los modales
+const modalIds = [
+  "myModal01",//component-Clock
+  "myModal02",//component-Programas
+  "myModal03",//component-Lanzador
+  "myModal04"//component-Folders
+];
 
-//component-Programas
-var modal02 = document.getElementById("myModal02");
-makeDraggable(modal02);
-initializeModalPosition(modal02, "myModal02");
+// Función para inicializar modales
+function initializeModals(modalIds) {
+  modalIds.forEach(id => {
+      const modal = document.getElementById(id);
+      makeDraggable(modal);
+      initializeModalPosition(modal, id);
+  });
+}
 
-//component-Lanzador
-var modal03 = document.getElementById("myModal03");
-makeDraggable(modal03);
-initializeModalPosition(modal03, "myModal03");
-
-//component-Folders
-var modal04 = document.getElementById("myModal04");
-makeDraggable(modal04);
-initializeModalPosition(modal04, "myModal04");
+// Llamada a la función para inicializar todos los modales
+initializeModals(modalIds);
 
 /**
  * Widget
  */
+// Asignar el evento de cambio a los botones de radio
+const radios = [
+  're-relog-digital',
+  'rf-relog-digital',
+  're-Programas01',
+  'rf-Programas01',
+  're-Lanzador',
+  'rf-Lanzador',
+  're-Folders',
+  'rf-Folders'
+];
+
 document.addEventListener('DOMContentLoaded', function() {
   // Función para manejar la visibilidad del modal
   function toggleVisibility(id, condition) {
@@ -156,18 +168,6 @@ document.addEventListener('DOMContentLoaded', function() {
       toggleVisibility('myModal03', document.getElementById('rf-Lanzador').checked);
       toggleVisibility('myModal04', document.getElementById('rf-Folders').checked);
   }
-
-  // Asignar el evento de cambio a los botones de radio
-  var radios = [
-      're-relog-digital',
-      'rf-relog-digital',
-      're-Programas01',
-      'rf-Programas01',
-      're-Lanzador',
-      'rf-Lanzador',
-      're-Folders',
-      'rf-Folders'
-  ];
 
   radios.forEach(function(id) {
       document.getElementById(id).addEventListener('change', function() {
@@ -186,16 +186,7 @@ document.addEventListener('DOMContentLoaded', function() {
  * Guarda el estado de los radio buttons en localStorage
  */
 function saveRadioButtonState() {
-  const radios = [
-      're-relog-digital',
-      'rf-relog-digital',
-      're-Programas01',
-      'rf-Programas01',
-      're-Lanzador',
-      'rf-Lanzador',
-      're-Folders',
-      'rf-Folders'
-  ];
+  
 
   radios.forEach(function(id) {
     const radio = document.getElementById(id);
@@ -209,17 +200,7 @@ function saveRadioButtonState() {
  * Recupera el estado de los radio buttons desde localStorage
  */
 function restoreRadioButtonsState() {
-  const radios = [
-      're-relog-digital',
-      'rf-relog-digital',
-      're-Programas01',
-      'rf-Programas01',
-      're-Lanzador',
-      'rf-Lanzador',
-      're-Folders',
-      'rf-Folders'
-  ];
-
+  
   radios.forEach(function(id) {
     const checked = localStorage.getItem(id) === 'true';
     const radio = document.getElementById(id);

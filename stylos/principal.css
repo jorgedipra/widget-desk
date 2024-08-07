@@ -19,6 +19,7 @@ iframe {
 /* ventana flotante */
 .draggable {
     position: absolute;
+    display: none;
     width: 300px;
     height: 200px;
     background-color: #f1f1f1;
