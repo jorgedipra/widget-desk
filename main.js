@@ -31,6 +31,11 @@ const createWindow = () => {
         }
     });
 
+    // Configuración para ocultar la ventana de la barra de tareas en Windows
+    if (process.platform === 'win32') {
+        win.setSkipTaskbar(true); // Oculta el ícono de la barra de tareas
+    }
+
     win.loadFile('index.html');
     win.setAlwaysOnTop(false);
 
