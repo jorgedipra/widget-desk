@@ -1,6 +1,11 @@
 {
     "chrome":   "D:\\www\\Python\\gadgets\\panelAplicaiones.py\\chrome.bat",
+    "opera":   "E:\\Users\\User\\AppData\\Local\\Programs\\Opera GX\\opera.exe",
+    "brave":   "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe",
     "sublime":  "E:\\Program Files\\Sublime Text\\sublime_text.exe",
+    "VisualCode":  "E:\\Users\\User\\AppData\\Local\\Programs\\Microsoft VS Code\\code.exe",
+    "DBeaver": "E:\\Users\\User\\AppData\\Local\\DBeaver\\dbeaver.exe",
+    "Sourcetree":"C:\\Users\\User\\AppData\\Local\\SourceTree\\SourceTree.exe",
     "pomodoro": "D:\\www\\Python\\gadgets\\pomodoro\\pomodoro.bat",
     "lectorVoz":"D:\\www\\Python\\gadgets\\lector.py\\lector.py",
     "Folder-www":"D:\\www\\Electron\\app1\\gadget\\Folders\\www.bat",
@@ -9,5 +14,7 @@
     "Folder-imagenes":"D:\\www\\Electron\\app1\\gadget\\Folders\\imagenes.bat",
     "Folder-musica":"D:\\www\\Electron\\app1\\gadget\\Folders\\musica.bat",
     "Folder-video":"D:\\www\\Electron\\app1\\gadget\\Folders\\video.bat",
-    "Folder-trabajo":"D:\\www\\Electron\\trabajo.bat"
+    "Folder-trabajo":"D:\\www\\Electron\\trabajo.bat",
+    "Acceso-desk":"D:\\www\\Electron\\app1\\gadget\\Folders\\desk.bat"
+    
 }

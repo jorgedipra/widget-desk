@@ -25,7 +25,12 @@ document.addEventListener('DOMContentLoaded', function() {
 // Mapeo de IDs a programas
 const programMap = {
   'openChrome': 'chrome',
+  'openOpera': 'opera',
+  'openBrave': 'brave',
   'openSublime': 'sublime',
+  'openVisualCode': 'VisualCode',
+  'openDBeaver':'DBeaver',
+  'openSourcetree':'Sourcetree',
   'openPomodoro': 'pomodoro',
   'openLectorVoz': 'lectorVoz',
   'openFolder-www': 'Folder-www',
@@ -34,7 +39,8 @@ const programMap = {
   'openFolder-imagenes': 'Folder-imagenes',
   'openFolder-musica': 'Folder-musica',
   'openFolder-video': 'Folder-video',
-  'openFolder-trabajo': 'Folder-trabajo'
+  'openFolder-trabajo': 'Folder-trabajo',
+  'openAcceso-desk': 'Acceso-desk'
 };
 
 // Función para configurar los eventos de clic

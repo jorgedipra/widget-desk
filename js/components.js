@@ -74,8 +74,13 @@ const targetDiv = document.querySelector(".usermenu > div");
 
 // Define las imágenes de fondo para cada enlace
 const images = {
-    'SublimeText': './images/Component-lanzador/sublime_text.png',
     'ChromeDev': './images/Component-lanzador/google_chrome_dev.png',
+    'Opera': './images/Component-lanzador/opera.png',
+    'Brave': './images/Component-lanzador/brave.png',
+    'VisualCode': './images/Component-lanzador/visual_code.png',
+    'SublimeText': './images/Component-lanzador/sublime_text.png',
+    'DBeaver': './images/Component-lanzador/DBeaver.png',
+    'Sourcetree': './images/Component-lanzador/Sourcetree.png',
     'Pomodoro': './images/Component-lanzador/pomodoro.png',
     'LectorVoz': './images/Component-lanzador/LectorVoz.png',
     'alert': './images/Component-lanzador/pr.png'

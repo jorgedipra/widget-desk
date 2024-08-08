@@ -36,6 +36,7 @@
   position: relative;
   float: left;
   margin: 0;
+  padding: auto;
   height: 72px;
   width: 62px;
   color: #fff;
@@ -45,11 +46,6 @@
   transition: all 0.3s ease-out;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 1;
-  filter: drop-shadow(
-          0 0 5px rgba(255, 255, 255, 0.7), /* Sombra blanca clara */
-          0 0 10px rgba(255, 255, 255, 0.5), /* Sombra blanca menos intensa */
-          0 0 15px rgba(255, 255, 255, 0.3)  /* Resplandor blanco más suave */
-    );
 }
 .container .honeycomb .hex span img{
     width: 40px;
@@ -57,12 +53,7 @@
     position: absolute;
     top: 12px;
     left: 0px;
-    filter: invert(100%);
-    filter: drop-shadow(
-          0 0 5px rgba(255, 255, 255, 0.7), /* Sombra blanca clara */
-          0 0 10px rgba(255, 255, 255, 0.5), /* Sombra blanca menos intensa */
-          0 0 15px rgba(255, 255, 255, 0.3)  /* Resplandor blanco más suave */
-    );
+    filter: invert(100%) brightness(100%);
 }
 .container .honeycomb .hex:hover {
   opacity: 1;
@@ -86,13 +77,13 @@
   width: 100%;
 }
 .container .honeycomb .hex .wrapper .color-1 {
-  background: #2196F3;
+  background: #69a2f5;
 }
 .container .honeycomb .hex .wrapper .color-1:before {
-  border-right-color: #2196F3;
+  border-right-color: #69a2f5;
 }
 .container .honeycomb .hex .wrapper .color-1:after {
-  border-left-color: #2196F3;
+  border-left-color: #69a2f5;
 }
 .container .honeycomb .hex .content {
   display: block;
@@ -139,7 +130,7 @@
   content: "";
   position: relative;
   float: left;
-  border-top: 31px solid transparent;
+  border-top: 34px solid transparent;
   border-bottom: 31px solid transparent;
 }
 .hexagon:before {
