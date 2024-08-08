@@ -39,11 +39,15 @@ const createWindow = () => {
     win.loadFile('index.html');
     win.setAlwaysOnTop(false);
 
-    // Mueve la ventana detrás de todos los elementos, como un fondo de pantalla
-    win.once('ready-to-show', () => {
-        win.setAlwaysOnTop(true, 'screen-saver');
-        win.show();
-        win.setAlwaysOnTop(false);
+     // Mueve la ventana detrás de todos los elementos, como un fondo de pantalla
+     win.once('ready-to-show', () => {
+        setTimeout(() => {
+            win.setAlwaysOnTop(true, 'screen-saver');
+            win.show();
+            // Asegúrate de que la ventana está en el fondo
+            win.setVisibleOnAllWorkspaces(true); // En sistemas Unix, puede ser útil para asegurar la visibilidad en todos los escritorios
+            win.setAlwaysOnTop(false);
+        }, 100); // Ajusta el retraso según sea necesario
     });
 
     // Evento adicional para asegurarse de que la ventana siempre se mantenga atrás
