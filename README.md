@@ -10,7 +10,7 @@ Finalmente, se pondrá énfasis en una documentación detallada para facilitar s
 ## Captura de pantalla
 
 
-![image](https://github.com/user-attachments/assets/4f7dbb9d-0ce0-4edb-91f2-e58c7b2a47c7)
+![image](https://github.com/user-attachments/assets/f0999939-5697-4505-be47-042e58ea6257)
 
 
 
