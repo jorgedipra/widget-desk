@@ -83,6 +83,7 @@ const images = {
     'Sourcetree': './images/Component-lanzador/Sourcetree.png',
     'Pomodoro': './images/Component-lanzador/pomodoro.png',
     'LectorVoz': './images/Component-lanzador/LectorVoz.png',
+    'Gestor': './images/Component-lanzador/gestor.png',
     'alert': './images/Component-lanzador/pr.png'
 };
 
@@ -110,3 +111,7 @@ links.forEach(link => {
         targetDiv.style.backgroundImage = '';
     });
 });
+/**
+ * Programas-components
+ */
+

@@ -3,6 +3,7 @@ const { exec } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 const windowManager = require('electron-window-manager');
+const activeWindows = require('active-windows');
 
 // Configura electron-reload
 require('electron-reload')(__dirname, {
@@ -38,6 +39,7 @@ const createWindow = () => {
 
     win.loadFile('index.html');
     win.setAlwaysOnTop(false);
+    win.webContents.openDevTools(); // abre el explorador dev
 
      // Mueve la ventana detrás de todos los elementos, como un fondo de pantalla
      win.once('ready-to-show', () => {
@@ -51,6 +53,7 @@ const createWindow = () => {
     });
 
     // Evento adicional para asegurarse de que la ventana siempre se mantenga atrás
+    // Asegúrate de que la ventana siempre se mantenga atrás
     win.on('focus', () => {
         win.blur();
     });
@@ -62,6 +65,37 @@ app.whenReady().then(() => {
     app.on('activate', () => {
         if (BrowserWindow.getAllWindows().length === 0) createWindow();
     });
+
+    ipcMain.handle('get-windows', async () => {
+        return new Promise((resolve, reject) => {
+            exec('wmctrl -l', (error, stdout, stderr) => {
+                if (error) {
+                    reject(`Error: ${stderr}`);
+                } else {
+                    const windows = stdout.split('\n').filter(line => line.trim() !== '');
+                    resolve(windows);
+                }
+            });
+        });
+    });
+
+    ipcMain.handle('restore-window', async (event, windowTitle) => {
+        return new Promise((resolve, reject) => {
+            exec(`wmctrl -a "${windowTitle}"`, (error, stdout, stderr) => {
+                if (error) {
+                    reject(`Error: ${stderr}`);
+                } else {
+                    resolve(true);
+                }
+            });
+        });
+    });
+
+
+
+
+
+
 });
 
 app.on('window-all-closed', () => {

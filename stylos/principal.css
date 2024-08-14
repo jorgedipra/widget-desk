@@ -2,6 +2,7 @@
 /* importaciónes */
 @import url('./componets/Lanzador-component.css');
 @import url('./componets/Folders-component.css');
+@import url('./componets/Programas-components.css');
 /* Principal.css */
 html,
 body{

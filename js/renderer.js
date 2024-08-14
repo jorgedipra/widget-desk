@@ -40,7 +40,8 @@ const programMap = {
   'openFolder-musica': 'Folder-musica',
   'openFolder-video': 'Folder-video',
   'openFolder-trabajo': 'Folder-trabajo',
-  'openAcceso-desk': 'Acceso-desk'
+  'openAcceso-desk': 'Acceso-desk',
+  'openGestor': 'Gestor'
 };
 
 // Función para configurar los eventos de clic
