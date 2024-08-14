@@ -1,4 +1,6 @@
 @import url('../font/Orbitron/css.css');
+@import url('../node_modules/@fortawesome/fontawesome-free/css/all.min.css');
+
 /* importaciónes */
 @import url('./componets/Lanzador-component.css');
 @import url('./componets/Folders-component.css');

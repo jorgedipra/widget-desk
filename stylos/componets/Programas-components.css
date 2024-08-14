@@ -1,0 +1,91 @@
+/* Estilos básicos para el calendario */
+.calendar-box{
+    width: 340px;
+    height: 390px;
+}
+.calendar {
+    width: 300px;
+    height: 350px;
+    text-align: center;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #69a2f5; /* Color principal para el encabezado */
+    color: white;
+}
+
+#monthYear {
+    text-transform: uppercase; /* Convertir el texto a mayúsculas */
+    font-weight: bold;
+    margin: 0;
+}
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-bottom: 10px;
+}
+
+.calendar-day {
+    font-weight: bold;
+    border: 1px solid #ddd;
+    background-color: #f5f5f5;
+    font-size: 0.8em;
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    height: calc(78% - 30px); 
+    overflow: auto;
+}
+
+.calendar-day-box {
+    padding: 5px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    font-size: 0.8em;
+    height: 40px;
+    vertical-align: top;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calendar-day-box.current-day {
+    background-color: #69a2f5; /* Color principal */
+    color: white;
+    font-weight: bold;
+}
+.calendar-day-box.holiday {
+    background-color: hsl(171, 100%, 41%); /* Color distintivo para los festivos */
+    color: white;
+    font-weight: bold;
+}
+.calendar-day-box:nth-child(7n) {
+    color: hsl(0, 0%, 20%); /* Color especial para los domingos */
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .calendar-day-box {
+        height: 35px;
+        font-size: 0.7em;
+    }
+}
+
+@media (max-width: 480px) {
+    .calendar-day-box {
+        height: 30px;
+        font-size: 0.6em;
+    }
+}

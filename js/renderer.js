@@ -15,6 +15,7 @@ loadComponent('./components/Clock-component.html', 'component-Clock');
 loadComponent('./components/Programas-component.html', 'component-Programas');
 loadComponent('./components/Lanzador-component.html', 'component-Lanzador');
 loadComponent('./components/Folders-component.html', 'component-Folders');
+loadComponent('./components/ChildComponent/General-Programas.html', 'Programas-General');
 
 
 /**
@@ -41,7 +42,13 @@ const programMap = {
   'openFolder-video': 'Folder-video',
   'openFolder-trabajo': 'Folder-trabajo',
   'openAcceso-desk': 'Acceso-desk',
-  'openGestor': 'Gestor'
+  'openGestor': 'Gestor',
+  'openOpenVPN': 'OpenVPN',
+  'openWinSCP': 'WinSCP',
+  'openUwAmp': 'UwAmp',
+
+
+  're-power':'re-power'
 };
 
 // Función para configurar los eventos de clic

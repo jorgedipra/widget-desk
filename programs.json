@@ -16,6 +16,12 @@
     "Folder-video":"D:\\www\\Electron\\app1\\gadget\\Folders\\video.bat",
     "Folder-trabajo":"D:\\www\\Electron\\trabajo.bat",
     "Acceso-desk":"D:\\www\\Electron\\app1\\gadget\\Folders\\desk.bat",
-    "Gestor":"D:\\www\\Python\\gadgets\\gestor de ventanas\\gestor.pyw"
+    "Gestor":"D:\\www\\Python\\gadgets\\gestor de ventanas\\gestor.pyw",
+    "OpenVPN":"C:\\Program Files\\OpenVPN Connect\\OpenVPNConnect.exe",
+    "WinSCP":"E:\\Users\\User\\AppData\\Local\\Programs\\WinSCP\\WinSCP.exe",
+    "UwAmp":"E:\\UwAmp\\UwAmp.exe",
+    
+    "re-power":  "D:\\www\\Electron\\app1\\gadget\\Folders\\re-power.bat"
+    
     
 }

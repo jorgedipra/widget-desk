@@ -1,6 +1,26 @@
 <div id="component-Programas">
-    <h1>Programas</h1>
-    <h1>Ventanas Activas</h1>
-    <div id="windows-list"></div>
-    <button id="refresh-button">Actualizar</button>
+            <div class="calendar-box box has-background-white">
+                <div class="columns">
+                    <div class="column is-12">
+                        <div class="calendar">
+                            <div class="calendar-header">
+                                <button id="prevMonth" class="button is-success is-light">◄</button>
+                                <h2 id="monthYear" class="title is-6"></h2>
+                                <button id="nextMonth" class="button is-success is-light">►</button>
+                            </div>
+                            <div class="calendar-grid">
+                                <div class="calendar-day">Lun</div>
+                                <div class="calendar-day">Mar</div>
+                                <div class="calendar-day">Mié</div>
+                                <div class="calendar-day">Jue</div>
+                                <div class="calendar-day">Vie</div>
+                                <div class="calendar-day">Sáb</div>
+                                <div class="calendar-day">Dom</div>
+                                <!-- Los días se agregarán dinámicamente aquí -->
+                            </div>
+                            <div id="days" class="calendar-days"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 </div>

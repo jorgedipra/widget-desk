@@ -84,7 +84,10 @@ const images = {
     'Pomodoro': './images/Component-lanzador/pomodoro.png',
     'LectorVoz': './images/Component-lanzador/LectorVoz.png',
     'Gestor': './images/Component-lanzador/gestor.png',
-    'alert': './images/Component-lanzador/pr.png'
+    'UwAmp': './images/Component-lanzador/UwAmp.png',
+    'WinSCP': './images/Component-lanzador/WinSCP.png',
+    'OpenVPN': './images/Component-lanzador/OpenVPN.png',
+    'alert': './images/Component-lanzador/pr.png',
 };
 
 // Función para cambiar el fondo del div
