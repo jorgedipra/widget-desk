@@ -33,6 +33,7 @@ para correr el proyecto:
 
 ## LINKS
 https://bulma.io/documentation/  
+https://fontawesome.com/search
 
 ## Authors
 
