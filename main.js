@@ -41,8 +41,10 @@ const createWindow = () => {
     win.setAlwaysOnTop(false);
     win.webContents.openDevTools(); // abre el explorador dev
 
-     // Mueve la ventana detrás de todos los elementos, como un fondo de pantalla
-     win.once('ready-to-show', () => {
+
+
+    // Mueve la ventana detrás de todos los elementos, como un fondo de pantalla
+    win.once('ready-to-show', () => {
         setTimeout(() => {
             win.setAlwaysOnTop(true, 'screen-saver');
             win.show();
@@ -92,10 +94,6 @@ app.whenReady().then(() => {
     });
 
 
-
-
-
-
 });
 
 app.on('window-all-closed', () => {
@@ -127,4 +125,5 @@ ipcMain.on('open-program', (event, programName) => {
             console.error(`Programa no encontrado: ${programName}`);
         }
     });
+    
 });

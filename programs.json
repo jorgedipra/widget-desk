@@ -21,7 +21,8 @@
     "WinSCP":"E:\\Users\\User\\AppData\\Local\\Programs\\WinSCP\\WinSCP.exe",
     "UwAmp":"E:\\UwAmp\\UwAmp.exe",
     
-    "re-power":  "D:\\www\\Electron\\app1\\gadget\\Folders\\re-power.bat"
+    "re-power":  "D:\\www\\Electron\\app1\\gadget\\General\\re-power.bat",
+    "CerrarApp":  "D:\\www\\Electron\\app1\\gadget\\General\\CerrarApp.bat"
     
     
 }
