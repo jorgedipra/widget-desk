@@ -1,0 +1,27 @@
+#myModal05{
+    width: 80px;
+    height: 80px;
+}
+#component-Lector{
+    width: 50px;
+    margin: 0 auto;
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 8px;
+}
+#component-Lector #Off #obj-off,
+#component-Lector #ON #obj-on{
+    display: none;
+    cursor: pointer;
+}
+
+#component-Lector #Off{
+    font-size: 40px;
+    color:#17D4FE;
+    position: relative;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    
+}

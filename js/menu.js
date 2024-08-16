@@ -124,7 +124,8 @@ const modalIds = [
   "myModal01",//component-Clock
   "myModal02",//component-Programas
   "myModal03",//component-Lanzador
-  "myModal04"//component-Folders
+  "myModal04",//component-Folders
+  "myModal05"//component-Lector
 ];
 
 // Función para inicializar modales
@@ -151,7 +152,9 @@ const radios = [
   're-Lanzador',
   'rf-Lanzador',
   're-Folders',
-  'rf-Folders'
+  'rf-Folders',
+  're-Lector',
+  'rf-Lector'
 ];
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -167,6 +170,7 @@ document.addEventListener('DOMContentLoaded', function() {
       toggleVisibility('myModal02', document.getElementById('rf-Programas01').checked);
       toggleVisibility('myModal03', document.getElementById('rf-Lanzador').checked);
       toggleVisibility('myModal04', document.getElementById('rf-Folders').checked);
+      toggleVisibility('myModal05', document.getElementById('rf-Lector').checked);
   }
 
   radios.forEach(function(id) {

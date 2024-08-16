@@ -15,6 +15,7 @@ loadComponent('./components/Clock-component.html', 'component-Clock');
 loadComponent('./components/Programas-component.html', 'component-Programas');
 loadComponent('./components/Lanzador-component.html', 'component-Lanzador');
 loadComponent('./components/Folders-component.html', 'component-Folders');
+loadComponent('./components/Lector-component.html', 'component-Lector');
 loadComponent('./components/ChildComponent/General-Programas.html', 'Programas-General');
 
 /**
@@ -32,7 +33,6 @@ document.addEventListener('DOMContentLoaded', function () {
         'openDBeaver': 'DBeaver',
         'openSourcetree': 'Sourcetree',
         'openPomodoro': 'pomodoro',
-        'openLectorVoz': 'lectorVoz',
         'openFolder-www': 'Folder-www',
         'openFolder-document': 'Folder-document',
         'openFolder-descargas': 'Folder-descargas',
@@ -46,7 +46,8 @@ document.addEventListener('DOMContentLoaded', function () {
         'openWinSCP': 'WinSCP',
         'openUwAmp': 'UwAmp',
 
-
+        'openLectorVoz_30': 'lectorVoz_30',
+        'openLectorVoz': 'lectorVoz',
         'CerrarApp': 'CerrarApp',
         're-power': 're-power'
     };
@@ -60,6 +61,15 @@ document.addEventListener('DOMContentLoaded', function () {
                     window.electron.sendOpenProgram(programMap[id]);
                 });
             }
+        });
+
+        Object.keys(programMap).forEach(className => {
+            const buttons = document.querySelectorAll(`.${className}`);
+            buttons.forEach(button => {
+                button.addEventListener('click', () => {
+                    window.electron.sendOpenProgram(programMap[className]);
+                });
+            });
         });
 
     }
