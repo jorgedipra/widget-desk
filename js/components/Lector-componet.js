@@ -9,7 +9,7 @@ const objOff = document.getElementById("obj-off");
 objOff.style.display = "block";
 
 // Función para alternar la visibilidad
-function toggleVisibility() {
+function toggleVisibility_Lector() {
     if (objOff.style.display === "block") {
         objOn.style.display = "block";
         objOff.style.display = "none";
@@ -20,8 +20,8 @@ function toggleVisibility() {
 }
 
 // Añadir el evento click a ambos elementos
-objOn.addEventListener("click", toggleVisibility);
-objOff.addEventListener("click", toggleVisibility);
+objOn.addEventListener("click", toggleVisibility_Lector);
+objOff.addEventListener("click", toggleVisibility_Lector);
 
 // Temporizador de 1 minuto para apagar automáticamente
 setTimeout(() => {
