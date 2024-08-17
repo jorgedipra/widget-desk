@@ -20,6 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('reset').addEventListener('click', resetTimer);
     document.getElementById('freeBreak').addEventListener('click', startFreeBreak);
     document.getElementById('updateTimes').addEventListener('click', updateTimes);
+    document.getElementById('minimizar_pomodoro').addEventListener('click', minimizar_pomodoro);
+
 
 });
 
@@ -126,4 +128,24 @@ function updateTimes() {
     workTime = parseInt(document.getElementById('workTime').value, 10);
     breakTime = parseInt(document.getElementById('breakTime').value, 10);
     resetTimer();
+}
+
+function minimizar_pomodoro() {
+    const min_Pomodoro = document.getElementById('minimizar_pomodoro');
+    const win_Pomodoro = document.getElementById('myModal06');
+    const miniPomodoro = document.getElementById('miniPomodoro');
+    const timerText = document.getElementById('timer_pomodoro').textContent;
+    if (min_Pomodoro) {
+        win_Pomodoro.classList.remove('hidden');
+        win_Pomodoro.classList.toggle('visible');
+        miniPomodoro.style.display = 'block';
+        // Llamar a la función de actualización cada 1 segundo
+        const intervalId = setInterval(updateButtonText, 1000); // 1000 milisegundos = 1 segundo
+    }
+
+    // Función para actualizar el texto del botón
+    function updateButtonText() {
+        const timerText = document.getElementById('timer_pomodoro').textContent;
+        miniPomodoro.textContent = "🍅 "+timerText;
+    }
 }

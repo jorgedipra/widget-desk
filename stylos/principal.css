@@ -113,6 +113,43 @@ iframe {
     border-bottom: solid 2px #ffff;
 }
 
+/* tooltip */
+.has-tooltip {
+  position: relative;
+}
+
+.has-tooltip:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%; /* Position the tooltip above the button */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 4px;
+  white-space: nowrap;
+  font-size: 14px;
+  z-index: 10;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.2s;
+}
+
+.has-tooltip::before {
+  content: "";
+  position: absolute;
+  bottom: 100%; /* Position the tooltip above the button */
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #333 transparent;
+  z-index: 10;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.2s;
+}
 
 @supports not (selector(::-webkit-scrollbar-thumb)) {
     .scroll {

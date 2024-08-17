@@ -28,4 +28,22 @@ document.addEventListener('DOMContentLoaded', () => {
 function toggleVisibility(id, condition) {
     var element = document.getElementById(id);
     element.style.display = condition ? 'block' : 'none';
-  }
+} 
+
+
+// Variable para llevar el control del estado de visibilidad
+let isButtonVisible = true;
+
+document.getElementById('miniPomodoro').addEventListener('click', toggleButtonVisibility);
+
+function toggleButtonVisibility() {
+    const button = document.getElementById('miniPomodoro');
+    const win_Pomodoro = document.getElementById('myModal06');
+
+    button.style.display = 'none'; // Ocultar el botón
+    win_Pomodoro.classList.remove('hidden');
+    win_Pomodoro.classList.toggle('visible');
+    
+    // Cambiar el estado de visibilidad
+    isButtonVisible = !isButtonVisible;
+}

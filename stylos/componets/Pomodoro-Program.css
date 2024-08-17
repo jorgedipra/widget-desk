@@ -3,6 +3,13 @@
     height: 390px !important;
     padding: 20px !important;
 }
+#minimizar_pomodoro{
+    position: absolute;
+    cursor: pointer;
+}
+#minimizar_pomodoro:hover{
+    color: #fff;
+}
 #Pomodoro-Program {
     background-color: #1f1f1f;
     padding: 20px;

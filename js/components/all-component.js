@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const modal000 = document.getElementById("myModal000");
   const Pomodoro = document.getElementById('Pomodoro');
   const win_Pomodoro = document.getElementById('myModal06');
-  const cerar_Pomodoro = document.getElementById('cerrarModal06').querySelector('p');;
+  const cerar_Pomodoro = document.getElementById('cerrarModal06').querySelector('p');
   const img_Pomodoro='./images/Component-lanzador/pomodoro.png';
 
   if (Pomodoro) {

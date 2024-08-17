@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const modal000 = document.getElementById("myModal000");
   const Pomodoro = document.getElementById('Pomodoro');
   const win_Pomodoro = document.getElementById('myModal06');
-  const cerar_Pomodoro = document.getElementById('cerrarModal06').querySelector('p');;
+  const cerar_Pomodoro = document.getElementById('cerrarModal06').querySelector('p');
   const img_Pomodoro='./images/Component-lanzador/pomodoro.png';
 
   if (Pomodoro) {
@@ -70,7 +70,26 @@ document.addEventListener('DOMContentLoaded', () => {
 function toggleVisibility(id, condition) {
     var element = document.getElementById(id);
     element.style.display = condition ? 'block' : 'none';
-  }
+} 
+
+
+// Variable para llevar el control del estado de visibilidad
+let isButtonVisible = true;
+
+document.getElementById('miniPomodoro').addEventListener('click', toggleButtonVisibility);
+
+function toggleButtonVisibility() {
+    const button = document.getElementById('miniPomodoro');
+    const win_Pomodoro = document.getElementById('myModal06');
+
+    button.style.display = 'none'; // Ocultar el botón
+    win_Pomodoro.classList.remove('hidden');
+    win_Pomodoro.classList.toggle('visible');
+    
+    // Cambiar el estado de visibilidad
+    isButtonVisible = !isButtonVisible;
+}
+
 /**
  * Lanzador-components
  */
@@ -242,6 +261,8 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('reset').addEventListener('click', resetTimer);
     document.getElementById('freeBreak').addEventListener('click', startFreeBreak);
     document.getElementById('updateTimes').addEventListener('click', updateTimes);
+    document.getElementById('minimizar_pomodoro').addEventListener('click', minimizar_pomodoro);
+
 
 });
 
@@ -348,6 +369,26 @@ function updateTimes() {
     workTime = parseInt(document.getElementById('workTime').value, 10);
     breakTime = parseInt(document.getElementById('breakTime').value, 10);
     resetTimer();
+}
+
+function minimizar_pomodoro() {
+    const min_Pomodoro = document.getElementById('minimizar_pomodoro');
+    const win_Pomodoro = document.getElementById('myModal06');
+    const miniPomodoro = document.getElementById('miniPomodoro');
+    const timerText = document.getElementById('timer_pomodoro').textContent;
+    if (min_Pomodoro) {
+        win_Pomodoro.classList.remove('hidden');
+        win_Pomodoro.classList.toggle('visible');
+        miniPomodoro.style.display = 'block';
+        // Llamar a la función de actualización cada 1 segundo
+        const intervalId = setInterval(updateButtonText, 1000); // 1000 milisegundos = 1 segundo
+    }
+
+    // Función para actualizar el texto del botón
+    function updateButtonText() {
+        const timerText = document.getElementById('timer_pomodoro').textContent;
+        miniPomodoro.textContent = "🍅 "+timerText;
+    }
 }
 document.addEventListener('DOMContentLoaded', function () {
     const prevMonthBtn = document.getElementById('prevMonth');
