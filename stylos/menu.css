@@ -346,6 +346,9 @@
   top: -42px;
   left: -8px;
 }
+.cerar p:hover{
+  color: #fff;
+}
 
 
 .gadget-config {

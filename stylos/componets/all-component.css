@@ -1,4 +1,9 @@
 .program-cell{
+    background-size: 110%;
+    background-position: -51px -47px;
+    background-repeat: no-repeat;
+    color: #fff;
+
     border: solid 1px rgb(40 42 54 / 80%);;
     padding: 50px;
     height: 120px;

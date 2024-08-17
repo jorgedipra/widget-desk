@@ -3,8 +3,7 @@
  */
 var modal00 = document.getElementById("myModal00");
 var modal000 = document.getElementById("myModal000");
-var cerarmodal00 = document.getElementById("cerrarModal00");
-var cerarmodal000 = document.getElementById("cerrarModal000");
+var cerarmodal00 = document.getElementById("cerrarModal00").querySelector('p');
 
 makeDraggable(modal00);
 // makeDraggable(modal000);
@@ -86,7 +85,7 @@ function makeDraggable(element) {
   };
 
   function elementDrag(e) {
-    e.preventDefault();
+    e.preventDefault(); 
     // Calcula el nuevo desplazamiento del elemento
     offsetX = mouseX - e.clientX;
     offsetY = mouseY - e.clientY;

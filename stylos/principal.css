@@ -8,6 +8,7 @@
 @import url('./componets/Programas-components.css');
 @import url('./componets/Clock-component.css');
 @import url('./componets/Lector-component.css');
+@import url('./componets/Pomodoro-Program.css');
 /* Principal.css */
 html,
 body{
@@ -68,6 +69,7 @@ iframe {
 }
 
 .draggable-free {
+    display: none;
     position: absolute;
     width: 300px;
     height: 200px;

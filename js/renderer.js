@@ -18,6 +18,7 @@ loadComponent('./components/Lanzador-component.html', 'component-Lanzador');
 loadComponent('./components/Folders-component.html', 'component-Folders');
 loadComponent('./components/Lector-component.html', 'component-Lector');
 loadComponent('./components/ChildComponent/General-Programas.html', 'Programas-General');
+loadComponent('./components/ProgramComponent/Pomodoro-Program.html', 'Programas-Pomodoro');
 
 /**
  * llamdo de programas 
