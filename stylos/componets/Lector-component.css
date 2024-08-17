@@ -23,5 +23,21 @@
     margin: 0 auto;
     display: block;
     text-align: center;
-    
+    border: solid #17D4FE 2px;
+    border-radius: 100%;
+    padding: 10px 30px;
+}
+#component-Lector #Off:hover{
+    box-shadow: 
+        0 0 5px rgba(255, 255, 255, 0.7), /* Sombra blanca clara */
+        0 0 10px rgba(255, 255, 255, 0.5), /* Sombra blanca menos intensa */
+        0 0 15px rgba(255, 255, 255, 0.3); /* Resplandor blanco más suave */
+}
+
+#component-Lector #Off #obj-off{
+    margin-left: -15px;
+}
+#component-Lector #ON{
+    position: relative;
+    left: 5px;
 }

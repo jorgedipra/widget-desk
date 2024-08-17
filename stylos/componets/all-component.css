@@ -1,0 +1,13 @@
+.program-cell{
+    border: solid 1px rgb(40 42 54 / 80%);;
+    padding: 50px;
+    height: 120px;
+    width: 200px;
+}
+.program-cell:hover{
+    background-color: rgb(40 42 54 / 80%);
+    cursor: pointer;
+}
+.program-cell:active{
+    background-color: rgb(40 42 54 / 99%);
+}

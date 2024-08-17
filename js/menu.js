@@ -2,10 +2,16 @@
  * MENU::CONFIG
  */
 var modal00 = document.getElementById("myModal00");
+var modal000 = document.getElementById("myModal000");
 var cerarmodal00 = document.getElementById("cerrarModal00");
+var cerarmodal000 = document.getElementById("cerrarModal000");
 
 makeDraggable(modal00);
+// makeDraggable(modal000);
 initializeModalPosition(modal00, "myModal00");
+initializeModalPosition(modal000, "myModal000");
+
+
 
 // Función para cerrar el modal
 function cerrarModal() {
@@ -42,6 +48,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Asignar el evento click al botón de cerrar
   cerarmodal00.addEventListener('click', cerrarModal);
+  
+  // Menu de programas
+  // modal000.classList.toggle('visible');
+  const Program = document.getElementById('program_menu');
+  if (Program) {
+    Program.addEventListener('click', () => {
+      if (modal000.classList.contains('visible')) {
+        modal000.classList.remove('visible');
+        modal000.classList.toggle('hidden');
+      } else {
+        modal000.classList.toggle('visible');
+        modal000.classList.remove('hidden');
+      }
+    });
+  }
+
 
   // Recuperar el estado de los radio buttons desde localStorage
   restoreRadioButtonsState();
@@ -125,7 +147,9 @@ const modalIds = [
   "myModal02",//component-Programas
   "myModal03",//component-Lanzador
   "myModal04",//component-Folders
-  "myModal05"//component-Lector
+  "myModal05",//component-Lector
+
+  "myModal06"//component-program
 ];
 
 // Función para inicializar modales

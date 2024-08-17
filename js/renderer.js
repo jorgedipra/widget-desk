@@ -11,6 +11,7 @@ function loadComponent(url, containerId) {
 }
 // Llamar a la función para cargar el componente
 loadComponent('./components/Menu-component.html', 'component-Menu');
+loadComponent('./components/all-component.html', 'component-all');
 loadComponent('./components/Clock-component.html', 'component-Clock');
 loadComponent('./components/Programas-component.html', 'component-Programas');
 loadComponent('./components/Lanzador-component.html', 'component-Lanzador');
