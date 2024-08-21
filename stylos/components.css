@@ -1,0 +1,481 @@
+.program-cell{
+    background-size: 110%;
+    background-position: -51px -47px;
+    background-repeat: no-repeat;
+    color: #fff;
+
+    border: solid 1px rgb(40 42 54 / 80%);;
+    padding: 50px;
+    height: 120px;
+    width: 200px;
+}
+.program-cell:hover{
+    background-color: rgb(40 42 54 / 80%);
+    cursor: pointer;
+}
+.program-cell:active{
+    background-color: rgb(40 42 54 / 99%);
+}
+
+#miniPomodoro,
+#openCalendar{
+    color: #17D4FE;
+    font-size: 15px;
+    font-family: Orbitron;
+    position: absolute;
+    top: 100px;
+    left: 0;
+}
+
+#miniPomodoro:hover,
+#openCalendar:hover{
+    text-shadow: 
+                0 0 5px rgba(255, 255, 255, 0.7), /* Sombra blanca clara */
+                0 0 10px rgba(255, 255, 255, 0.5), /* Sombra blanca menos intensa */
+                0 0 15px rgba(255, 255, 255, 0.3); /* Resplandor blanco más suave */
+}
+
+#miniPomodoro{
+    left: 250px;
+}
+
+.container {
+  position: relative;
+  transition: all 0.3s ease-out;
+  height: 200px;
+  width: 500px;
+  perspective: 700px;
+  z-index: 10;
+  overflow: hidden;
+}
+.container .honeycomb {
+  display: block;
+  position: absolute;
+  margin-top: -35px;
+  margin-left: -125px;
+  padding-left: 18px;
+  left: 50%;
+  text-align: center;
+  height: 450px;
+  width: 930px;
+  transform: rotateX(45deg) rotateY(0deg);
+  transform-style: preserve-3d;
+  transform-origin: center 65%;
+  z-index: 5;
+}
+.container .honeycomb .column {
+  display: block;
+  float: left;
+  width: 62px;
+  transform-style: preserve-3d;
+}
+.container .honeycomb .column:nth-child(odd) {
+  margin-top: 36px;
+}
+.container .honeycomb .hex {
+  display: block;
+  position: relative;
+  float: left;
+  margin: 0;
+  padding: auto;
+  height: 72px;
+  width: 62px;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+  transform-style: preserve-3d;
+  transition: all 0.3s ease-out;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 1;
+}
+.container .honeycomb .hex span img{
+    width: 40px;
+    z-index: 999;
+    position: absolute;
+    top: 12px;
+    left: 0px;
+    filter: invert(100%) brightness(100%);
+}
+.container .honeycomb .hex:hover {
+  opacity: 1;
+  transform: translateZ(20px);
+  transition-duration: 200ms;
+}
+.container .honeycomb .hex:hover .content {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+  transform: rotateX(-50deg) translateZ(-40px) translateY(-50px);
+  background-color: #333333ab;
+  padding: 5px 0 10px 0;
+  margin-top:-10px
+}
+.container .honeycomb .hex .wrapper {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.container .honeycomb .hex .wrapper .color-1 {
+  background: #69a2f5;
+}
+.container .honeycomb .hex .wrapper .color-1:before {
+  border-right-color: #69a2f5;
+}
+.container .honeycomb .hex .wrapper .color-1:after {
+  border-left-color: #69a2f5;
+}
+.container .honeycomb .hex .content {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -80px;
+  text-align: center;
+  width: 200px;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -moz-transition: all 0.3s ease-out 0.1s;
+  -o-transition: all 0.3s ease-out 0.1s;
+  -webkit-transition: all 0.3s ease-out;
+  -webkit-transition-delay: 0.1s;
+  transition: all 0.3s ease-out 0.1s;
+  transform: rotateX(-90deg) translateZ(-40px) translateY(-40px);
+  pointer-events: none;
+  -webkit-font-smoothing: antialiased;
+}
+.container .honeycomb .hex .content strong {
+  display: block;
+  font: 600 26px/1.1 "Orbitron", sans-serif;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-shadow: -1px -1px 2px rgba(0, 0, 0, 0.8);
+}
+.container .honeycomb .hex .content small {
+  display: block;
+  font: 15px/1.1 "Orbitron", sans-serif;
+}
+.hexagon {
+  display: block;
+  position: absolute;
+  width: 36px;
+  height: 62px;
+  background-color: #ffffff;
+     box-shadow: 
+                0 0 5px rgba(255, 255, 255, 0.1), /* Sombra blanca clara */
+                0 0 10px rgba(255, 255, 255, 0.1), /* Sombra blanca menos intensa */
+                0 0 15px rgba(255, 255, 255, 0.5); /* Resplandor blanco más suave */
+}
+.hexagon:before, .hexagon:after {
+  content: "";
+  position: relative;
+  float: left;
+  border-top: 34px solid transparent;
+  border-bottom: 31px solid transparent;
+}
+.hexagon:before {
+  border-right: 18px solid #ffffff;
+  left: -17px;
+}
+.hexagon:after {
+  border-left: 18px solid #ffffff;
+  right: -18px;
+}
+
+.hidden {
+  display: none;
+}
+
+.usermenu {
+    cursor: pointer;
+    position: absolute;
+    bottom: 5rem;
+    left: 5rem;
+    transition: background-color 0.3s ease-out;
+    padding: 2em;
+}
+
+.usermenu > div {
+    background-image: url("../images/Component-lanzador/lanzador.png");
+    background-size: 60px;
+    background-repeat: no-repeat;
+    background-position: center 2px;
+    background-color: #444444a1;
+    border-radius: 50px;
+    padding: 2em;
+    border: 5px solid #00000073;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.usermenu > div:hover,
+.usermenu > div:active {
+    background-color: #555;
+    transition: all 0.3s ease-out;
+    border-color: #66c6e7;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.7),
+        /* Sombra blanca clara */ 0 0 10px rgba(255, 255, 255, 0.5),
+        /* Sombra blanca menos intensa */ 0 0 15px rgba(255, 255, 255, 0.3);
+    /* Resplandor blanco más suave */
+}
+
+.usermenu a {
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    bottom: 34px;
+    left: 30px;
+    width: 40px;
+    height: 40px;
+    margin: -1em;
+    text-align: center;
+    z-index: 1;
+}
+
+/*circular menu*/
+.circle {
+    border-radius: 50%;
+    background-color: #222;
+    transition: background-color 0.3s ease-out;
+    background-size: 28px;
+    background-repeat: no-repeat;
+    background-position: center 5px;
+    border: 2px solid #444;
+}
+
+.circle:hover {
+    background-color: #333;
+    border: 2px solid #2196f3;
+    cursor: pointer;
+    transition: background-color 0.3s ease-out;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.7),
+        /* Sombra blanca clara */ 0 0 10px rgba(255, 255, 255, 0.5),
+        /* Sombra blanca menos intensa */ 0 0 15px rgba(255, 255, 255, 0.3);
+    /* Resplandor blanco más suave */
+}
+
+/* Animación de expansión con retraso */
+@keyframes expand {
+    0% {
+        transform: scale(1);
+        background-color: #555;
+    }
+    50% {
+        transform: scale(1.3); /* Agranda el círculo */
+        background-color: #666; /* Cambia el color */
+    }
+    100% {
+        transform: scale(1);
+        background-color: #555;
+    }
+}
+
+/* Estilo cuando el círculo está siendo presionado */
+.circle:active {
+    background-color: #555; /* Cambia el color al presionar */
+    animation: expand 1s ease forwards; /* Aplica la animación */
+    animation-delay: 0.5s; /* Retrasa la animación 0.5 segundos */
+    border: 5px solid #2196f3; /* Cambia el borde al presionar */
+    background-position: center 2px; /* Ajusta la posición del fondo */
+}
+
+
+#myModal05{
+    width: 80px;
+    height: 80px;
+}
+#component-Lector{
+    width: 50px;
+    margin: 0 auto;
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 8px;
+}
+#component-Lector #Off #obj-off,
+#component-Lector #ON #obj-on{
+    display: none;
+    cursor: pointer;
+}
+
+#component-Lector #Off{
+    font-size: 40px;
+    color:#17D4FE;
+    position: relative;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    border: solid #17D4FE 2px;
+    border-radius: 100%;
+    padding: 10px 30px;
+}
+#component-Lector #Off:hover{
+    box-shadow: 
+        0 0 5px rgba(255, 255, 255, 0.7), /* Sombra blanca clara */
+        0 0 10px rgba(255, 255, 255, 0.5), /* Sombra blanca menos intensa */
+        0 0 15px rgba(255, 255, 255, 0.3); /* Resplandor blanco más suave */
+}
+
+#component-Lector #Off #obj-off{
+    margin-left: -15px;
+}
+#component-Lector #ON{
+    position: relative;
+    left: 5px;
+}
+.win-pomodoro{
+    width: 620px !important;
+    height: 390px !important;
+    padding: 20px !important;
+}
+#minimizar_pomodoro{
+    position: absolute;
+    cursor: pointer;
+}
+#minimizar_pomodoro:hover{
+    color: #fff;
+}
+#Pomodoro-Program {
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    width: 580px;
+    cursor: auto;
+}
+
+#title_pomodoro {
+    font-size: 24px;
+    text-align: center;
+}
+
+#timer_pomodoro {
+    font-size: 35px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+#controls_pomodoro, #settings, #status {
+    margin: 10px 0;
+    text-align: center;
+}
+#settings_pomodoro > button,
+#controls_pomodoro > button {
+    background: #1f1f1f;
+    border: none;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#settings_pomodoro > button:hover,  
+#controls_pomodoro > button:hover {
+    background: #333;
+}
+#settings_pomodoro > input {
+    width: 50px;
+    padding: 5px;
+    margin: 0 5px;
+}
+
+#topMost {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Estilos básicos para el calendario */
+.calendar-box{
+    width: 340px;
+    height: 390px;
+}
+.calendar {
+    width: 300px;
+    height: 350px;
+    text-align: center;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #69a2f5; /* Color principal para el encabezado */
+    color: white;
+}
+
+#monthYear {
+    text-transform: uppercase; /* Convertir el texto a mayúsculas */
+    font-weight: bold;
+    margin: 0;
+}
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-bottom: 10px;
+}
+
+.calendar-day {
+    font-weight: bold;
+    border: 1px solid #ddd;
+    background-color: #f5f5f5;
+    font-size: 0.8em;
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    height: calc(78% - 30px); 
+    overflow: auto;
+}
+
+.calendar-day-box {
+    padding: 5px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    font-size: 0.8em;
+    height: 40px;
+    vertical-align: top;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calendar-day-box.current-day {
+    background-color: #69a2f5; /* Color principal */
+    color: white;
+    font-weight: bold;
+}
+.calendar-day-box.holiday {
+    background-color: hsl(171, 100%, 41%); /* Color distintivo para los festivos */
+    color: white;
+    font-weight: bold;
+}
+.calendar-day-box:nth-child(7n) {
+    color: hsl(0, 0%, 20%); /* Color especial para los domingos */
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .calendar-day-box {
+        height: 35px;
+        font-size: 0.7em;
+    }
+}
+
+@media (max-width: 480px) {
+    .calendar-day-box {
+        height: 30px;
+        font-size: 0.6em;
+    }
+}

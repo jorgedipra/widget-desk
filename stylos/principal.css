@@ -1,14 +1,8 @@
 @import url('../font/Orbitron/css.css');
 @import url('../node_modules/@fortawesome/fontawesome-free/css/all.min.css');
 
-/* importaciónes */
-@import url('./componets/all-component.css');
-@import url('./componets/Lanzador-component.css');
-@import url('./componets/Folders-component.css');
-@import url('./componets/Programas-components.css');
-@import url('./componets/Clock-component.css');
-@import url('./componets/Lector-component.css');
-@import url('./componets/Pomodoro-Program.css');
+/* importaciónes de componentes*/
+@import url('./components.css');
 /* Principal.css */
 html,
 body{
