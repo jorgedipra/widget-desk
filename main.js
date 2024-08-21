@@ -3,7 +3,7 @@ const { exec } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 const windowManager = require('electron-window-manager');
-const activeWindows = require('active-windows');
+const activeWindows = require('active-windows'); 
 
 // Configura electron-reload
 require('electron-reload')(__dirname, {
@@ -107,10 +107,10 @@ ipcMain.on('open-program', (event, programName) => {
             return;
         }
         const programs = JSON.parse(data);
-        const programPath = programs[programName];
-        if (programPath) {
-            // Asegúrate de que la ruta esté bien formateada
-            exec(`"${programPath}"`, (error, stdout, stderr) => {
+        const program = programs[programName];
+        if (program && program.path) {
+            // Ejecutar el programa
+            exec(`"${program.path}"`, (error, stdout, stderr) => {
                 if (error) {
                     console.error(`Error al ejecutar el programa: ${error.message}`);
                     return;
@@ -121,9 +121,12 @@ ipcMain.on('open-program', (event, programName) => {
                 }
                 console.log(`stdout: ${stdout}`);
             });
+
+            // Enviar la imagen asociada al frontend
+            event.sender.send('program-image', program.image);
+
         } else {
             console.error(`Programa no encontrado: ${programName}`);
         }
     });
-    
 });

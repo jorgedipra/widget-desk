@@ -1,29 +1,122 @@
 {
-    "chrome":   "D:\\www\\Python\\gadgets\\panelAplicaiones.py\\chrome.bat",
-    "opera":   "E:\\Users\\User\\AppData\\Local\\Programs\\Opera GX\\opera.exe",
-    "brave":   "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe",
-    "sublime":  "E:\\Program Files\\Sublime Text\\sublime_text.exe",
-    "VisualCode":  "E:\\Users\\User\\AppData\\Local\\Programs\\Microsoft VS Code\\code.exe",
-    "DBeaver": "E:\\Users\\User\\AppData\\Local\\DBeaver\\dbeaver.exe",
-    "Sourcetree":"C:\\Users\\User\\AppData\\Local\\SourceTree\\SourceTree.exe",
-    "pomodoro": "D:\\www\\Python\\gadgets\\pomodoro\\pomodoro.bat",
-    "lectorVoz_30":"D:\\www\\Electron\\app1\\gadget\\General\\lector_30.py",
-    "lectorVoz":"D:\\www\\Electron\\app1\\gadget\\General\\lector.py",
-    "Folder-www":"D:\\www\\Electron\\app1\\gadget\\Folders\\www.bat",
-    "Folder-document":"D:\\www\\Electron\\app1\\gadget\\Folders\\document.bat",
-    "Folder-descargas":"D:\\www\\Electron\\app1\\gadget\\Folders\\descargas.bat",
-    "Folder-imagenes":"D:\\www\\Electron\\app1\\gadget\\Folders\\imagenes.bat",
-    "Folder-musica":"D:\\www\\Electron\\app1\\gadget\\Folders\\musica.bat",
-    "Folder-video":"D:\\www\\Electron\\app1\\gadget\\Folders\\video.bat",
-    "Folder-trabajo":"D:\\www\\Electron\\trabajo.bat",
-    "Acceso-desk":"D:\\www\\Electron\\app1\\gadget\\Folders\\desk.bat",
-    "Gestor":"D:\\www\\Python\\gadgets\\gestor de ventanas\\gestor.pyw",
-    "OpenVPN":"C:\\Program Files\\OpenVPN Connect\\OpenVPNConnect.exe",
-    "WinSCP":"E:\\Users\\User\\AppData\\Local\\Programs\\WinSCP\\WinSCP.exe",
-    "UwAmp":"E:\\UwAmp\\UwAmp.exe",
-    
-    "re-power":  "D:\\www\\Electron\\app1\\gadget\\General\\re-power.bat",
-    "CerrarApp":  "D:\\www\\Electron\\app1\\gadget\\General\\CerrarApp.bat"
-    
-    
+    "ChromeDev": {
+        "name": "Chrome Dev",
+        "path": "D:\\www\\Python\\gadgets\\panelAplicaiones.py\\chrome.bat",
+        "image": "./images/Component-lanzador/google_chrome_dev.png"
+    },
+    "Opera": {
+        "name": "Opera GX",
+        "path": "E:\\Users\\User\\AppData\\Local\\Programs\\Opera GX\\opera.exe",
+        "image": "./images/Component-lanzador/opera.png"
+    },
+    "Brave": {
+        "name": "Brave Browser",
+        "path": "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe",
+        "image": "./images/Component-lanzador/brave.png"
+    },
+    "SublimeText": {
+        "name": "Sublime Text",
+        "path": "E:\\Program Files\\Sublime Text\\sublime_text.exe",
+        "image": "./images/Component-lanzador/sublime_text.png"
+    },
+    "VisualCode": {
+        "name": "Visual Studio Code",
+        "path": "E:\\Users\\User\\AppData\\Local\\Programs\\Microsoft VS Code\\code.exe",
+        "image": "./images/Component-lanzador/visual_code.png"
+    },
+    "DBeaver": {
+        "name": "DBeaver",
+        "path": "E:\\Users\\User\\AppData\\Local\\DBeaver\\dbeaver.exe",
+        "image": "./images/Component-lanzador/DBeaver.png"
+    },
+    "Sourcetree": {
+        "name": "SourceTree",
+        "path": "C:\\Users\\User\\AppData\\Local\\SourceTree\\SourceTree.exe",
+        "image": "./images/Component-lanzador/Sourcetree.png"
+    },
+    "Pomodoro": {
+        "name": "Pomodoro Timer",
+        "path": "D:\\www\\Python\\gadgets\\pomodoro\\pomodoro.bat",
+        "image": "./images/Component-lanzador/pomodoro.png"
+    },
+    "OpenVPN": {
+        "name": "OpenVPN",
+        "path": "C:\\Program Files\\OpenVPN Connect\\OpenVPNConnect.exe",
+        "image": "./images/Component-lanzador/OpenVPN.png"
+    },
+    "WinSCP": {
+        "name": "WinSCP",
+        "path": "E:\\Users\\User\\AppData\\Local\\Programs\\WinSCP\\WinSCP.exe",
+        "image": "./images/Component-lanzador/WinSCP.png"
+    },
+    "UwAmp": {
+        "name": "UwAmp",
+        "path": "E:\\UwAmp\\UwAmp.exe",
+        "image": "./images/Component-lanzador/UwAmp.png"
+    },
+    "lectorVoz_30": {
+        "name": "Lector Voz 30",
+        "path": "D:\\www\\Electron\\app1\\gadget\\General\\lector_30.py",
+        "image": "./images/Component-lanzador/LectorVoz_30.png"
+    },
+    "lectorVoz": {
+        "name": "Lector Voz",
+        "path": "D:\\www\\Electron\\app1\\gadget\\General\\lector.py",
+        "image": "./images/Component-lanzador/LectorVoz.png"
+    },
+    "Folder-www": {
+        "name": "Folder WWW",
+        "path": "D:\\www\\Electron\\app1\\gadget\\Folders\\www.bat",
+        "image": "./images/Component-lanzador/Folder-www.png"
+    },
+    "Folder-document": {
+        "name": "Folder Document",
+        "path": "D:\\www\\Electron\\app1\\gadget\\Folders\\document.bat",
+        "image": "./images/Component-lanzador/Folder-document.png"
+    },
+    "Folder-descargas": {
+        "name": "Folder Descargas",
+        "path": "D:\\www\\Electron\\app1\\gadget\\Folders\\descargas.bat",
+        "image": "./images/Component-lanzador/Folder-descargas.png"
+    },
+    "Folder-imagenes": {
+        "name": "Folder Imágenes",
+        "path": "D:\\www\\Electron\\app1\\gadget\\Folders\\imagenes.bat",
+        "image": "./images/Component-lanzador/Folder-imagenes.png"
+    },
+    "Folder-musica": {
+        "name": "Folder Música",
+        "path": "D:\\www\\Electron\\app1\\gadget\\Folders\\musica.bat",
+        "image": "./images/Component-lanzador/Folder-musica.png"
+    },
+    "Folder-video": {
+        "name": "Folder Video",
+        "path": "D:\\www\\Electron\\app1\\gadget\\Folders\\video.bat",
+        "image": "./images/Component-lanzador/Folder-video.png"
+    },
+    "Folder-trabajo": {
+        "name": "Folder Trabajo",
+        "path": "D:\\www\\Electron\\trabajo.bat",
+        "image": "./images/Component-lanzador/Folder-trabajo.png"
+    },
+    "Acceso-desk": {
+        "name": "Acceso Desk",
+        "path": "D:\\www\\Electron\\app1\\gadget\\Folders\\desk.bat",
+        "image": "./images/Component-lanzador/Acceso-desk.png"
+    },
+    "Gestor": {
+        "name": "Gestor de Ventanas",
+        "path": "D:\\www\\Python\\gadgets\\gestor de ventanas\\gestor.pyw",
+        "image": "./images/Component-lanzador/gestor.png"
+    },
+    "CerrarApp": {
+        "name": "Cerrar App",
+        "path": "D:\\www\\Electron\\app1\\gadget\\General\\CerrarApp.bat",
+        "image": "./images/Component-lanzador/CerrarApp.png"
+    },
+    "re-power": {
+        "name": "Re-Power",
+        "path": "D:\\www\\Electron\\app1\\gadget\\General\\re-power.bat",
+        "image": "./images/Component-lanzador/re-power.png"
+    }
 }

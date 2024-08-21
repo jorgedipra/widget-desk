@@ -27,14 +27,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Mapeo de IDs a programas
     const programMap = {
-        'openChrome': 'chrome',
-        'openOpera': 'opera',
-        'openBrave': 'brave',
-        'openSublime': 'sublime',
+        'openChrome': 'ChromeDev',
+        'openOpera': 'Opera',
+        'openBrave': 'Brave',
+        'openSublime': 'SublimeText',
         'openVisualCode': 'VisualCode',
         'openDBeaver': 'DBeaver',
         'openSourcetree': 'Sourcetree',
-        'openPomodoro': 'pomodoro',
+        'openPomodoro': 'Pomodoro',
         'openFolder-www': 'Folder-www',
         'openFolder-document': 'Folder-document',
         'openFolder-descargas': 'Folder-descargas',
