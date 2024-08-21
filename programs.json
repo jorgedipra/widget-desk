@@ -34,11 +34,6 @@
         "path": "C:\\Users\\User\\AppData\\Local\\SourceTree\\SourceTree.exe",
         "image": "./images/Component-lanzador/Sourcetree.png"
     },
-    "Pomodoro": {
-        "name": "Pomodoro Timer",
-        "path": "D:\\www\\Python\\gadgets\\pomodoro\\pomodoro.bat",
-        "image": "./images/Component-lanzador/pomodoro.png"
-    },
     "OpenVPN": {
         "name": "OpenVPN",
         "path": "C:\\Program Files\\OpenVPN Connect\\OpenVPNConnect.exe",
@@ -56,67 +51,72 @@
     },
     "lectorVoz_30": {
         "name": "Lector Voz 30",
-        "path": "D:\\www\\Electron\\app1\\gadget\\General\\lector_30.py",
-        "image": "./images/Component-lanzador/LectorVoz_30.png"
+        "path": "./gadget/General/lector_30.py",
+        "image": "./images/Component-lanzador/LectorVoz.png"
     },
     "lectorVoz": {
         "name": "Lector Voz",
-        "path": "D:\\www\\Electron\\app1\\gadget\\General\\lector.py",
+        "path": "./gadget/General/lector.py",
         "image": "./images/Component-lanzador/LectorVoz.png"
     },
     "Folder-www": {
         "name": "Folder WWW",
-        "path": "D:\\www\\Electron\\app1\\gadget\\Folders\\www.bat",
-        "image": "./images/Component-lanzador/Folder-www.png"
+        "path": "./gadget/Folders/www.bat",
+        "image": ""
     },
     "Folder-document": {
         "name": "Folder Document",
-        "path": "D:\\www\\Electron\\app1\\gadget\\Folders\\document.bat",
-        "image": "./images/Component-lanzador/Folder-document.png"
+        "path": "./gadget/Folders/document.bat",
+        "image": ""
     },
     "Folder-descargas": {
         "name": "Folder Descargas",
-        "path": "D:\\www\\Electron\\app1\\gadget\\Folders\\descargas.bat",
-        "image": "./images/Component-lanzador/Folder-descargas.png"
+        "path": "./gadget/Folders/descargas.bat",
+        "image": ""
     },
     "Folder-imagenes": {
         "name": "Folder Imágenes",
-        "path": "D:\\www\\Electron\\app1\\gadget\\Folders\\imagenes.bat",
-        "image": "./images/Component-lanzador/Folder-imagenes.png"
+        "path": "./gadget/Folders/imagenes.bat",
+        "image": ""
     },
     "Folder-musica": {
         "name": "Folder Música",
-        "path": "D:\\www\\Electron\\app1\\gadget\\Folders\\musica.bat",
-        "image": "./images/Component-lanzador/Folder-musica.png"
+        "path": "./gadget/Folders/musica.bat",
+        "image": ""
     },
     "Folder-video": {
         "name": "Folder Video",
-        "path": "D:\\www\\Electron\\app1\\gadget\\Folders\\video.bat",
-        "image": "./images/Component-lanzador/Folder-video.png"
+        "path": "./gadget/Folders/video.bat",
+        "image": ""
     },
     "Folder-trabajo": {
         "name": "Folder Trabajo",
         "path": "D:\\www\\Electron\\trabajo.bat",
-        "image": "./images/Component-lanzador/Folder-trabajo.png"
+        "image": ""
     },
     "Acceso-desk": {
         "name": "Acceso Desk",
-        "path": "D:\\www\\Electron\\app1\\gadget\\Folders\\desk.bat",
-        "image": "./images/Component-lanzador/Acceso-desk.png"
+        "path": "./gadget/Folders/desk.bat",
+        "image": ""
     },
     "Gestor": {
         "name": "Gestor de Ventanas",
         "path": "D:\\www\\Python\\gadgets\\gestor de ventanas\\gestor.pyw",
-        "image": "./images/Component-lanzador/gestor.png"
+        "image": ""
     },
     "CerrarApp": {
         "name": "Cerrar App",
-        "path": "D:\\www\\Electron\\app1\\gadget\\General\\CerrarApp.bat",
-        "image": "./images/Component-lanzador/CerrarApp.png"
+        "path": "./gadget/General/CerrarApp.bat",
+        "image": ""
     },
     "re-power": {
         "name": "Re-Power",
-        "path": "D:\\www\\Electron\\app1\\gadget\\General\\re-power.bat",
-        "image": "./images/Component-lanzador/re-power.png"
+        "path": "./gadget/General/re-power.bat",
+        "image": ""
+    },
+    "Add": {
+        "name": "nuevo programa",
+        "path": "",
+        "image": "./images/Component-lanzador/add.png"
     }
 }
