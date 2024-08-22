@@ -88,8 +88,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (closeBtn) {
         closeBtn.addEventListener('click', () => {
             setTimeout(() => {
-                window.close();
+                // window.close();//cierra solo la ventana
+                window.electron.closeApp();//cierra todo el programa
             }, 500); // Espera 500 milisegundos, que es igual a 0.5 segundos
         });
     }
+
 });

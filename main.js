@@ -139,3 +139,8 @@ ipcMain.on('open-program', (event, programName) => {
         }
     });
 });
+
+// cerrar app
+ipcMain.on('close-app', () => {
+    app.quit();
+});

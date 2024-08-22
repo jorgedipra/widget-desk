@@ -369,6 +369,41 @@
   transform: scale(0.95); /* Escala reducida cuando se oculta */
 }
 
+/* ventana configuración */
+
+.button_general {
+  border: solid 1px #fff;
+  padding: 3px;
+  border-radius: 3px;
+  margin: 0px;
+  width: 100%;
+  position: relative;
+  top: -3px !important;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+.button_general:hover{
+  background-color: #fff;
+  border: solid 2px #2196F3;
+  color:#2196F3;
+  box-shadow: 
+                0 0 2px rgba(255, 255, 255, 0.7), /* Sombra blanca clara */
+                0 0 5px rgba(255, 255, 255, 0.5), /* Sombra blanca menos intensa */
+                0 0 10px rgba(255, 255, 255, 0.3); /* Resplandor blanco más suave */
+
+}
+.button_general:active {
+  background-color: #2196F3; /* Fondo cambia a azul en el estado activo */
+  border: solid 2px #fff; /* El borde cambia a blanco */
+  color: #fff; /* El texto cambia a blanco */
+  box-shadow: 
+                0 0 5px rgba(33, 150, 243, 0.7), /* Sombra azul clara */
+                0 0 15px rgba(33, 150, 243, 0.5), /* Sombra azul menos intensa */
+                0 0 20px rgba(33, 150, 243, 0.3); /* Resplandor azul más suave */
+  transform: translateY(2px); /* Efecto de presionado con movimiento hacia abajo */
+}
+
+
 /* Opcional: Animación de entrada y salida personalizada */
 @keyframes slideIn {
   0% {
