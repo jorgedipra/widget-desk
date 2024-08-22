@@ -21,9 +21,11 @@ const createWindow = () => {
         y: primaryDisplay.bounds.y,
         width: 1226,
         height: 1080,
-        transparent: true,
-        frame: false,
-        fullscreen: true,
+        transparent: true,  // Fondo transparente 
+        frame: false,       // indica que no se muestra la barra de título ni los bordes de la ventana
+        fullscreen: true,   // pantalla completa
+        alwaysOnTop: false, // Asegura que no esté siempre al frente
+        focusable: false,   // Hace que la ventana no sea enfocada al hacer clic
         webPreferences: {
             preload: path.join(__dirname, '/js/preload.js'), // Ruta al archivo preload.js
             contextIsolation: true,
@@ -59,6 +61,13 @@ const createWindow = () => {
     win.on('focus', () => {
         win.blur();
     });
+
+    win.on('show', () => {
+        setTimeout(() => {
+            win.setAlwaysOnTop(false, 'screen-saver');
+        }, 100);
+    });
+    
 }
 
 app.whenReady().then(() => {
