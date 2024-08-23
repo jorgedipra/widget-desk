@@ -32,7 +32,9 @@
 .program-cell:active{
     background-color: rgb(40 42 54 / 99%);
 }
-
+/* --[Componente]-- */
+/*  clock-Programas */
+/* ---------------- */
 #miniPomodoro,
 #openCalendar{
     color: #17D4FE;
@@ -54,7 +56,21 @@
 #miniPomodoro{
     left: 250px;
 }
-
+/* --[Componente]-- */
+/*  day-Programas  */
+/* ---------------- */
+#component-day{
+    font-family: 'Incompleeta';
+    font-size: 100px;
+    font-weight: bold;
+    padding: 0px;
+    padding-left: 13px;
+    margin-top: -37px;
+    text-shadow: 
+                0 0 5px rgba(255, 255, 255, 0.7), /* Sombra blanca clara */
+                0 0 10px rgba(255, 255, 255, 0.5), /* Sombra blanca menos intensa */
+                0 0 15px rgba(255, 255, 255, 0.3); /* Resplandor blanco más suave */
+}
 .container {
   position: relative;
   transition: all 0.3s ease-out;
