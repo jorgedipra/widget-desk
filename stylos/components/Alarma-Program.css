@@ -1,0 +1,15 @@
+.win-alarma {
+    width: 500px !important;
+    height: 600px !important;
+    padding: 20px !important;
+}
+#Alarma-Programas {
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    cursor: auto;
+    height: 550px;
+    overflow: auto;
+}

@@ -3,7 +3,7 @@ const { exec } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 const windowManager = require('electron-window-manager');
-const activeWindows = require('active-windows'); 
+const activeWindows = require('active-windows');
 
 // Configura electron-reload
 require('electron-reload')(__dirname, {
@@ -25,7 +25,7 @@ const createWindow = () => {
         frame: false,       // indica que no se muestra la barra de título ni los bordes de la ventana
         fullscreen: true,   // pantalla completa
         alwaysOnTop: false, // Asegura que no esté siempre al frente
-        focusable: false,   // Hace que la ventana no sea enfocada al hacer clic
+        focusable: true,   // Hace que la ventana no sea enfocada al hacer clic
         webPreferences: {
             preload: path.join(__dirname, '/js/preload.js'), // Ruta al archivo preload.js
             contextIsolation: true,
@@ -56,18 +56,18 @@ const createWindow = () => {
         }, 100); // Ajusta el retraso según sea necesario
     });
 
-    // Evento adicional para asegurarse de que la ventana siempre se mantenga atrás
-    // Asegúrate de que la ventana siempre se mantenga atrás
-    win.on('focus', () => {
-        win.blur();
-    });
-
     win.on('show', () => {
         setTimeout(() => {
             win.setAlwaysOnTop(false, 'screen-saver');
         }, 100);
     });
-    
+
+    // Evento adicional para asegurarse de que la ventana siempre se mantenga atrás
+    // Asegúrate de que la ventana siempre se mantenga atrás
+    ipcMain.on('backgroundWin', () => {
+        win.blur();
+    });
+    // 
 }
 
 app.whenReady().then(() => {
@@ -144,3 +144,4 @@ ipcMain.on('open-program', (event, programName) => {
 ipcMain.on('close-app', () => {
     app.quit();
 });
+

@@ -19,6 +19,7 @@ loadComponent('./components/Folders-component.html', 'component-Folders');
 loadComponent('./components/Lector-component.html', 'component-Lector');
 loadComponent('./components/ChildComponent/General-Programas.html', 'Programas-General');
 loadComponent('./components/ProgramComponent/Pomodoro-Program.html', 'Programas-Pomodoro');
+loadComponent('./components/ProgramComponent/Alarma-Program.html', 'Programas-Alarma');
 
 /**
  * llamdo de programas 
@@ -77,13 +78,15 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Configuración de eventos de clic
-    setupEventListeners();  
+    setupEventListeners();
 
 });
 
 
-// cerrar app
 document.addEventListener('DOMContentLoaded', () => {
+    /**
+     * Cerrar APP
+     *  */
     const closeBtn = document.getElementById('CerrarApp');
     if (closeBtn) {
         closeBtn.addEventListener('click', () => {
@@ -94,4 +97,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    /**
+     * pasar al fondo la aplicación
+     */
+    const htmlElement = document.getElementById("backgroundWin");
+    htmlElement.addEventListener('click', () => {
+        window.electron.WinBackground();
+    });
+    htmlElement.addEventListener('mousedown', () => {
+        window.electron.WinBackground();
+    });
+
 });
+
+

@@ -148,7 +148,8 @@ const modalIds = [
   "myModal04",//component-Folders
   "myModal05",//component-Lector
 
-  "myModal06"//component-program
+  "myModal06",//component-program(pomodoro)
+  "myModal07"//component-program(Alarma)
 ];
 
 // Función para inicializar modales
