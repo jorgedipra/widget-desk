@@ -329,7 +329,7 @@
   height: 0;
   border-left: 40px solid transparent;
   border-right: 40px solid transparent;
-  border-top: 40px solid #2196F3;
+  border-top: 40px solid var(--color-primario);
   position: absolute;
   transform: translateX(100%);
   position: absolute;
@@ -384,8 +384,8 @@
 }
 .button_general:hover{
   background-color: #fff;
-  border: solid 2px #2196F3;
-  color:#2196F3;
+  border: solid 2px var(--color-primario);
+  color:var(--color-primario);
   box-shadow: 
                 0 0 2px rgba(255, 255, 255, 0.7), /* Sombra blanca clara */
                 0 0 5px rgba(255, 255, 255, 0.5), /* Sombra blanca menos intensa */
@@ -393,7 +393,7 @@
 
 }
 .button_general:active {
-  background-color: #2196F3; /* Fondo cambia a azul en el estado activo */
+  background-color: var(--color-primario); /* Fondo cambia a azul en el estado activo */
   border: solid 2px #fff; /* El borde cambia a blanco */
   color: #fff; /* El texto cambia a blanco */
   box-shadow: 

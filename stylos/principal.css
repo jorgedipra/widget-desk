@@ -4,6 +4,13 @@
 
 /* importaciónes de componentes*/
 @import url('./components.css');
+
+/* Definiciones de variables */
+:root {
+  --color-primario: #2196F3;
+  --color-solid: #fff;
+}
+
 /* Principal.css */
 html,
 body{
@@ -36,7 +43,7 @@ iframe {
 }
 .header-transparente,
 .header {
-    background-color: #2196F3;
+    background-color: var(--color-primario);
     color: #fff;
     padding: 10px;
     cursor: move;

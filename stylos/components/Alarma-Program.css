@@ -1,3 +1,7 @@
+/* --[Componente]-- */
+/* Alarma-Programas */
+/* ---------------- */
+
 .win-alarma {
     width: 500px !important;
     height: 600px !important;
@@ -12,4 +16,130 @@
     cursor: auto;
     height: 550px;
     overflow: auto;
+    transition: scroll-top 0.5s ease-in-out;
 }
+
+#alarmas_zone{
+    border: solid #ddd 1px;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+#alarmTime{
+    background-color: #1f1f1f;
+    color: var(--color-primario);
+    border: solid #ddd 1px;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 11px;
+    position: absolute;
+    right: 10%;
+    top: 15px;
+}
+.etiquetaTime {
+    background-color: var(--color-primario);
+    display: block;
+    width: 100%;
+    margin: 0px;
+    padding: 3px 10px;
+}
+
+.session-time{
+    display: block;
+    margin-left: 10px;
+    width: 45%;
+}
+.session-time .timeHMT{
+    color: var(--color-primario);
+    font-size: 15px;
+    display: block;
+    margin-top: 5px;
+    width: 100%;
+}
+.session-time .timeExt{
+    font-size: 11px;
+}
+
+
+.session-button {
+    position: relative;
+    width: 220px;
+    text-align: center;
+    left: 45%;
+    top: -26px;
+}
+
+.button.is-warning {
+    background-color: transparent;
+    border: solid 1px #ffdd57;
+    color: #fff;
+}
+.button.is-warning:hover{
+    background-color: #917919;
+    border-color: transparent;
+}
+.button.delete-button {
+    background-color: transparent;
+    border: solid 1px #f14668;
+    color: #fff;
+    font-size: 11px;
+}
+.button.delete-button:hover{
+    background-color: #74192b;
+    border-color: transparent;
+}
+.button.edit-button {
+    background-color: transparent;
+    border: solid 1px #209cee;
+    color: #fff;
+    font-size: 11px;
+}
+.button.edit-button:hover{
+    background-color: #124d74;
+    border-color: transparent;
+}
+.button.status-button{
+    font-size: 11px;
+}
+.button.addAlarmButton {
+    background-color: transparent;
+    border: solid 1px #00d1b2;
+    color: #fff;
+    border-radius: 100%;
+    font-size: 15px;
+    text-align: center;
+    display: block;
+    margin: 20px auto;
+    width: 55px;
+    height: 55px;
+}
+.button.addAlarmButton:hover{
+    background-color: #146357;
+    border-color: transparent;
+}
+
+#AddAlarm{
+    background-color: #146357;
+    border-color: transparent;
+    border-bottom: solid 15px #1f1f1f;
+    border-radius: 5px;
+    position: absolute;
+    left: 0;
+    margin-top: -30px;
+    display: none;
+    width: 100%;
+    height: 300px;
+}
+.addAlarmButton {
+    transition: width 0.5s ease-in-out, border 0.5s ease-in-out;
+  }
+  
+  .addAlarmButton > span {
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .addAlarmButton > section {
+    transition: opacity 0.5s ease-in-out;
+  }

@@ -1,15 +1,22 @@
 /* --[Componente]-- */
 /*  day-Programas  */
 /* ---------------- */
-#component-day{
+#component-day {
     font-family: 'Incompleeta';
     font-size: 100px;
     font-weight: bold;
-    padding: 0px;
+    color: var(--color-solid);
+    letter-spacing:45px;
+    padding: 0;
     padding-left: 13px;
     margin-top: -37px;
-    text-shadow: 
-                0 0 5px rgba(255, 255, 255, 0.7), /* Sombra blanca clara */
-                0 0 10px rgba(255, 255, 255, 0.5), /* Sombra blanca menos intensa */
-                0 0 15px rgba(255, 255, 255, 0.3); /* Resplandor blanco más suave */
+    text-shadow:
+        -2px -2px 0 var(--color-solid),
+        -2px 0 0 var(--color-solid),
+        -2px 2px 0 var(--color-solid),
+        0 -2px 0 var(--color-solid),
+        0 2px 0 var(--color-solid),
+        2px -2px 0 var(--color-solid),
+        2px 0 0 var(--color-solid),
+        2px 2px 0 var(--color-solid);
 }

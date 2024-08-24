@@ -59,7 +59,7 @@
 
 .circle:hover {
     background-color: #333;
-    border: 2px solid #2196f3;
+    border: 2px solid var(--color-primario);
     cursor: pointer;
     transition: background-color 0.3s ease-out;
     box-shadow: 0 0 5px rgba(255, 255, 255, 0.7),
@@ -89,7 +89,7 @@
     background-color: #555; /* Cambia el color al presionar */
     animation: expand 1s ease forwards; /* Aplica la animación */
     animation-delay: 0.5s; /* Retrasa la animación 0.5 segundos */
-    border: 5px solid #2196f3; /* Cambia el borde al presionar */
+    border: 5px solid var(--color-primario); /* Cambia el borde al presionar */
     background-position: center 2px; /* Ajusta la posición del fondo */
 }
 

@@ -59,18 +59,26 @@
 /* --[Componente]-- */
 /*  day-Programas  */
 /* ---------------- */
-#component-day{
+#component-day {
     font-family: 'Incompleeta';
     font-size: 100px;
     font-weight: bold;
-    padding: 0px;
+    color: var(--color-solid);
+    letter-spacing:45px;
+    padding: 0;
     padding-left: 13px;
     margin-top: -37px;
-    text-shadow: 
-                0 0 5px rgba(255, 255, 255, 0.7), /* Sombra blanca clara */
-                0 0 10px rgba(255, 255, 255, 0.5), /* Sombra blanca menos intensa */
-                0 0 15px rgba(255, 255, 255, 0.3); /* Resplandor blanco más suave */
+    text-shadow:
+        -2px -2px 0 var(--color-solid),
+        -2px 0 0 var(--color-solid),
+        -2px 2px 0 var(--color-solid),
+        0 -2px 0 var(--color-solid),
+        0 2px 0 var(--color-solid),
+        2px -2px 0 var(--color-solid),
+        2px 0 0 var(--color-solid),
+        2px 2px 0 var(--color-solid);
 }
+
 .container {
   position: relative;
   transition: all 0.3s ease-out;
@@ -280,7 +288,7 @@
 
 .circle:hover {
     background-color: #333;
-    border: 2px solid #2196f3;
+    border: 2px solid var(--color-primario);
     cursor: pointer;
     transition: background-color 0.3s ease-out;
     box-shadow: 0 0 5px rgba(255, 255, 255, 0.7),
@@ -310,7 +318,7 @@
     background-color: #555; /* Cambia el color al presionar */
     animation: expand 1s ease forwards; /* Aplica la animación */
     animation-delay: 0.5s; /* Retrasa la animación 0.5 segundos */
-    border: 5px solid #2196f3; /* Cambia el borde al presionar */
+    border: 5px solid var(--color-primario); /* Cambia el borde al presionar */
     background-position: center 2px; /* Ajusta la posición del fondo */
 }
 
