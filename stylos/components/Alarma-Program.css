@@ -7,6 +7,7 @@
     height: 600px !important;
     padding: 20px !important;
 }
+
 #Alarma-Programas {
     background-color: #1f1f1f;
     padding: 20px;
@@ -19,7 +20,7 @@
     transition: scroll-top 0.5s ease-in-out;
 }
 
-#alarmas_zone{
+#alarmas_zone {
     border: solid #ddd 1px;
     border-radius: 5px;
     padding: 10px;
@@ -27,7 +28,7 @@
     width: 100%;
 }
 
-#alarmTime{
+#alarmTime {
     background-color: #1f1f1f;
     color: var(--color-primario);
     border: solid #ddd 1px;
@@ -38,31 +39,12 @@
     right: 10%;
     top: 15px;
 }
-.etiquetaTime {
-    background-color: var(--color-primario);
-    display: block;
-    width: 100%;
-    margin: 0px;
-    padding: 3px 10px;
+
+.color_fondo {
+    color: #1f1f1f;
 }
 
-.session-time{
-    display: block;
-    margin-left: 10px;
-    width: 45%;
-}
-.session-time .timeHMT{
-    color: var(--color-primario);
-    font-size: 15px;
-    display: block;
-    margin-top: 5px;
-    width: 100%;
-}
-.session-time .timeExt{
-    font-size: 11px;
-}
-
-
+/* Botones de sesión */
 .session-button {
     position: relative;
     width: 220px;
@@ -76,33 +58,40 @@
     border: solid 1px #ffdd57;
     color: #fff;
 }
-.button.is-warning:hover{
+
+.button.is-warning:hover {
     background-color: #917919;
     border-color: transparent;
 }
+
 .button.delete-button {
     background-color: transparent;
     border: solid 1px #f14668;
     color: #fff;
     font-size: 11px;
 }
-.button.delete-button:hover{
+
+.button.delete-button:hover {
     background-color: #74192b;
     border-color: transparent;
 }
+
 .button.edit-button {
     background-color: transparent;
     border: solid 1px #209cee;
     color: #fff;
     font-size: 11px;
 }
-.button.edit-button:hover{
+
+.button.edit-button:hover {
     background-color: #124d74;
     border-color: transparent;
 }
-.button.status-button{
+
+.button.status-button {
     font-size: 11px;
 }
+
 .button.addAlarmButton {
     background-color: transparent;
     border: solid 1px #00d1b2;
@@ -115,31 +104,213 @@
     width: 55px;
     height: 55px;
 }
-.button.addAlarmButton:hover{
+
+.button.addAlarmButton:hover {
     background-color: #146357;
     border-color: transparent;
 }
 
-#AddAlarm{
+/* Alarma Agregar */
+#AddAlarm {
     background-color: #146357;
     border-color: transparent;
-    border-bottom: solid 15px #1f1f1f;
     border-radius: 5px;
     position: absolute;
     left: 0;
-    margin-top: -30px;
+    margin-top: -40px;
     display: none;
+    opacity: 0;
     width: 100%;
-    height: 300px;
+    height: 375px;
+    cursor: auto;
 }
-.addAlarmButton {
-    transition: width 0.5s ease-in-out, border 0.5s ease-in-out;
-  }
-  
-  .addAlarmButton > span {
+
+#AddAlarm::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 1px;
+    background-color: #1f1f1f;
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#AddAlarm.visible {
+    display: block;
+    opacity: 1;
     transition: opacity 0.5s ease-in-out;
-  }
-  
-  .addAlarmButton > section {
+}
+
+/* Contenedor de Alarmas */
+.add-alarm-container {
+    background-color: #146357;
+    border-radius: 5px;
+    position: absolute;
+    left: 0;
+    margin-top: -40px;
+    display: none;
+    opacity: 0;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    box-sizing: border-box;
     transition: opacity 0.5s ease-in-out;
-  }
+}
+
+.add-alarm-container.visible {
+    display: block;
+    opacity: 1;
+}
+
+.add-alarm-content {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-rows: auto;
+    align-items: center;
+}
+
+.form-title {
+    grid-column: span 2; /* Hace que el título ocupe dos columnas en la cuadrícula */
+    font-size: 24px; /* Tamaño de la fuente */
+    color: #fff; /* Color del texto */
+    margin: 0; /* Elimina el margen predeterminado */
+    text-align: center; /* Centra el texto horizontalmente */
+    padding-bottom: 10px; /* Espaciado debajo del título */
+}
+
+.add-alarm-content label {
+    font-size: 14px;
+    color: #fff;
+    margin: 0;
+}
+
+.add-alarm-content input[type="time"],
+.add-alarm-content select,
+.add-alarm-content input[type="text"],
+.add-alarm-content input[type="checkbox"] {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #1f1f1f;
+    color: #fff;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.add-alarm-content .button-group {
+    grid-column: span 2;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.add-alarm-content .button-group input[type="button"] {
+    width: auto;
+    flex: 1;
+}
+
+/* Etiquetas de Tiempo */
+.etiquetaTime {
+    background-color: var(--color-primario);
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 3px 10px;
+}
+
+.session-time {
+    display: block;
+    margin-left: 10px;
+    width: 45%;
+}
+
+.session-time .timeHMT {
+    color: var(--color-primario);
+    font-size: 15px;
+    display: block;
+    margin-top: 5px;
+    width: 100%;
+}
+
+.session-time .timeExt {
+    font-size: 11px;
+}
+/* Estilo general para el input de tipo time */
+.add-alarm-content input[type="time"] {
+    width: 100%; /* Asegura que el campo ocupe todo el ancho disponible */
+    padding: 8px; /* Añade relleno interno */
+    border-radius: 5px; /* Bordes redondeados */
+    border: 1px solid #ddd; /* Borde gris claro */
+    background-color: #1f1f1f; /* Fondo oscuro */
+    color: #fff; /* Color del texto */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el input */
+}
+
+/* Para cambiar el tamaño del ícono en Chrome */
+.add-alarm-content input[type="time"]::-webkit-calendar-picker-indicator {
+    color: #00d1b2; /* Cambia el color del ícono */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el ícono */
+    transform: scale(1.5); /* Aumenta el tamaño del ícono */
+    /* Cambia el tamaño del ícono en la mayoría de los navegadores modernos */
+}
+
+
+/* Para ocultar el ícono en navegadores que no soportan cambios */
+.add-alarm-content input[type="time"]::-webkit-calendar-picker-indicator {
+    opacity: 0; /* Oculta el ícono predeterminado */
+}
+
+.add-alarm-content input[type="time"]::before {
+    content: "\1F552"; /* Código Unicode para un reloj de ejemplo (ajusta según tu preferencia) */
+    font-size: 22px; /* Tamaño del ícono */
+    color: #00d1b2; /* Color del ícono */
+    position: absolute; /* Posiciona el ícono */
+    right: 20px; /* Ajusta la posición */
+    top: 24%; /* Ajusta verticalmente */
+    transform: translateY(-50%); /* Centra verticalmente */
+}
+
+
+/* Botón Añadir Alarma - Expansión */
+.addAlarmButton>span {
+    transition: opacity 0.5s ease-in-out;
+}
+
+.addAlarmButton>section {
+    transition: opacity 0.5s ease-in-out;
+}
+
+.button.addAlarmButton.expanded {
+    width: 100%;
+    border: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.add-alarm-content {
+    display: grid;
+    gap: 10px; /* Espaciado entre los elementos */
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Columnas responsivas */
+    grid-template-rows: auto;
+    align-items: center; /* Alinea los elementos en el centro verticalmente */
+    text-align: center; /* Centra el texto y los elementos en el contenedor */
+}
+
+.add-alarm-content .align-center {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente el contenedor */
+    align-items: center; /* Centra verticalmente el label y el checkbox */
+    gap: 10px; /* Espaciado entre el label y el checkbox */
+    margin-left: 165px;
+    z-index: 1;
+}
+
+.add-alarm-content .align-center label {
+    margin: 0; /* Elimina el margen predeterminado del label */
+    font-size: 14px;
+    color: #fff;
+}
+

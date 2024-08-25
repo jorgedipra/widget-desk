@@ -149,7 +149,8 @@ const modalIds = [
   "myModal05",//component-Lector
 
   "myModal06",//component-program(pomodoro)
-  "myModal07"//component-program(Alarma)
+  "myModal07",//component-program(Alarma)
+  "myModal08"//component-Dia
 ];
 
 // Función para inicializar modales
@@ -178,7 +179,9 @@ const radios = [
   're-Folders',
   'rf-Folders',
   're-Lector',
-  'rf-Lector'
+  'rf-Lector',
+  're-Day',
+  'rf-Day'
 ];
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -195,6 +198,7 @@ document.addEventListener('DOMContentLoaded', function() {
       toggleVisibility('myModal03', document.getElementById('rf-Lanzador').checked);
       toggleVisibility('myModal04', document.getElementById('rf-Folders').checked);
       toggleVisibility('myModal05', document.getElementById('rf-Lector').checked);
+      toggleVisibility('myModal08', document.getElementById('rf-Day').checked);
   }
 
   radios.forEach(function(id) {

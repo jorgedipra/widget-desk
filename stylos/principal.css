@@ -24,6 +24,24 @@ iframe {
     width: 100%; /* Ajusta el iframe al ancho del contenedor */
     height: 100%; /* Ajusta la altura del iframe al 100% del contenedor */
 }
+.hidden {
+  display: none;
+}
+
+.expanded {
+  width: 100%;
+  border: none;
+}
+
+.visible {
+  display: block;
+  opacity: 1;
+}
+
+.hidden {
+  display: none;
+}
+
 #backgroundWin{
   background-color: transparent;
   position: absolute;
