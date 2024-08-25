@@ -11,12 +11,13 @@ Finalmente, se pondrá énfasis en una documentación detallada para facilitar s
 
 ![image](https://github.com/user-attachments/assets/0eb012a1-26af-40f9-89bf-07d5480816f2)
 
-
 ![image](https://github.com/user-attachments/assets/dd97a3ba-fffa-4dc4-be25-04ff66faadf3)
 
 ![image](https://github.com/user-attachments/assets/da536528-5353-4363-ae40-64783b2c5e46)
 
 ![image](https://github.com/user-attachments/assets/ddeddb9b-c432-4d0f-8f7e-36cf1b4b0de4)
+
+![image](https://github.com/user-attachments/assets/2d855bfc-680f-4c6e-a29a-93e6337e8735)
 
 
 
