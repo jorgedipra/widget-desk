@@ -2,7 +2,9 @@
     margin: 0;
     padding: 0; 
   }
-  
+  div#myModal00 {
+    z-index: 3;
+  }
   /* Icon 1 */
   
   #nav-icon1, #nav-icon2, #nav-icon3, #nav-icon4 {
@@ -321,6 +323,9 @@
   position: absolute;
   top: -45px;
   left: -1px;
+  width: 209px;
+  height: 40px;
+  padding: 10px 6px;
 }
 
 .cerar {

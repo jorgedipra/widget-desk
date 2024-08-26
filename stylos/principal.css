@@ -63,8 +63,10 @@ iframe {
 .header {
     background-color: var(--color-primario);
     color: #fff;
-    padding: 10px;
+    padding: 0;
     cursor: move;
+    width: 0;
+    height: 0;
 }
 .header-all{
   cursor: auto;
@@ -81,8 +83,8 @@ iframe {
     height: 5px;
     padding: 5px;
     position: absolute;
-    top: 35px;
-    left: 2px;
+    top: 5px;
+    left: -7px;
     box-shadow: 
                 0 0 5px rgba(255, 255, 255, 0.7), /* Sombra blanca clara */
                 0 0 10px rgba(255, 255, 255, 0.5), /* Sombra blanca menos intensa */
@@ -99,9 +101,11 @@ iframe {
     width: 300px;
     height: 200px;
     background-color: #f1f1f100;
-    border: 1px solid #dddddd02;
-    padding: 10px;
-    cursor: move; /* Cambia el cursor cuando se pasa sobre el elemento */
+    border: none;
+    padding: 0;
+    cursor: move;/* Cambia el cursor cuando se pasa sobre el elemento */
+    width: 0;
+    height: 0; 
 }
 .contenedor-draggable{
     border: solid 1px #ddd;

@@ -1,6 +1,7 @@
 /* --[Componente]-- */
 /*  day-Programas  */
-/* ---------------- */
+/*  div#myModal08 */
+/* ------------- */
 #component-day {
     font-family: 'Incompleeta';
     font-size: 100px;
@@ -8,8 +9,11 @@
     color: var(--color-solid);
     letter-spacing:45px;
     padding: 0;
-    padding-left: 13px;
-    margin-top: -37px;
+    position: relative;
+    width: 0;
+    left: 0;
+    margin-top: -36px;
+    margin-left: 9px;
     text-shadow:
         -2px -2px 0 var(--color-solid),
         -2px 0 0 var(--color-solid),

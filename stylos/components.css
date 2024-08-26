@@ -362,7 +362,8 @@
 }
 /* --[Componente]-- */
 /*  day-Programas  */
-/* ---------------- */
+/*  div#myModal08 */
+/* ------------- */
 #component-day {
     font-family: 'Incompleeta';
     font-size: 100px;
@@ -370,8 +371,11 @@
     color: var(--color-solid);
     letter-spacing:45px;
     padding: 0;
-    padding-left: 13px;
-    margin-top: -37px;
+    position: relative;
+    width: 0;
+    left: 0;
+    margin-top: -36px;
+    margin-left: 9px;
     text-shadow:
         -2px -2px 0 var(--color-solid),
         -2px 0 0 var(--color-solid),
@@ -383,11 +387,11 @@
         2px 2px 0 var(--color-solid);
 }
 
-.container {
+#Folders-component .container {
   position: relative;
   transition: all 0.3s ease-out;
-  height: 200px;
-  width: 500px;
+  height: 152px;
+  width: 372px;
   perspective: 700px;
   z-index: 10;
   overflow: hidden;
@@ -395,8 +399,8 @@
 .container .honeycomb {
   display: block;
   position: absolute;
-  margin-top: -35px;
-  margin-left: -125px;
+  margin-top: -30px;
+  margin-left: -175px;
   padding-left: 18px;
   left: 50%;
   text-align: center;
@@ -627,10 +631,10 @@
 }
 
 
-#myModal05{
-    width: 80px;
-    height: 80px;
-}
+/* --[Componente]-- */
+/* Lector-component */
+/*   #myModal05     */
+/* ---------------- */  
 #component-Lector{
     width: 50px;
     margin: 0 auto;
