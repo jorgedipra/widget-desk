@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Captura de datos del formulario
             const timeInput = document.querySelector('#alarmInputTime').value;
             const sound = document.querySelector('select[name="soundSelect"]').value;
-            const repeat = document.querySelector('select[name="repeatSelect"]').value;
+            let repeat = document.querySelector('select[name="repeatSelect"]').value;
             const autoDelete = document.querySelector('#autoDelete').checked;
             const label = document.querySelector('#alarmLabel').value || 'Nueva Alarma';
 
@@ -94,7 +94,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     const alarmItem = document.querySelector(`li[data-id="${editingAlarmId}"]`);
                     alarmItem.querySelector('.etiquetaTime').textContent = label;
                     alarmItem.querySelector('.timeHMT').textContent = convertTo12HourFormat(timeInput);
-                    alarmItem.querySelector('.timeExt').textContent = repeat;
+                    const repeatMap = {
+                        'once': 'Una sola vez',
+                        'daily': 'Diariamente',
+                        'weekdays': 'Lunes a viernes'
+                    };
+                    const repeatText = repeatMap[repeat] || repeat;
+                    // Actualizar el contenido de texto del elemento
+                    alarmItem.querySelector('.timeExt').textContent = repeatText;
                     alarmItem.querySelector('.toggle-button').textContent = alarms[alarmIndex].active ? 'Apagar' : 'Encender';
                     alarmItem.querySelector('.toggle-button').classList.toggle('is-warning', alarms[alarmIndex].active);
                     alarmItem.querySelector('.toggle-button').classList.toggle('is-success', !alarms[alarmIndex].active);
@@ -163,6 +170,18 @@ document.addEventListener('DOMContentLoaded', () => {
         const alarmList = document.getElementById('alarmList');
         const alarmItem = document.createElement('li');
         alarmItem.setAttribute('data-id', alarm.id);
+        const repeatToText = {
+            'once': 'Una sola vez',
+            'daily': 'Diariamente',
+            'weekdays': 'Lunes a viernes'
+        };
+        
+        const textToRepeat = {
+            'Una sola vez': 'once',
+            'Diariamente': 'daily',
+            'Lunes a viernes': 'weekdays'
+        };
+        alarm.repeat = repeatToText[alarm.repeat] || alarm.repeat;// variable a texto
         alarmItem.innerHTML = `
             <div>
                 <span class="etiquetaTime">${alarm.label} </span>
@@ -177,7 +196,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <button class="button is-danger delete-button">Eliminar</button>
             </div>
         `;
-
+        alarm.repeat = textToRepeat[alarm.repeat] || alarm.repeat;// texto a varible
         // Añadir listeners para los botones de la alarma
         alarmItem.querySelector('.edit-button').addEventListener('click', () => editAlarm(alarm.id));
         alarmItem.querySelector('.delete-button').addEventListener('click', () => deleteAlarm(alarm.id));
