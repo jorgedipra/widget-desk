@@ -316,7 +316,7 @@
 }
 
 .gadget-config .header{
-  clip-path: polygon(0.25em 0, calc(87% - 1em) 0, 100% 100%, 0.33em 100%, 0 100%, 0 0.25em);
+  clip-path: polygon(0.25em 0, calc(89% - 1em) 0, 100% 100%, 0.33em 100%, 0 100%, 0 0.25em);
   font-weight: bold;
   width: 215px;
   border-radius: 5px 0px 0px 0px;

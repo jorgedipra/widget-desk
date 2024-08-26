@@ -1,5 +1,6 @@
 /* --[Componente]-- */
 /* Alarma-Programas */
+/*   #myModal07     */
 /* ---------------- */
 
 .win-alarma {
@@ -87,6 +88,17 @@
 
 .button.edit-button:hover {
     background-color: #124d74;
+    border-color: transparent;
+}
+button.button.status-button.toggle-button.is-success{
+    background-color: transparent;
+    border: solid 1px #00d1b2;
+    padding: 6px;
+    color: #fff;
+    font-size: 11px;
+}
+button.button.status-button.toggle-button.is-success:hover{
+    background-color: #134740;
     border-color: transparent;
 }
 

@@ -7,3 +7,5 @@ contextBridge.exposeInMainWorld('electron', {
     closeApp: () => ipcRenderer.send('close-app'),
     WinBackground: () => ipcRenderer.send('backgroundWin')
 });
+// se agregar:
+// window.electron.WinBackground();

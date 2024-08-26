@@ -21,6 +21,7 @@ const createWindow = () => {
         y: primaryDisplay.bounds.y,
         width: 1226,
         height: 1080,
+        icon: path.join(__dirname, '/images/desk.ico'),
         transparent: true,  // Fondo transparente 
         frame: false,       // indica que no se muestra la barra de título ni los bordes de la ventana
         fullscreen: true,   // pantalla completa
@@ -144,4 +145,3 @@ ipcMain.on('open-program', (event, programName) => {
 ipcMain.on('close-app', () => {
     app.quit();
 });
-

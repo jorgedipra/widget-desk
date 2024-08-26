@@ -1,3 +1,11 @@
+/* ---[Componente]--- */
+/* Lanzador-component */
+/*    #myModal03     */
+/* ---------------- */  
+#myModal03 > .header-circle{
+    left: 49px;
+    top: -70px;
+}
 .usermenu {
     cursor: pointer;
     position: absolute;
