@@ -1,4 +1,9 @@
-/* Estilos básicos para el calendario */
+/* ----[Componente]---- */
+/*  calendario-Programas */
+/* -------------------- */
+div#component-Programas {
+    margin: -31px -10px;
+}
 .calendar-box{
     width: 340px;
     height: 390px;

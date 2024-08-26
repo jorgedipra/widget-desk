@@ -43,7 +43,9 @@
 .color_fondo {
     color: #1f1f1f;
 }
-
+.text_24{
+    font-size: 24px !important;
+}
 /* Botones de sesión */
 .session-button {
     position: relative;

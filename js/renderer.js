@@ -111,3 +111,50 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+// Modal-notificaciones 
+
+// Función para mostrar el modal
+function mostrarModal(titulo, mensaje,offcancelar) {
+    return new Promise((resolve) => {
+        // Establecer el título y el mensaje
+        document.getElementById('modal-title').textContent = titulo;
+        document.getElementById('modal-content').textContent = mensaje;
+
+        // Mostrar el modal
+        document.getElementById('modal-message').classList.add('is-active');
+
+        // Función para cerrar el modal
+        function cerrarModal(resultado) {
+            document.getElementById('modal-message').classList.remove('is-active');
+            resolve(resultado);
+            // Eliminar los event listeners para evitar múltiples registros
+            document.getElementById('close-modal').removeEventListener('click', handleClose);
+            document.getElementById('cancel-button').removeEventListener('click', handleCancel);
+            document.getElementById('accept-button').removeEventListener('click', handleAccept);
+        }
+
+        // Manejo de eventos para los botones
+        function handleClose() { cerrarModal(false); }
+        function handleCancel() { cerrarModal(false); }
+        function handleAccept() { cerrarModal(true); }
+
+        document.getElementById('close-modal').addEventListener('click', handleClose);
+        document.getElementById('cancel-button').addEventListener('click', handleCancel);
+        document.getElementById('accept-button').addEventListener('click', handleAccept);
+
+        if(offcancelar){
+            document.getElementById('cancel-button').style.display='none';
+        }
+    });
+}
+
+// Ejemplo de uso del modal como función
+/**
+mostrarModal('Título desde Consola', 'Mensaje desde Consola').then(resultado => {
+    if (resultado) {
+      console.log('El usuario aceptó el mensaje.');
+    } else {
+      console.log('El usuario canceló o cerró el mensaje.');
+    }
+  });
+*/

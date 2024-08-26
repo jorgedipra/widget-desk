@@ -37,8 +37,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  win_Alarma.classList.toggle('visible');
-  win_Alarma.classList.remove('hidden');
 
 //Alarma
 if (Alarma) {

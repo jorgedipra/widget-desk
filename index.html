@@ -1,115 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-        <meta
-            http-equiv="Content-Security-Policy"
-            content="default-src 'self'; script-src 'self'"
-        />
-        <meta
-            http-equiv="X-Content-Security-Policy"
-            content="default-src 'self'; script-src 'self'"
-        />
-        <meta
-            http-equiv="Content-Security-Policy"
-            content="script-src 'self' 'unsafe-inline';"
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-        <link rel="stylesheet" href="./stylos/bulma/css/bulma.min.css" />
-        <link rel="stylesheet" href="./stylos/principal.css" />
-        <link rel="stylesheet" href="./stylos/menu.css" />
-    </head>
-    <body>
-        <section id="backgroundWin"></section>
-        <div id="nav-icon2">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <!-- Modal -->
-        <div id="myModal00" class="draggable gadget-config">
-            <div class="header">🛠 CONFIGURACIÓN</div>
-            <span id="cerrarModal00" class="cerar">
-                <p>x</p>
-            </span>
-            <span class="contenedor-draggable">
-                <div id="component-Menu"></div>
-            </span>
-        </div>
 
-        <div id="myModal000" class="draggable gadget-config win-all">
-            <div class="header header-all"><i class="fa-solid fa-laptop"></i> PROGRAMAS</div>
-            <span class="contenedor-draggable-all">
-                <div id="component-all"></div>
-            </span>
+<head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./stylos/bulma/css/bulma.min.css" />
+    <link rel="stylesheet" href="./stylos/principal.css" />
+    <link rel="stylesheet" href="./stylos/menu.css" />
+</head>
+
+<body>
+    <section id="backgroundWin"></section>
+    <div id="nav-icon2">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <!-- Modal -->
+    <div id="myModal00" class="draggable gadget-config">
+        <div class="header">🛠 CONFIGURACIÓN</div>
+        <span id="cerrarModal00" class="cerar">
+            <p>x</p>
+        </span>
+        <span class="contenedor-draggable">
+            <div id="component-Menu"></div>
+        </span>
+    </div>
+
+    <div id="myModal000" class="draggable gadget-config win-all">
+        <div class="header header-all">
+            <i class="fa-solid fa-laptop"></i> PROGRAMAS
         </div>
+        <span class="contenedor-draggable-all">
+            <div id="component-all"></div>
+        </span>
+    </div>
 
-        <div id="myModal01" class="draggable-free gadget-clock">
-            <div class="header-transparente">
-                <span class="header-circle"></span>
-            </div>
-            <div id="component-Clock"></div>
+    <div id="myModal01" class="draggable-free gadget-clock">
+        <div class="header-transparente">
+            <span class="header-circle"></span>
         </div>
+        <div id="component-Clock"></div>
+    </div>
 
-        <div id="myModal02" class="draggable-free">
-            <div class="header-transparente"></div>
-            <div id="component-Programas"></div>
+    <div id="myModal02" class="draggable-free">
+        <div class="header-transparente"></div>
+        <div id="component-Programas"></div>
+    </div>
+
+    <div id="myModal03" class="draggable-free">
+        <div class="header-transparente"></div>
+        <div id="component-Lanzador"></div>
+    </div>
+
+    <div id="myModal04" class="draggable-free">
+        <div class="header-transparente"></div>
+        <div id="component-Folders"></div>
+    </div>
+
+    <div id="myModal05" class="draggable-free">
+        <div class="header-transparente"></div>
+        <div id="component-Lector"></div>
+    </div>
+
+    <div id="myModal06" class="draggable gadget-config win-pomodoro">
+        <div class="header">Pomodoro</div>
+        <span id="cerrarModal06" class="cerar">
+            <p>x</p>
+        </span>
+        <div id="Programas-Pomodoro"></div>
+    </div>
+
+    <div id="myModal07" class="draggable gadget-config win-alarma">
+        <div class="header">Alarma</div>
+        <span id="cerrarModal07" class="cerar">
+            <p>x</p>
+        </span>
+        <div id="Programas-Alarma"></div>
+    </div>
+
+    <div id="myModal08" class="draggable-free gadget-clock">
+        <div class="header-transparente">
+            <span class="header-circle"></span>
         </div>
+        <div id="component-day"></div>
+    </div>
 
-        <div id="myModal03" class="draggable-free">
-            <div class="header-transparente">
-            </div>
-            <div id="component-Lanzador"></div>
-        </div>
-
-        <div id="myModal04" class="draggable-free">
-            <div class="header-transparente">
-            </div>
-            <div id="component-Folders"></div>
-        </div>
-
-        <div id="myModal05" class="draggable-free">
-            <div class="header-transparente">
-            </div>
-            <div id="component-Lector"></div>
-        </div>
-
-        <div id="myModal06" class="draggable gadget-config win-pomodoro">
-            <div class="header">Pomodoro</div>
-            <span id="cerrarModal06" class="cerar">
-                <p>x</p>
-            </span>
-            <div id="Programas-Pomodoro"></div>
-        </div> 
-
-        <div id="myModal07" class="draggable gadget-config win-alarma">
-            <div class="header">Alarma</div>
-            <span id="cerrarModal07" class="cerar">
-                <p>x</p>
-            </span>
-            <div id="Programas-Alarma"></div>
-        </div> 
-
-        <div id="myModal08" class="draggable-free gadget-clock">
-            <div class="header-transparente">
-                <span class="header-circle"></span>
-            </div>
-            <div id="component-day"></div>
-        </div>
-        
-        <!-- <div id="myModal02" class="draggable">
+    <!-- <div id="myModal02" class="draggable">
             <div class="header"></div>
             <div id="component-Programas"></div>
         </div> -->
-        <!--  -->
+    <!--  -->
         
-    </body>
-    <script src="./js/renderer.js"></script>
-    <script src="./js/menu.js"></script>
-    <script src="./js/components.js"></script>
+    <!-- Modal -->
+    <div class="modal" id="modal-message">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title" id="modal-title"></p>
+                <button class="delete" aria-label="close" id="close-modal"></button>
+            </header>
+            <section class="modal-card-body has-background-primary-100 has-text-black" id="modal-content">
+                <!-- Aquí va el contenido del mensaje -->
+            </section>
+            <footer class="modal-card-foot">
+                <button class="button is-success" id="accept-button">Aceptar</button>
+                <button class="button" id="cancel-button">Cancelar</button>
+            </footer>
+        </div>
+    </div>
+    <!--  -->
+</body>
+<script src="./js/renderer.js"></script>
+<script src="./js/menu.js"></script>
+<script src="./js/components.js"></script>
+
 </html>

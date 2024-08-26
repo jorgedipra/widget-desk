@@ -91,11 +91,24 @@ function startFreeBreak() {
     }
 }
 
-function askForActivityChange() {
-    if (confirm(`¿Deseas cambiar de ${timerType} a ${timerType === 'work' ? 'descanso' : 'trabajo'}?`)) {
-        switchMode();
-        updateTimer();
-    }
+function askForActivityChange() { 
+    if(timerType === 'work')
+        timerType='trabajo'
+    else
+        timerType='descanso'
+    
+    mostrarModal('🍅 Pomodoro Timer 🍅', `¿Deseas cambiar de ${timerType} a ${timerType === 'trabajo' ? 'descanso' : 'trabajo'}?`).then(resultado => {
+
+        if (resultado) {
+            timerType = 'work';
+            switchMode();
+            updateTimer();
+        }else{
+            timerType = 'break';
+            resetTimer();
+        } 
+
+    });
 }
 
 function switchMode() {
@@ -146,6 +159,6 @@ function minimizar_pomodoro() {
     // Función para actualizar el texto del botón
     function updateButtonText() {
         const timerText = document.getElementById('timer_pomodoro').textContent;
-        miniPomodoro.textContent = "🍅 "+timerText;
+        miniPomodoro.textContent = "🍅 " + timerText;
     }
 }

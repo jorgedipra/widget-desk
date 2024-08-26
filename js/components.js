@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let alarms = JSON.parse(localStorage.getItem('alarms')) || []; // Recuperar alarmas del localStorage o inicializar con un array vacío
     let swBtnAdd = 0; // Estado del botón de agregar alarma
     let editingAlarmId = null; // ID de la alarma que se está editando
+    let playInterval = null;
 
     const addAlarmButton = document.querySelector('.addAlarmButton');
     const btnCancelar = document.querySelector('#btnCancelar');
@@ -261,16 +262,18 @@ document.addEventListener('DOMContentLoaded', () => {
             if (alarm.active && alarm.time === convertTo24HourFormat(currentTime)) {
                 // Reproducir el sonido asociado
                 if (alarm.sound === 'beep') {
-                    playSoundRepeatedly('./song/SD_ALERT_29.mp3', 3, 1000); // 1000 ms entre repeticiones
+                    playSoundRepeatedly('./song/SD_ALERT_29.mp3', 1000); // Repetir cada 1000 ms
                 } else if (alarm.sound === 'ring') {
-                    playSoundRepeatedly('./song/mario-bros-die.mp3', 3, 1000); // 1000 ms entre repeticiones
+                    playSoundRepeatedly('./song/mario-bros-die.mp3', 1000); // Repetir cada 1000 ms
                 }
-
+                
                 // Mostrar alerta
-                // alert(`¡Alarma activada! ${alarm.label}`);
-                console.log(`¡Alarma activada! ${alarm.label} - ${alarm.sound}`);
-
-
+                mostrarModal(`🕑 Alarma: ${alarm.label} 🕑`, `¡Alarma activada!`, 'Simple').then(resultado => {
+                    if (resultado) {
+                        stopSound(); // Detener el sonido cuando el usuario acepta el mensaje
+                    }
+                });
+                
                 // Si autoDelete está habilitado, eliminar la alarma
                 if (alarm.autoDelete) {
                     deleteAlarm(alarm.id);
@@ -278,19 +281,24 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-    
-    // Función para reproducir un sonido tres veces con un retraso
-    function playSoundRepeatedly(soundFile, times, interval) {
-        let count = 0;
-        const playInterval = setInterval(() => {
-            if (count < times) {
-                playSound(soundFile);
-                count++;
-            } else {
-                clearInterval(playInterval); // Detener el intervalo después de reproducir el sonido las veces deseadas
-            }
-        }, interval);
+
+    // Función para reproducir un sonido indefinidamente
+function playSoundRepeatedly(soundFile, interval) {
+    // Si ya hay un intervalo activo, no crear uno nuevo
+    if (playInterval) return;
+
+    playInterval = setInterval(() => {
+        playSound(soundFile);
+    }, interval);
+}
+
+// Función para detener el sonido
+function stopSound() {
+    if (playInterval) {
+        clearInterval(playInterval);
+        playInterval = null;
     }
+}
 
     // Función para mostrar la hora actual en el formato deseado
     function showTime(id) {
@@ -299,25 +307,25 @@ document.addEventListener('DOMContentLoaded', () => {
         var m = date.getMinutes(); // 0 - 59
         var s = date.getSeconds(); // 0 - 59
         var session = "AM";
-    
+
         if (h === 0) {
             h = 12;
         } else if (h > 12) {
             h -= 12;
             session = "PM";
         }
-    
+
         h = h.toString().padStart(2, '0');
         m = m.toString().padStart(2, '0');
         s = s.toString().padStart(2, '0');
-    
+
         // Alternar visibilidad de los dos puntos cada segundo
         var separator = s % 2 === 0 ? ":" : "<span class='color_fondo'>:</span>";
-    
+
         // Construir el tiempo con dos puntos parpadeantes
         var time = h + separator + m + " " + session;
         var time24 = date.getHours().toString().padStart(2, '0') + ":" + m; // Tiempo en formato de 24 horas
-    
+
         // Verificar si el elemento existe antes de modificar el innerHTML
         var element = document.getElementById(id);
         var element2 = document.getElementById("alarmInputTimeHidden");
@@ -327,7 +335,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             console.error(`Element with id "${id}" not found.`);
         }
-    
+
         setTimeout(function () { showTime(id); }, 1000); // Pasar id como argumento
     }
 });
@@ -371,8 +379,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  win_Alarma.classList.toggle('visible');
-  win_Alarma.classList.remove('hidden');
 
 //Alarma
 if (Alarma) {
@@ -694,11 +700,24 @@ function startFreeBreak() {
     }
 }
 
-function askForActivityChange() {
-    if (confirm(`¿Deseas cambiar de ${timerType} a ${timerType === 'work' ? 'descanso' : 'trabajo'}?`)) {
-        switchMode();
-        updateTimer();
-    }
+function askForActivityChange() { 
+    if(timerType === 'work')
+        timerType='trabajo'
+    else
+        timerType='descanso'
+    
+    mostrarModal('🍅 Pomodoro Timer 🍅', `¿Deseas cambiar de ${timerType} a ${timerType === 'trabajo' ? 'descanso' : 'trabajo'}?`).then(resultado => {
+
+        if (resultado) {
+            timerType = 'work';
+            switchMode();
+            updateTimer();
+        }else{
+            timerType = 'break';
+            resetTimer();
+        } 
+
+    });
 }
 
 function switchMode() {
@@ -749,7 +768,7 @@ function minimizar_pomodoro() {
     // Función para actualizar el texto del botón
     function updateButtonText() {
         const timerText = document.getElementById('timer_pomodoro').textContent;
-        miniPomodoro.textContent = "🍅 "+timerText;
+        miniPomodoro.textContent = "🍅 " + timerText;
     }
 }
 document.addEventListener('DOMContentLoaded', function () {

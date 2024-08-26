@@ -13,28 +13,28 @@
         <div id="AddAlarm" class="add-alarm-container">
             <div class="add-alarm-content">
                 <h2 class="form-title">Ajustar Alarma</h2>
-                <label for="alarmInputTime">Hora:</label>
+                <label class="text_24" for="alarmInputTime">Hora:</label>
                 <input type="time" id="alarmInputTime" value="" required>
                 <input type="hidden" id="alarmInputTimeHidden">
 
-                <label for="soundSelect">Tono:</label>
+                <label class="text_24" for="soundSelect">Tono:</label>
                 <select name="soundSelect" id="soundSelect">
                     <option value="beep">Tono 1</option>
                     <option value="ring" selected>Tono 2</option>
                 </select>
 
-                <label for="repeatSelect">Repetir:</label>
+                <label class="text_24" for="repeatSelect">Repetir:</label>
                 <select name="repeatSelect" id="repeatSelect">
                     <option value="once">Una vez</option>
                     <option value="daily" selected>Diariamente</option>
                     <option value="weekdays">Lunes a viernes</option>
                 </select>
 
-                <label for="alarmLabel">Etiqueta:</label>
+                <label class="text_24" for="alarmLabel">Etiqueta:</label>
                 <input type="text" id="alarmLabel" placeholder="Nueva alarma">
 
                 <div class="align-center">
-                    <label for="autoDelete">Eliminar cuando suene?</label>
+                    <label  for="autoDelete">Eliminar cuando suene?</label>
                     <input type="checkbox" id="autoDelete">
                 </div>
                 <br><br>

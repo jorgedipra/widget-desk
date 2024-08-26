@@ -175,6 +175,16 @@ iframe {
   visibility: visible;
   transition: opacity 0.2s;
 }
+/* modal */
+
+.modal-card-head,
+.modal-card-foot {
+  justify-content: center; /* Centrar los botones */
+  text-align: center;
+}
+.modal-card-foot .button {
+  margin: 0 10px; /* Espacio de 20px entre los botones (10px a cada lado) */
+}
 
 @supports not (selector(::-webkit-scrollbar-thumb)) {
     .scroll {
