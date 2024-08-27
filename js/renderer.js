@@ -17,9 +17,11 @@ loadComponent('./components/Programas-component.html', 'component-Programas');
 loadComponent('./components/Lanzador-component.html', 'component-Lanzador');
 loadComponent('./components/Folders-component.html', 'component-Folders');
 loadComponent('./components/Lector-component.html', 'component-Lector');
+loadComponent('./components/Volumen-component.html', 'component-volumen');
 loadComponent('./components/ChildComponent/General-Programas.html', 'Programas-General');
 loadComponent('./components/ProgramComponent/Pomodoro-Program.html', 'Programas-Pomodoro');
 loadComponent('./components/ProgramComponent/Alarma-Program.html', 'Programas-Alarma');
+
 
 /**
  * llamdo de programas 

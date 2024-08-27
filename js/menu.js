@@ -152,7 +152,7 @@ const modalIds = [
   "myModal06",//component-program(pomodoro)
   "myModal07",//component-program(Alarma)
   "myModal08",//component-Dia
-  "myModal09"//component-Barra de Tareas
+  "myModal09"//component-control de volumen
 ];
 
 // Función para inicializar modales
@@ -183,7 +183,9 @@ const radios = [
   're-Lector',
   'rf-Lector',
   're-Day',
-  'rf-Day'
+  'rf-Day',
+  're-volumen',
+  'rf-volumen'
 ];
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -201,6 +203,7 @@ document.addEventListener('DOMContentLoaded', function() {
       toggleVisibility('myModal04', document.getElementById('rf-Folders').checked);
       toggleVisibility('myModal05', document.getElementById('rf-Lector').checked);
       toggleVisibility('myModal08', document.getElementById('rf-Day').checked);
+      toggleVisibility('myModal09', document.getElementById('rf-volumen').checked);
   }
 
   radios.forEach(function(id) {

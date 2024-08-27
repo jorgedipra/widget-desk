@@ -4,6 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const windowManager = require('electron-window-manager');
 const activeWindows = require('active-windows');
+const loudness = require('loudness');
 
 // Configura electron-reload
 require('electron-reload')(__dirname, {
@@ -104,6 +105,7 @@ app.whenReady().then(() => {
     });
 
 
+
 });
 
 app.on('window-all-closed', () => {
@@ -144,4 +146,21 @@ ipcMain.on('open-program', (event, programName) => {
 // cerrar app
 ipcMain.on('close-app', () => {
     app.quit();
+});
+
+//control de volumen
+ipcMain.handle('get-volume', async () => {
+    return await loudness.getVolume();
+});
+
+ipcMain.handle('set-volume', async (event, volume) => {
+    await loudness.setVolume(volume);
+});
+
+ipcMain.handle('get-muted', async () => {
+    return await loudness.getMuted();
+});
+
+ipcMain.handle('set-muted', async (event, muted) => {
+    await loudness.setMuted(muted);
 });

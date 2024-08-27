@@ -17,13 +17,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const img_Alarma='./images/Component-lanzador/alarma.png';
 
 
-
-  // myModal09.classList.remove('hidden');
-  // myModal09.classList.toggle('visible');
-  // myModal09.style.display='block';
-
-
-
 // Pomodoro
   if (Pomodoro) {
     Pomodoro.addEventListener('click', () => {

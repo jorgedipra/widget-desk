@@ -1,0 +1,168 @@
+/*  --[Componente]--  */
+/*  volumen-component */
+/*    #myModal09      */
+/*  ----------------  */
+div#myModal09 {
+  width: 180px;
+  height: 48px;
+}
+/* Control deslizante de volumen */
+#volume-slider {
+  width: 100%;
+  height: 5px;
+  background: #ddd;
+  outline: none;
+  border-radius: 5px;
+  margin: 20px 0;
+  transition: background 0.3s;
+}
+
+/* Thumb del control deslizante */
+#volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background: var(--color-primario);
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+#volume-slider::-webkit-slider-thumb:hover {
+  background: #0056b3;
+  transform: scale(1.1);
+}
+
+/* Estilos del botón de silencio */
+#mute-toggle {
+  color: var(--color-solid);
+  border: none;
+  padding: 0;
+  font-size: 20px;
+  margin-top: -50px;
+  margin-left: -43px;
+  width: 35px;
+  height: 30px;
+  cursor: pointer;
+}
+
+#mute-toggle:hover {
+  color: var(--color-primario-lite);
+  
+}
+
+/* Transición del botón al hacer clic */
+#mute-toggle:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.range-control {
+  align-items: center;
+  background: radial-gradient(60% 17% at 50% -2%, #96dded 0%, transparent 100%) no-repeat, 0px 0px/75% 100%, radial-gradient(60% 17% at 50% 102%, #96dded 0%, transparent 100%) no-repeat, 0px 0px/75% 100%, linear-gradient(rgba(94, 100, 111, 0.25) 3px, transparent 3px) 8px 4px/16px 16px, linear-gradient(to right, rgba(94, 100, 111, 0.25) 3px, transparent 3px) 8px 4px/16px 16px, rgba(43, 44, 43, 0.75);
+  border-bottom: 2px solid #b0e5fb;
+  border-top: 2px solid #b0e5fb;
+  display: flex;
+  height: 45px;
+  justify-content: space-between;
+  padding-left: 8px;
+  position: relative;
+}
+.range-control:before, .range-control:after {
+  background-color: rgba(255, 255, 255, 0.7);
+  content: "";
+  height: 41px;
+  position: absolute;
+  width: 2px;
+}
+.range-control:before {
+  left: 0;
+  top: 0;
+}
+.range-control:after {
+  right: 0;
+  top: 0;
+}
+.range-control .range-slider-container {
+  align-items: center;
+  display: flex;
+}
+.range-control .range-slider-container:before, .range-control .range-slider-container:after {
+  background-color: rgba(255, 255, 255, 0.7);
+  content: "";
+  height: 14px;
+  width: 2px;
+}
+.range-control .range-slider-container:before {
+  left: 5px;
+  margin-right: 1px;
+  top: 0;
+}
+.range-control .range-slider-container:after {
+  margin-left: 1px;
+  right: 0;
+  top: 0;
+}
+.range-control .range-value-container {
+  align-items: center;
+  color: #b0e5fb;
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  min-width: 86px;
+  text-shadow: 0px 0px 15px rgba(37, 222, 232, 0.8);
+}
+
+input[type=range] {
+  -moz-appearance: none;
+       appearance: none;
+  background: transparent;
+  cursor: pointer;
+  transition: opacity 300ms ease-in-out;
+  -webkit-appearance: none;
+  width: 280px;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]:disabled {
+  opacity: 50%;
+}
+input[type=range]::-moz-range-track {
+  background-color: #b0e5fb;
+  background: linear-gradient(to right, white 3%, #b0e5fb 3%, #b0e5fb 97%, white 97%);
+  height: 3px;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  background-color: #b0e5fb;
+  background: linear-gradient(to right, white 3%, #b0e5fb 3%, #b0e5fb 97%, white 97%);
+  height: 3px;
+}
+input[type=range]::-moz-range-thumb {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid white;
+  border-radius: 0;
+  height: 12px;
+  -moz-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  width: 5px;
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+          appearance: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid white;
+  border-radius: 0;
+  height: 13px;
+  margin-top: -5px;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  width: 7px;
+}
+input[type=range]:focus::-moz-range-thumb {
+  background-color: rgba(109, 184, 219, 0.5);
+  border: 1px solid #b0e5fb;
+}
+input[type=range]:focus::-webkit-slider-thumb {
+  background-color: rgba(109, 184, 219, 0.5);
+  border: 1px solid #b0e5fb;
+}
