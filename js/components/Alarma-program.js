@@ -1,3 +1,7 @@
+/**
+ * [Componente]
+ *  Alarma-program
+ */
 document.addEventListener('DOMContentLoaded', () => {
     let alarms = JSON.parse(localStorage.getItem('alarms')) || []; // Recuperar alarmas del localStorage o inicializar con un array vacío
     let swBtnAdd = 0; // Estado del botón de agregar alarma

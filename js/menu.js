@@ -1,4 +1,5 @@
 /**
+ * [Componente]
  * MENU::CONFIG
  */
 var modal00 = document.getElementById("myModal00");

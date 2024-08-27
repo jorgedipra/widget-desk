@@ -1,5 +1,6 @@
 /**
- * Clock-component
+ * [Componente]
+ *  Clock-component
  */
 document.addEventListener('DOMContentLoaded', () => {
     const closeBtn = document.getElementById('openCalendar');

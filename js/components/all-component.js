@@ -24,7 +24,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-
 // Pomodoro
   if (Pomodoro) {
     Pomodoro.addEventListener('click', () => {
