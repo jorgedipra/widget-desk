@@ -150,7 +150,8 @@ const modalIds = [
 
   "myModal06",//component-program(pomodoro)
   "myModal07",//component-program(Alarma)
-  "myModal08"//component-Dia
+  "myModal08",//component-Dia
+  "myModal09"//component-Barra de Tareas
 ];
 
 // Función para inicializar modales

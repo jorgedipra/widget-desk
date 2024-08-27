@@ -319,42 +319,5 @@ function stopSound() {
     }
 }
 
-    // Función para mostrar la hora actual en el formato deseado
-    function showTime(id) {
-        var date = new Date();
-        var h = date.getHours(); // 0 - 23
-        var m = date.getMinutes(); // 0 - 59
-        var s = date.getSeconds(); // 0 - 59
-        var session = "AM";
-
-        if (h === 0) {
-            h = 12;
-        } else if (h > 12) {
-            h -= 12;
-            session = "PM";
-        }
-
-        h = h.toString().padStart(2, '0');
-        m = m.toString().padStart(2, '0');
-        s = s.toString().padStart(2, '0');
-
-        // Alternar visibilidad de los dos puntos cada segundo
-        var separator = s % 2 === 0 ? ":" : "<span class='color_fondo'>:</span>";
-
-        // Construir el tiempo con dos puntos parpadeantes
-        var time = h + separator + m + " " + session;
-        var time24 = date.getHours().toString().padStart(2, '0') + ":" + m; // Tiempo en formato de 24 horas
-
-        // Verificar si el elemento existe antes de modificar el innerHTML
-        var element = document.getElementById(id);
-        var element2 = document.getElementById("alarmInputTimeHidden");
-        if (element) {
-            element.innerHTML = time;
-            element2.value = time24; // Actualizar el campo oculto con el formato de 24 horas
-        } else {
-            console.error(`Element with id "${id}" not found.`);
-        }
-
-        setTimeout(function () { showTime(id); }, 1000); // Pasar id como argumento
-    }
+   
 });

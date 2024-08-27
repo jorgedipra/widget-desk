@@ -1,6 +1,23 @@
 /* --[Componente]-- */
 /*  clock-Programas */
 /* ---------------- */
+.clock {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    color: var(--color-priamrio-lite);
+    font-size: 60px;
+    font-family: Orbitron;
+    letter-spacing: 7px;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7),
+        /* Sombra blanca clara */ 0 0 10px rgba(255, 255, 255, 0.5),
+        /* Sombra blanca menos intensa */ 0 0 15px
+            rgba(255, 255, 255, 0.3); /* Resplandor blanco más suave */
+}
+.clock > .color_fondo{
+    color: var(--color-priamrio-lite);
+}
+/* calendario */
 #miniPomodoro,
 #openCalendar{
     color: #17D4FE;
