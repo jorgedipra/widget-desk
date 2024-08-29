@@ -28,11 +28,16 @@ document.addEventListener('DOMContentLoaded', function () {
     // Inicializa la interfaz de usuario
     updateUI();
 
+
     const setDisplayedValue = (value) => {
         rangeInputValueContainer.innerText = value;
     };
 
-    setDisplayedValue(initialValue);
+    setInterval(function () {
+        updateUI();
+        setDisplayedValue(rangeInput.value);
+    }, 500);
+
 
     rangeInput.addEventListener("input", (e) => {
         setDisplayedValue(e.target.value);
