@@ -4,7 +4,7 @@
 document.addEventListener('DOMContentLoaded', function () {
 
   const modal000 = document.getElementById("myModal000");
-  const myModal09 = document.getElementById("myModal09");
+  const myModal10 = document.getElementById("myModal10");
 
   const Pomodoro = document.getElementById('Pomodoro');
   const win_Pomodoro = document.getElementById('myModal06');
@@ -15,6 +15,13 @@ document.addEventListener('DOMContentLoaded', function () {
   const win_Alarma = document.getElementById('myModal07');
   const cerar_Alarma = document.getElementById('cerrarModal07').querySelector('p');
   const img_Alarma='./images/Component-lanzador/alarma.png';
+
+
+  // myModal10.classList.remove('visible');
+  // myModal10.classList.toggle('hidden');
+  // toggleVisibility_win('myModal10', 1);
+
+
 
 
 // Pomodoro

@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 // Llama a toggleVisibility con el estado actual del checkbox
                 toggleVisibility('myModal02', checkbox.checked);
+                document.querySelector("#openCalendar > span").textContent = "Calendario";
             }
         });
     }

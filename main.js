@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const windowManager = require('electron-window-manager');
 const activeWindows = require('active-windows');
-const loudness = require('loudness');
+const loudness = require('loudness'); //volumen
 
 // Configura electron-reload
 require('electron-reload')(__dirname, {

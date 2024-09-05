@@ -28,6 +28,9 @@
     top: 100px;
     left: 0;
 }
+#openCalendar>i{
+    color: var(--color-solid);
+}
 
 #miniPomodoro:hover,
 #openCalendar:hover{
