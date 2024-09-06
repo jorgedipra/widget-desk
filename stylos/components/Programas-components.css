@@ -6,7 +6,7 @@ div#component-Programas {
 }
 .calendar-box{
     width: 340px;
-    height: 390px;
+    height: 410px;
 }
 .calendar {
     width: 300px;
@@ -80,6 +80,21 @@ div#component-Programas {
     color: hsl(0, 0%, 20%); /* Color especial para los domingos */
 }
 
+#has-tooltip-calendar::before{
+    border-color: var(--color-solid);
+}
+i#minimizar_calendario {
+    position: relative;
+    top: -13px;
+    left: -7px;
+    z-index: 10;
+    cursor: pointer;
+}
+span#has-tooltip-calendar {
+    position: relative;
+    display: block;
+    height: 15px !important;
+}
 /* Responsivo */
 @media (max-width: 768px) {
     .calendar-day-box {

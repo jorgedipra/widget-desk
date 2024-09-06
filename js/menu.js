@@ -152,7 +152,8 @@ const modalIds = [
   "myModal06",//component-program(pomodoro)
   "myModal07",//component-program(Alarma)
   "myModal08",//component-Dia
-  "myModal09"//component-control de volumen
+  "myModal09",//component-control de volumen
+  "myModal10"//component-OpenWebUI
 ];
 
 // Función para inicializar modales

@@ -1,8 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
+    const tooltipCalendar = document.getElementById('has-tooltip-calendar');
     const prevMonthBtn = document.getElementById('prevMonth');
     const nextMonthBtn = document.getElementById('nextMonth');
     const monthYearElem = document.getElementById('monthYear');
     const daysElem = document.getElementById('days');
+    
 
     let currentDate = new Date();
 
@@ -95,6 +97,42 @@ document.addEventListener('DOMContentLoaded', function () {
         renderCalendar(currentDate);
     });
 
+    tooltipCalendar.addEventListener('click', function () {
+        minimizar_calendar();
+    });
+
+
     // Renderizar el calendario por primera vez
     renderCalendar(currentDate);
 });
+
+
+
+function  minimizar_calendar(){
+    
+    const checkbox = document.getElementById('rf-Programas01');
+    const relatedCheckbox = document.getElementById('re-Programas01');
+
+    const opciones = { 
+        // weekday: 'long', 
+        year: 'numeric', 
+        month: 'long', 
+        day: 'numeric' 
+    };
+    const fechaActual = new Date();
+    const fechaFormateada = new Intl.DateTimeFormat('es-CO', opciones).format(fechaActual);
+
+    if (checkbox) {
+        // Alterna el estado del checkbox
+        checkbox.checked = !checkbox.checked;
+        
+        // Si se desmarca el checkbox, marca el otro checkbox
+        if (!checkbox.checked && relatedCheckbox) {
+            relatedCheckbox.checked = true;
+        }
+        
+        // Llama a toggleVisibility con el estado actual del checkbox
+        toggleVisibility('myModal02', checkbox.checked);
+        document.querySelector("#openCalendar > span").textContent = fechaFormateada;
+    }
+}
