@@ -1,0 +1,30 @@
+/* MonitorSistema-component */
+#myModal10 {
+  opacity: 1 !important;
+}
+
+#MonitorSistema-component {
+  background-color: transparent;
+  width: 260px;
+  height: 130px;
+
+}
+
+.usage-container {
+  text-align: center;
+  border: 1px solid var(--color-primario-lite);
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 5px;
+  color: var(--color-primario);
+  backdrop-filter: blur(10px);  
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  
+}
+
+.usage-container h1 {
+  font-size: 24px;
+}
+
+.usage-container p {
+  font-size: 18px;
+}

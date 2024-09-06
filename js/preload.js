@@ -9,7 +9,9 @@ contextBridge.exposeInMainWorld('electron', {
     getVolume: () => ipcRenderer.invoke('get-volume'),
     setVolume: (volume) => ipcRenderer.invoke('set-volume', volume),
     getMuted: () => ipcRenderer.invoke('get-muted'),
-    setMuted: (muted) => ipcRenderer.invoke('set-muted', muted)
+    setMuted: (muted) => ipcRenderer.invoke('set-muted', muted),
+    getSystemUsage: () => ipcRenderer.send('get-system-usage'),
+    onSystemUsage: (callback) => ipcRenderer.on('system-usage', (event, usage) => callback(usage))
 });
 // se agregar:
 // window.electron.WinBackground();

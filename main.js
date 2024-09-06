@@ -1,6 +1,7 @@
 const { app, BrowserWindow, ipcMain, screen } = require('electron');
 const { exec } = require('child_process');
 const fs = require('fs');
+const os = require('os');
 const path = require('path');
 const windowManager = require('electron-window-manager');
 const activeWindows = require('active-windows');
@@ -163,4 +164,30 @@ ipcMain.handle('get-muted', async () => {
 
 ipcMain.handle('set-muted', async (event, muted) => {
     await loudness.setMuted(muted);
+});
+
+// Escuchar evento del frontend para obtener datos
+function getSystemUsage() {
+    const totalMemory = os.totalmem();
+    const freeMemory = os.freemem();
+    const usedMemory = totalMemory - freeMemory;
+    const memoryUsage = (usedMemory / totalMemory) * 100;
+
+    const cpus = os.cpus();
+    const cpuUsage = cpus.map(cpu => {
+        const total = Object.values(cpu.times).reduce((acc, time) => acc + time, 0);
+        const idle = cpu.times.idle;
+        return 100 - Math.floor((idle / total) * 100);
+    });
+
+    return {
+        memoryUsage: memoryUsage.toFixed(2),
+        cpuUsage: Math.floor(cpuUsage.reduce((acc, curr) => acc + curr, 0) / cpuUsage.length)
+    };
+}
+
+// Escuchar evento del frontend para obtener datos
+ipcMain.on('get-system-usage', (event) => {
+    const usage = getSystemUsage();
+    event.reply('system-usage', usage);
 });

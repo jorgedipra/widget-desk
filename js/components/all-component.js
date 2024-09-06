@@ -17,9 +17,9 @@ document.addEventListener('DOMContentLoaded', function () {
   const img_Alarma='./images/Component-lanzador/alarma.png';
 
 
-  // myModal10.classList.remove('visible');
-  // myModal10.classList.toggle('hidden');
-  // toggleVisibility_win('myModal10', 1);
+  myModal10.classList.remove('visible');
+  myModal10.classList.toggle('hidden');
+  toggleVisibility_win('myModal10', 1);
 
 
 

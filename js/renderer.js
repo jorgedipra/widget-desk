@@ -21,7 +21,7 @@ loadComponent('./components/Volumen-component.html', 'component-volumen');
 loadComponent('./components/ChildComponent/General-Programas.html', 'Programas-General');
 loadComponent('./components/ProgramComponent/Pomodoro-Program.html', 'Programas-Pomodoro');
 loadComponent('./components/ProgramComponent/Alarma-Program.html', 'Programas-Alarma');
-loadComponent('./components/OpenWebUI-component.html', 'component-OpenWebUI');
+loadComponent('./components/MonitorSistema-component.html', 'component-MonitorSistema');
 
 
 /**
