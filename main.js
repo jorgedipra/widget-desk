@@ -6,12 +6,14 @@ const path = require('path');
 const windowManager = require('electron-window-manager');
 const activeWindows = require('active-windows');
 const loudness = require('loudness'); //volumen
+const positionFilePath = path.join(app.getPath('userData'), 'window-position.json');// Archivo para almacenar la posición de la ventana
 
 // Configura electron-reload
 require('electron-reload')(__dirname, {
     electron: path.join(__dirname, 'node_modules', '.bin', 'electron')
 });
 
+//ventana principal
 const createWindow = () => {
     // Obtén la información de las pantallas
     const displays = screen.getAllDisplays();
@@ -65,6 +67,15 @@ const createWindow = () => {
         }, 100);
     });
 
+     // evento para mostrar la ventana principal desde otra
+    ipcMain.on('show-main-window', () => {
+        // Mostrar o enfocar la ventana principal
+        if (win) {
+            win.show();
+            win.focus();
+        }
+    });
+
     // Evento adicional para asegurarse de que la ventana siempre se mantenga atrás
     // Asegúrate de que la ventana siempre se mantenga atrás
     ipcMain.on('backgroundWin', () => {
@@ -73,8 +84,82 @@ const createWindow = () => {
     // 
 }
 
+// Función para guardar la posición de la ventana
+function saveWindowPosition(window) {
+    const bounds = window.getBounds();
+    const positionData = { x: bounds.x, y: bounds.y };
+    fs.writeFileSync(positionFilePath, JSON.stringify(positionData), 'utf-8');
+    // console.log('Position saved:', positionData); // Debugging line
+}
+
+// Función para cargar la posición de la ventana
+function loadWindowPosition() {
+    if (fs.existsSync(positionFilePath)) {
+        const positionData = JSON.parse(fs.readFileSync(positionFilePath, 'utf-8'));
+        // console.log('Position loaded:', positionData); // Debugging line
+        return positionData;
+    }
+    return { x: 0, y: 0 }; // Default position
+}
+
+/**
+ * Segunda ventana
+ */
+function createSecondWindow() {
+    // Obtén la información de las pantallas
+    const displays = screen.getAllDisplays();
+    const primaryDisplay = displays[0]; // Obtiene la pantalla principal
+    const secondaryDisplay = displays[1] || primaryDisplay; // Fallback si no hay pantalla secundaria
+
+    // Calcula la posición para la esquina inferior izquierda con un margen de 100px desde los bordes
+    const windowWidth = 70; // Ancho de la ventana
+    const windowHeight = 70; // Alto de la ventana
+
+    const xPosition = primaryDisplay.bounds.x + 100; // 100px desde el borde izquierdo
+    const yPosition = primaryDisplay.bounds.y + primaryDisplay.workArea.height - windowHeight - 100; // 100px desde el borde inferior
+
+
+    // Cargar la posición de la ventana principal
+    const mainWindowPosition = loadWindowPosition();
+
+    // Crea la segunda ventana con las configuraciones indicadas
+    secondWindow = new BrowserWindow({
+        x:  mainWindowPosition.x, 
+        y:mainWindowPosition.y, 
+        width: windowWidth,
+        height: windowHeight,
+        transparent: true,  // Fondo transparente 
+        frame: false,        // Muestra la barra de título y bordes de la ventana
+        fullscreen: false,  // No en pantalla completa
+        alwaysOnTop: true,  // Asegura que siempre esté al frente
+        focusable: true,    // Hace que la ventana pueda ser enfocada
+        movable: true,      // Permite que la ventana sea movible
+        webPreferences: {
+            // preload: path.join(__dirname, 'preload_second.js'),
+            enableRemoteModule: false,
+            nodeIntegration: true,   // Habilitar nodeIntegration
+            contextIsolation: false 
+        },
+    });
+    secondWindow.webContents.openDevTools(); // abre el explorador dev
+
+    secondWindow.loadFile('second.html'); // Asegúrate de tener un archivo HTML para la segunda ventana
+
+    // Guardar la posición de la ventana principal al moverla
+    secondWindow.on('move', () => {
+        saveWindowPosition(secondWindow);
+    });
+
+    // Evento para manejar cuando la segunda ventana se cierra
+    secondWindow.on('closed', () => {
+        secondWindow = null;
+    });
+}
+
+
 app.whenReady().then(() => {
     createWindow();
+    createSecondWindow();
 
     app.on('activate', () => {
         if (BrowserWindow.getAllWindows().length === 0) createWindow();
@@ -112,6 +197,9 @@ app.whenReady().then(() => {
 app.on('window-all-closed', () => {
     if (process.platform !== 'darwin') app.quit();
 });
+
+
+
 
 ipcMain.on('open-program', (event, programName) => {
     fs.readFile('programs.json', 'utf8', (err, data) => {

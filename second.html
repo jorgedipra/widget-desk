@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Second Window</title>
+    </head>
+    <body>
+        <style>
+            body {
+                overflow: hidden; /* Oculta las barras de desplazamiento */
+            }
+            img {
+                user-drag: none; /* Deshabilita el arrastre de la imagen */
+                cursor: pointer;
+                /*pointer-events: none; /*Evita la interacción con la imagen, si es necesario */
+                box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 1) inset;
+                background-color: rgba(255, 255, 255, 0.2);
+                backdrop-filter: blur(5px);
+                border: 2px solid #09244b;
+                border-radius: 10px;
+                width: 60%;
+                height: auto;
+                display: block;
+                margin-top: 10px;
+                margin-left: 20px;
+            }
+            .drag-area {
+                position: relative;
+                display: block;
+                -webkit-app-region: drag; /* Permite arrastrar la ventana */
+                width: 10px;
+                height: 10px;
+                background-color: #2196f3;
+                z-index: 1;
+                border-radius: 100%;
+                top: 3px;
+                left: 3px;
+                box-shadow: 0 0 5px rgba(255, 255, 255, 0.7),
+                    0 0 10px rgba(255, 255, 255, 0.5),
+                    0 0 15px rgba(255, 255, 255, 0.3);
+            }
+        </style>
+        <div class="drag-area"></div>
+        <img
+            id="widget-desk"
+            src="./images/Component-flotante/icono.png"
+            alt="widget-desk"
+        />
+        <script>
+            const { ipcRenderer } = require('electron');
+            const image = document.querySelector("img");
+
+            image.addEventListener("dragstart", (event) => {
+                event.preventDefault(); // Evita que la imagen se arrastre
+            });
+
+            // Selecciona el ícono y añade un event listener al clic
+            const widgetIcon = document.getElementById('widget-desk');
+
+            widgetIcon.addEventListener('click', () => {
+                // Enviar mensaje al proceso principal para mostrar la ventana principal
+                ipcRenderer.send('show-main-window');
+            });
+        </script>
+    </body>
+</html>
