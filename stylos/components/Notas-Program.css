@@ -1,0 +1,250 @@
+/* --[Componente]-- */
+/*  Notas-Programas */
+/*   #myModal11     */
+/* ---------------- */
+
+.win-Notas {
+    width: 370px !important;
+    height: 430px !important;
+    padding: 10px !important;
+}
+
+.note-container .fijar i.fas.fa-thumbtack {
+    float: right;
+    padding-bottom: 5px;
+    padding-right: 5px;
+    cursor: pointer;
+}
+
+.fijarOn {
+    display: none;
+    transform: rotate(45deg);
+    color: red
+}
+
+.note-container {
+    width: 350px;
+    height: 400px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin-top: 5px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Styles for the Editable Area */
+/* Estilos para la vista previa de HTML */
+.editor {
+    flex: 1;
+    padding: 15px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow-y: auto;
+    outline: none;
+    box-sizing: border-box;
+    background-color: #fafafa;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    cursor: text;
+}
+
+
+/* Custom Scrollbar */
+/* Custom Scrollbar */
+.editor::-webkit-scrollbar {
+    width: 8px;
+}
+
+.editor::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.editor::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Estilos adicionales para el contenido Markdown */
+.editor h1,
+.editor h2,
+.editor h3,
+.editor h4,
+.editor h5,
+.editor h6 {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.editor ul,
+.editor ol {
+    margin: 0;
+    padding: 0;
+    list-style-position: inside;
+}
+
+.editor blockquote {
+    border-left: 4px solid #ddd;
+    padding-left: 16px;
+    color: #555;
+    font-style: italic;
+}
+
+.editor code {
+    background-color: #f4f4f4;
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-size: 90%;
+}
+
+.editor pre {
+    background-color: #f4f4f4;
+    padding: 16px;
+    border-radius: 4px;
+    overflow: auto;
+    white-space: pre-wrap;
+    /* Para mantener el formato del código */
+}
+
+
+/* Custom Scrollbar */
+.editor::-webkit-scrollbar {
+    width: 8px;
+}
+
+.editor::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.editor::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: left;
+    background-color: #f5f5f5;
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+.toolbar i {
+    font-size: 15px;
+}
+
+.toolbar button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.toolbar button:hover {
+    background-color: #ddd;
+    border-radius: 3px;
+}
+
+.toolbar button#bold {
+    font-weight: bold;
+}
+
+.toolbar button#italic {
+    font-style: italic;
+    padding-left: 1px;
+    padding-right: 1px;
+}
+
+.toolbar button#underline {
+    text-decoration: underline;
+}
+
+.toolbar button#strikethrough {
+    text-decoration: line-through;
+}
+
+.toolbar button#removeFormat {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toolbar button#quote {
+    font-style: italic;
+}
+
+/* Estilos para las citas */
+.editor blockquote {
+    border-left: 4px solid #ddd;
+    padding-left: 16px;
+    color: #555;
+    font-style: italic;
+    margin: 0;
+    background-color: #f9f9f9;
+}
+
+
+
+/* Estilo para el icono de la 'T' tachada */
+.remove-format-icon {
+    font-size: 18px;
+    position: relative;
+}
+
+/* Crear la línea diagonal que tacha la 'T' */
+.remove-format-icon::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #abb1bf;
+    transform: rotate(45deg);
+    transform-origin: center;
+    z-index: 1;
+}
+
+.emoji-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fafafa;
+    max-height: 250px;
+    /* Ajusta según el tamaño necesario */
+    overflow-y: auto;
+    /* Para permitir el desplazamiento si hay demasiados emojis */
+}
+
+.emoji-grid span {
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.emoji-grid span:hover {
+    background-color: #ddd;
+    border-radius: 4px;
+}
+
+/* Ocultar la cuadrícula cuando no está en uso */
+.hidden {
+    display: none;
+}
