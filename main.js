@@ -31,6 +31,7 @@ const createWindow = () => {
         fullscreen: true,   // pantalla completa
         alwaysOnTop: false, // Asegura que no esté siempre al frente
         focusable: true,   // Hace que la ventana no sea enfocada al hacer clic
+        skipTaskbar: true, // Evita que aparezca en la barra de tareas
         webPreferences: {
             preload: path.join(__dirname, '/js/preload.js'), // Ruta al archivo preload.js
             contextIsolation: true,
@@ -115,8 +116,8 @@ function createSecondWindow() {
     const windowWidth = 70; // Ancho de la ventana
     const windowHeight = 70; // Alto de la ventana
 
-    const xPosition = primaryDisplay.bounds.x + 100; // 100px desde el borde izquierdo
-    const yPosition = primaryDisplay.bounds.y + primaryDisplay.workArea.height - windowHeight - 100; // 100px desde el borde inferior
+    // const xPosition = primaryDisplay.bounds.x + 100; // 100px desde el borde izquierdo
+    // const yPosition = primaryDisplay.bounds.y + primaryDisplay.workArea.height - windowHeight - 100; // 100px desde el borde inferior
 
 
     // Cargar la posición de la ventana principal
@@ -124,10 +125,11 @@ function createSecondWindow() {
 
     // Crea la segunda ventana con las configuraciones indicadas
     secondWindow = new BrowserWindow({
-        x:  mainWindowPosition.x, 
+        x:mainWindowPosition.x, 
         y:mainWindowPosition.y, 
         width: windowWidth,
         height: windowHeight,
+        icon: path.join(__dirname, '/images/desk.ico'),
         transparent: true,  // Fondo transparente 
         frame: false,        // Muestra la barra de título y bordes de la ventana
         fullscreen: false,  // No en pantalla completa
