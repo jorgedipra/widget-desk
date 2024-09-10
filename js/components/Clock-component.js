@@ -43,6 +43,8 @@ function toggleVisibility(id, condition) {
 function toggleButtonVisibility() {
     const button = document.getElementById('miniPomodoro');
     const win_Pomodoro = document.getElementById('myModal06');
+    let isButtonVisible = true;
+
 
     button.style.display = 'none'; // Ocultar el botón
     win_Pomodoro.classList.remove('hidden');
