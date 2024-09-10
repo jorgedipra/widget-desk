@@ -24,6 +24,7 @@ Finalmente, se pondrá énfasis en una documentación detallada para facilitar s
 
 ![image](https://github.com/user-attachments/assets/1d9e51d6-8719-4780-9302-604fb37a880b)
 
+![image](https://github.com/user-attachments/assets/8433b70a-1f1d-4943-81fb-31cccbc03e02)
 
 
 
