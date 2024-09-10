@@ -28,8 +28,10 @@
     "electron-win-state": "^1.1.22",
     "electron-window": "^0.8.1",
     "electron-window-manager": "^1.0.6",
+    "highlight.js": "^11.10.0",
     "install": "^0.13.0",
     "loudness": "^0.4.2",
+    "marked": "^14.1.2",
     "node-active-window": "^0.1.0",
     "node-window-manager": "^2.2.4"
   }

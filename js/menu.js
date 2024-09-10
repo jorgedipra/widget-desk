@@ -74,37 +74,76 @@ document.addEventListener('DOMContentLoaded', function () {
  * @param {} element 
  */
 // Función para hacer que un elemento sea arrastrable
-function makeDraggable(element) {
+function makeDraggable(element, status=true) {
   let offsetX = 0, offsetY = 0, mouseX = 0, mouseY = 0;
+  
+  // Convertir el selector de cadena a un objeto de elemento
+  const el = typeof element === 'string' ? document.querySelector(element) : element;
 
-  element.onmousedown = function (e) {
-    // Obtén la posición del mouse al hacer clic en el elemento
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-    document.onmousemove = elementDrag;
-    document.onmouseup = closeDragElement;
-  };
+  if (!el) {
+      console.error('Element not found');
+      return;
+  }
 
   function elementDrag(e) {
-    e.preventDefault(); 
-    // Calcula el nuevo desplazamiento del elemento
-    offsetX = mouseX - e.clientX;
-    offsetY = mouseY - e.clientY;
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-    // Aplica el nuevo posicionamiento
-    element.style.top = (element.offsetTop - offsetY) + "px";
-    element.style.left = (element.offsetLeft - offsetX) + "px";
+      e.preventDefault();
+      // Calcula el nuevo desplazamiento del elemento
+      offsetX = mouseX - e.clientX;
+      offsetY = mouseY - e.clientY;
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      // Aplica el nuevo posicionamiento
+      el.style.top = (el.offsetTop - offsetY) + "px";
+      el.style.left = (el.offsetLeft - offsetX) + "px";
   }
 
   function closeDragElement() {
-    // Detén el arrastre cuando se suelta el mouse
-    document.onmousemove = null;
-    document.onmouseup = null;
-    // Guarda la posición en localStorage
-    savePosition(element.id);
+      // Detén el arrastre cuando se suelta el mouse
+      document.onmousemove = null;
+      document.onmouseup = null;
+      // Guarda la posición en localStorage
+      savePosition(el.id);
+  }
+
+  if (status) {
+      // Activar arrastre
+      el.onmousedown = function(e) {
+          mouseX = e.clientX;
+          mouseY = e.clientY;
+          document.onmousemove = elementDrag;
+          document.onmouseup = closeDragElement;
+      };
+  } else {
+      // Desactivar arrastre
+      el.onmousedown = null;
+      document.onmousemove = null;
+      document.onmouseup = null;
   }
 }
+
+function savePosition(id) {
+  const el = document.getElementById(id);
+  if (el) {
+      localStorage.setItem('position-' + id, JSON.stringify({
+          top: el.style.top,
+          left: el.style.left
+      }));
+  }
+}
+
+
+// Función para guardar la posición en localStorage
+function savePosition(id) {
+  const element = document.getElementById(id);
+  if (element) {
+    const position = {
+      top: element.style.top,
+      left: element.style.left
+    };
+    localStorage.setItem(id + '-position', JSON.stringify(position));
+  }
+}
+
 
 /**
  * Inicializa la posición del modal desde localStorage [Del Menu de Configuración]
@@ -153,7 +192,8 @@ const modalIds = [
   "myModal07",//component-program(Alarma)
   "myModal08",//component-Dia
   "myModal09",//component-control de volumen
-  "myModal10"//component-OpenWebUI
+  "myModal10",//component-MonitorSistema
+  "myModal11"//component-Notas
 ];
 
 // Función para inicializar modales

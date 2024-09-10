@@ -4,7 +4,7 @@
 document.addEventListener('DOMContentLoaded', function () {
 
   const modal000 = document.getElementById("myModal000");
-  // const myModal10 = document.getElementById("myModal10");
+  const myModal = document.getElementById("myModal11");
 
   const Pomodoro = document.getElementById('Pomodoro');
   const win_Pomodoro = document.getElementById('myModal06');
@@ -17,9 +17,15 @@ document.addEventListener('DOMContentLoaded', function () {
   const img_Alarma='./images/Component-lanzador/alarma.png';
 
 
-  // myModal10.classList.remove('visible');
-  // myModal10.classList.toggle('hidden');
-  // toggleVisibility_win('myModal10', 1);
+  const Notas = document.getElementById('Notas');
+  const win_Notas = document.getElementById('myModal11');
+  const cerar_Notas = document.getElementById('cerrarModal11').querySelector('p');
+  const img_Notas='./images/Component-lanzador/Notas.png';
+
+
+  // toggleVisibility_win('myModal11', 1);
+  // myModal.classList.toggle('visible');
+  // myModal.classList.remove('hidden');
 
 
 
@@ -36,7 +42,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     Pomodoro.style.backgroundImage = `url('${img_Pomodoro}')`;
 
-
   }
 
   if (cerar_Pomodoro) {
@@ -45,7 +50,6 @@ document.addEventListener('DOMContentLoaded', function () {
       win_Pomodoro.classList.toggle('visible');
     });
   }
-
 
 //Alarma
 if (Alarma) {
@@ -68,6 +72,29 @@ if (cerar_Alarma) {
     win_Alarma.classList.toggle('visible');
   });
 }
+// Notas
+
+if (Notas) {
+  Notas.addEventListener('click', () => {
+    modal000.classList.remove('visible');
+    modal000.classList.toggle('hidden');
+    toggleVisibility_win('myModal11', 1);
+    win_Notas.classList.toggle('visible');
+    win_Notas.classList.remove('hidden');
+  });
+
+  Notas.style.backgroundImage = `url('${img_Notas}')`;
+
+
+}
+
+if (cerar_Notas) {
+  cerar_Notas.addEventListener('click', () => {
+    win_Notas.classList.remove('hidden');
+    win_Notas.classList.toggle('visible');
+  });
+}
+
 
 });
 

@@ -6,6 +6,7 @@ const path = require('path');
 const windowManager = require('electron-window-manager');
 const activeWindows = require('active-windows');
 const loudness = require('loudness'); //volumen
+
 const positionFilePath = path.join(app.getPath('userData'), 'window-position.json');// Archivo para almacenar la posición de la ventana
 
 // Configura electron-reload
@@ -280,4 +281,20 @@ function getSystemUsage() {
 ipcMain.on('get-system-usage', (event) => {
     const usage = getSystemUsage();
     event.reply('system-usage', usage);
+});
+
+//Notas
+// Guardar el contenido en un archivo
+ipcMain.on('save-note', (event, content) => {
+    const filePath = path.join(app.getPath('userData'), 'note.txt');
+    fs.writeFileSync(filePath, content, 'utf-8');
+});
+
+// Cargar el contenido desde un archivo
+ipcMain.handle('load-note', () => {
+    const filePath = path.join(app.getPath('userData'), 'note.txt');
+    if (fs.existsSync(filePath)) {
+        return fs.readFileSync(filePath, 'utf-8');
+    }
+    return '';
 });
