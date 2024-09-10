@@ -186,7 +186,9 @@ const radios = [
   're-Day',
   'rf-Day',
   're-volumen',
-  'rf-volumen'
+  'rf-volumen',
+  're-ConsumoSys',
+  'rf-ConsumoSys'
 ];
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -196,7 +198,7 @@ document.addEventListener('DOMContentLoaded', function() {
     element.style.display = condition ? 'block' : 'none';
   }
 
-  function toggleVisibility_relog() {
+  function toggleVisibility_Componet() {
       // Configurar el estado de los modales basado en los radio buttons
       toggleVisibility('myModal01', document.getElementById('rf-relog-digital').checked);
       toggleVisibility('myModal02', document.getElementById('rf-Programas01').checked);
@@ -205,6 +207,7 @@ document.addEventListener('DOMContentLoaded', function() {
       toggleVisibility('myModal05', document.getElementById('rf-Lector').checked);
       toggleVisibility('myModal08', document.getElementById('rf-Day').checked);
       toggleVisibility('myModal09', document.getElementById('rf-volumen').checked);
+      toggleVisibility('myModal10', document.getElementById('rf-ConsumoSys').checked);
   }
 
   radios.forEach(function(id) {
@@ -212,12 +215,12 @@ document.addEventListener('DOMContentLoaded', function() {
           // Guarda el estado del radio button en localStorage
           saveRadioButtonState();
           // Actualiza la visibilidad del modal
-          toggleVisibility_relog();
+          toggleVisibility_Componet();
       });
   });
 
   // Recuperar el estado de los radio buttons y aplicar
-  toggleVisibility_relog();
+  toggleVisibility_Componet();
 });
 
 /**

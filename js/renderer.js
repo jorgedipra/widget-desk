@@ -13,7 +13,7 @@ function loadComponent(url, containerId) {
 loadComponent('./components/Menu-component.html', 'component-Menu');
 loadComponent('./components/all-component.html', 'component-all');
 loadComponent('./components/Clock-component.html', 'component-Clock');
-loadComponent('./components/Programas-component.html', 'component-Programas');
+loadComponent('./components/Calendario-component.html', 'component-Calendario');
 loadComponent('./components/Lanzador-component.html', 'component-Lanzador');
 loadComponent('./components/Folders-component.html', 'component-Folders');
 loadComponent('./components/Lector-component.html', 'component-Lector');

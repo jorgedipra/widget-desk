@@ -16,6 +16,9 @@ div#myModal09 {
   margin: 20px 0;
   transition: background 0.3s;
 }
+#title_volumen{
+  color: var(--color-solid);
+}
 
 /* Thumb del control deslizante */
 #volume-slider::-webkit-slider-thumb {

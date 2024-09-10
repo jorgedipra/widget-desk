@@ -141,7 +141,7 @@ function createSecondWindow() {
             contextIsolation: false 
         },
     });
-    secondWindow.webContents.openDevTools(); // abre el explorador dev
+    //secondWindow.webContents.openDevTools(); // abre el explorador dev
 
     secondWindow.loadFile('second.html'); // Asegúrate de tener un archivo HTML para la segunda ventana
 

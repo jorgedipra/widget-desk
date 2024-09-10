@@ -1,7 +1,13 @@
 <div id="MonitorSistema-component">
     <div class="usage-container">
-        <h1>Uso del Sistema</h1>
-        <p id="ram-usage">RAM: Cargando...</p>
-        <p id="cpu-usage">CPU: Cargando...</p>
+        <div id="title_Sys">Uso del Sistema</div>
+        <div id="ram-usage">
+            <p>RAM: <span id="ram-percent">Cargando...</span></p>
+            <progress id="ram-progress" value="0" max="100"></progress>
+        </div>
+        <div id="cpu-usage">
+            <p>CPU: <span id="cpu-percent">Cargando...</span></p>
+            <progress id="cpu-progress" value="0" max="100"></progress>
+        </div>
     </div>
 </div>

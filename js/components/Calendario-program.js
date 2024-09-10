@@ -1,3 +1,7 @@
+/**
+ * [Component]
+ * Calendario-program
+ */
 document.addEventListener('DOMContentLoaded', function () {
     const tooltipCalendar = document.getElementById('has-tooltip-calendar');
     const prevMonthBtn = document.getElementById('prevMonth');

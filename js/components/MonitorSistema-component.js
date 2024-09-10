@@ -5,8 +5,13 @@ function updateSystemUsage() {
 }
 
 window.electron.onSystemUsage((usage) => {
-    document.getElementById('ram-usage').textContent = `RAM: ${usage.memoryUsage}%`;
-    document.getElementById('cpu-usage').textContent = `CPU: ${usage.cpuUsage}%`;
+    // Actualiza el texto y el progreso de la RAM
+    document.getElementById('ram-percent').textContent = `${usage.memoryUsage}%`;
+    document.getElementById('ram-progress').value = usage.memoryUsage;
+
+    // Actualiza el texto y el progreso del CPU
+    document.getElementById('cpu-percent').textContent = `${usage.cpuUsage}%`;
+    document.getElementById('cpu-progress').value = usage.cpuUsage;
 });
 
 // Actualiza el uso del sistema cada segundo
