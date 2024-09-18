@@ -3,7 +3,12 @@ function loadComponent(url, containerId) {
     fetch(url)
         .then(response => response.text())
         .then(data => {
-            document.getElementById(containerId).innerHTML = data;
+            const container = document.getElementById(containerId);
+            if (container) {
+                container.innerHTML = data;
+            } else {
+                console.error('No se encontró el contenedor con ID:', containerId);
+            }
         })
         .catch(error => {
             console.error('Error loading component:', error);
@@ -28,6 +33,7 @@ loadComponent('./components/MonitorSistema-component.html', 'component-MonitorSi
 /**
  * llamdo de programas 
  */
+
 document.addEventListener('DOMContentLoaded', function () {
 
     // Mapeo de IDs a programas
@@ -209,7 +215,9 @@ window.addEventListener('DOMContentLoaded', () => {
             // Asegúrate de que el modal esté visible
             modal.classList.remove('hidden');
             modal.classList.add('visible');
-
+            let configActual = JSON.parse(localStorage.getItem("config"));
+            if(!configActual['notas'])
+                actualizarCampo("notas", true);
         }
     }
 
@@ -377,9 +385,13 @@ window.addEventListener('DOMContentLoaded', () => {
         window.electron.saveNote(content);
     });
 
-
-
-
+    
+    document.getElementById('minimizar_Notas').addEventListener('click', () => {
+        toggleVisibility_win('myModal11', 1);
+        document.getElementById("myModal11").classList.toggle('visible');
+        document.getElementById("myModal11").classList.remove('hidden');
+    });
+    
 });
 
 // Función para cargar el contenido de la nota

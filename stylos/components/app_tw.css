@@ -1,0 +1,112 @@
+/* --[interface]-- */
+/*     app_tw     */
+/* ---------------- */
+#app_tw {
+    border: solid 1px rgba(255, 255, 255, 0.2);
+    width: 250px;
+    height: 300px;
+    display: none;
+    position: relative;
+    margin: 15% -232px;
+    transition: margin-left 0.3s ease;
+    cursor: pointer;
+    border-right: solid var(--color-primario-lite) 7px;
+    padding-top: 40px;
+
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    opacity: 0.9;
+}
+
+
+#app_tw::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -23px;
+    width: 15px;
+    height: 100%;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+#app_tw:hover {
+    margin-left: 4px !important;
+}
+
+
+.app-box {
+    background-color: var(--color-primario-lite);
+    clip-path: polygon(.5em 0, calc(89% - .4em) 0, 100% 100%, .33em 100%, 0 100%, 0 .5em);
+    padding: 5px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    height: 40px;
+    width: 80%;
+    vertical-align: top;
+    transition: background-color .3s;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    text-shadow: 1px 1px 0 #000;
+    padding-left: 30px;
+    font-size: 20px;
+    margin-left: 15%;
+    margin-top: 10px;
+    color: var(--color-solid);
+    opacity: 0.8;
+}
+
+.app-box:hover {
+    opacity: 1;
+}
+
+
+/* decoración */
+.app_twd1 {
+    border: solid 1px var(--color-solid);
+    width: 25px;
+    margin-top: 0px;
+}
+
+.app_twd2 {
+    background-color: var(--color-solid);
+    width: 30px;
+    height: 2px;
+    transform: rotate(-45deg);
+    margin-left: 20px;
+    margin-top: -12px;
+}
+
+.app_twd3 {
+    border: solid 1px var(--color-solid);
+    width: 100px;
+    margin-top: -12.5px;
+    margin-left: 45px;
+}
+
+.app_twd4 {
+    background-color: var(--color-solid);
+    clip-path: polygon(15% 0, 100% 0, 85% 100%, 0% 100%);
+    width: 100px;
+    height: 10px;
+    margin-top: -10px;
+    margin-left: 95px;
+}
+
+.app_twd5 {
+    background-color: #ffffff;
+    background: repeating-linear-gradient(-45deg, #ffffff00, #ffffff00 5px, #ffffff 5px, #ffffff 24.5px);
+    width: 10px;
+    height: 240px;
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 28px;
+}
+
+.opacity09{
+    opacity: .9;
+}

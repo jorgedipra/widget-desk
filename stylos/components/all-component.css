@@ -9,6 +9,7 @@
     padding: 50px;
     height: 120px;
     width: 200px;
+    text-transform: capitalize;
 }
 .program-cell:hover{
     background-color: rgb(40 42 54 / 80%);
