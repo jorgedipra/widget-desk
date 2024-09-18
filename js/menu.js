@@ -194,6 +194,7 @@ const modalIds = [
   "myModal09",//component-control de volumen
   "myModal10",//component-MonitorSistema
   "myModal11"//component-Notas
+  // "myModal12"//component-icono-Notas
 ];
 
 // Función para inicializar modales

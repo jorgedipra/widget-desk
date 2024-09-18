@@ -8,12 +8,24 @@
     height: 430px !important;
     padding: 10px !important;
 }
-
+.win-miniNotas{
+    width: 100px !important;
+    height: 230px !important;
+}
 .note-container .fijar i.fas.fa-thumbtack {
     float: right;
     padding-bottom: 5px;
     padding-right: 5px;
     cursor: pointer;
+}
+
+#minimizar_Notas {
+    cursor: pointer;
+    top: -5px;
+    position: relative;
+}
+#component-iconoNotas > img {
+    -webkit-user-drag:none;
 }
 
 .fijarOn {

@@ -52,6 +52,8 @@ function toggleButtonVisibility() {
     
     // Cambiar el estado de visibilidad
     isButtonVisible = !isButtonVisible;
+
+    actualizarCampo('pomodoro',true);
 }
 
 // Función para mostrar la hora actual en el formato deseado
