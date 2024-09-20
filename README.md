@@ -11,7 +11,6 @@ Finalmente, se pondrá énfasis en una documentación detallada para facilitar s
 
 ![image](https://github.com/user-attachments/assets/be39df49-1752-4014-a126-eae3f0858bd8)
 
-
 ![image](https://github.com/user-attachments/assets/4d85b87f-06d2-441c-9378-40e692a51edf)
 
 ![image](https://github.com/user-attachments/assets/dd97a3ba-fffa-4dc4-be25-04ff66faadf3)
@@ -25,6 +24,10 @@ Finalmente, se pondrá énfasis en una documentación detallada para facilitar s
 ![image](https://github.com/user-attachments/assets/1d9e51d6-8719-4780-9302-604fb37a880b)
 
 ![image](https://github.com/user-attachments/assets/8433b70a-1f1d-4943-81fb-31cccbc03e02)
+
+## Mejora de interface:
+![image](https://github.com/user-attachments/assets/331e8b45-4272-41b2-a355-1b75f300f679)
+
 
 
 
