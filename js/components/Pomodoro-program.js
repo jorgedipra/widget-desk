@@ -91,22 +91,22 @@ function startFreeBreak() {
     }
 }
 
-function askForActivityChange() { 
-    if(timerType === 'work')
-        timerType='trabajo'
+function askForActivityChange() {
+    if (timerType === 'work')
+        timerType = 'trabajo'
     else
-        timerType='descanso'
-    
+        timerType = 'descanso'
+
     mostrarModal('🍅 Pomodoro Timer 🍅', `¿Deseas cambiar de ${timerType} a ${timerType === 'trabajo' ? 'descanso' : 'trabajo'}?`).then(resultado => {
 
         if (resultado) {
             timerType = 'work';
             switchMode();
             updateTimer();
-        }else{
+        } else {
             timerType = 'break';
             resetTimer();
-        } 
+        }
 
     });
 }
@@ -146,12 +146,17 @@ function updateTimes() {
 function minimizar_pomodoro() {
     const min_Pomodoro = document.getElementById('minimizar_pomodoro');
     const win_Pomodoro = document.getElementById('myModal06');
+    const line_Pomodoro = document.querySelector('.line_minitwd3');
     const miniPomodoro = document.getElementById('miniPomodoro');
-    const timerText = document.getElementById('timer_pomodoro').textContent;
+
     if (min_Pomodoro) {
         win_Pomodoro.classList.remove('hidden');
         win_Pomodoro.classList.toggle('visible');
+
+        line_Pomodoro.style.display = 'block';
         miniPomodoro.style.display = 'block';
+        updateButtonText();
+
         // Llamar a la función de actualización cada 1 segundo
         const intervalId = setInterval(updateButtonText, 1000); // 1000 milisegundos = 1 segundo
     }

@@ -11,16 +11,20 @@
     font-family: Orbitron;
     letter-spacing: 7px;
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.7),
-        /* Sombra blanca clara */ 0 0 10px rgba(255, 255, 255, 0.5),
-        /* Sombra blanca menos intensa */ 0 0 15px
-            rgba(255, 255, 255, 0.3); /* Resplandor blanco más suave */
+        /* Sombra blanca clara */
+        0 0 10px rgba(255, 255, 255, 0.5),
+        /* Sombra blanca menos intensa */
+        0 0 15px rgba(255, 255, 255, 0.3);
+    /* Resplandor blanco más suave */
 }
-.clock > .color_fondo{
+
+.clock>.color_fondo {
     color: var(--color-primario-lite);
 }
+
 /* calendario */
 #miniPomodoro,
-#openCalendar{
+#openCalendar {
     color: #17D4FE;
     font-size: 15px;
     font-family: Orbitron;
@@ -28,18 +32,66 @@
     top: 100px;
     left: 0;
 }
-#openCalendar>i{
+
+#openCalendar>i {
     color: var(--color-solid);
 }
 
 #miniPomodoro:hover,
-#openCalendar:hover{
-    text-shadow: 
-                0 0 5px rgba(255, 255, 255, 0.7), /* Sombra blanca clara */
-                0 0 10px rgba(255, 255, 255, 0.5), /* Sombra blanca menos intensa */
-                0 0 15px rgba(255, 255, 255, 0.3); /* Resplandor blanco más suave */
+#openCalendar:hover {
+    text-shadow:
+        0 0 5px rgba(255, 255, 255, 0.7),
+        /* Sombra blanca clara */
+        0 0 10px rgba(255, 255, 255, 0.5),
+        /* Sombra blanca menos intensa */
+        0 0 15px rgba(255, 255, 255, 0.3);
+    /* Resplandor blanco más suave */
 }
 
-#miniPomodoro{
+#miniPomodoro {
     left: 250px;
+}
+
+/*decoración*/
+.clock_decore {
+    margin-top: 27px !important;
+    margin-left: -27px !important;
+}
+
+.app_twd5_clock {
+    background: repeating-linear-gradient(-45deg, #ffffff00, #ffffff00 5px, #ffffff 5px, #ffffff 24.5px);
+    width: 10px;
+    height: 65px;
+    position: fixed;
+    margin-left: 5px;
+    margin-top: 28px;
+}
+
+.line_minitwd1,
+.line_minitwd2,
+.line_minitwd3{
+    background: repeating-linear-gradient(-45deg, #ffffff00, #ffffff00 5px, #ffffff 5px, #ffffff 24.5px);
+}
+.line_minitwd1{
+    width: 55%;
+    height: 3px;
+    position: absolute;
+    right: 0;
+    margin-right: 23px;
+}
+.line_minitwd2{
+    width: 74%;
+    height: 3px;
+    position: absolute;
+    right: 0;
+    bottom: -4px;
+}
+
+.line_minitwd3{
+    display: none;
+    width: 20%;
+    height: 3px;
+    position: absolute;
+    right: 60px;
+    bottom: -4px;
 }

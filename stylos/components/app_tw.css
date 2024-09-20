@@ -7,10 +7,9 @@
     height: 300px;
     display: none;
     position: relative;
-    margin: 15% -232px;
+    margin: 15% -252px;
     transition: margin-left 0.3s ease;
     cursor: pointer;
-    border-right: solid var(--color-primario-lite) 7px;
     padding-top: 40px;
 
     background: rgba(255, 255, 255, 0.1);
@@ -26,11 +25,18 @@
     position: absolute;
     top: 0;
     right: -23px;
-    width: 15px;
-    height: 100%;
-    background-color: transparent;
+    top: 5%;
+    width: 10px;
+    height: 90%;
+    background-color: var(--color-primario-lite);
+    border-radius: 10px;
     transition: background-color 0.3s ease;
     cursor: pointer;
+    opacity: .8;
+    box-shadow: 
+                0 0 5px rgba(255, 255, 255, 0.7), /* Sombra blanca clara */
+                0 0 10px rgba(255, 255, 255, 0.5), /* Sombra blanca menos intensa */
+                0 0 15px rgba(255, 255, 255, 0.3); /* Resplandor blanco más suave */
 }
 
 #app_tw:hover {
@@ -66,6 +72,11 @@
 
 
 /* decoración */
+.border_decore{
+    margin-top: 41px;
+    margin-left: 14px;
+    position: absolute; 
+}
 .app_twd1 {
     border: solid 1px var(--color-solid);
     width: 25px;
@@ -98,11 +109,19 @@
 }
 
 .app_twd5 {
-    background-color: #ffffff;
     background: repeating-linear-gradient(-45deg, #ffffff00, #ffffff00 5px, #ffffff 5px, #ffffff 24.5px);
     width: 10px;
     height: 240px;
     position: absolute;
+    margin-left: 10px;
+    margin-top: 28px;
+}
+
+.app_twd5_big {
+    background: repeating-linear-gradient(-45deg, #ffffff00, #ffffff00 5px, #ffffff 5px, #ffffff 24.5px);
+    width: 10px;
+    height: 80%;
+    position: fixed;
     margin-left: 10px;
     margin-top: 28px;
 }

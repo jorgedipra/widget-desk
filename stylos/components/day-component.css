@@ -10,10 +10,11 @@
     letter-spacing:45px;
     padding: 0;
     position: relative;
-    width: 0;
+    width: 885px;
     left: 0;
     margin-top: -36px;
     margin-left: 9px;
+    text-align: center;
     text-shadow:
         -2px -2px 0 var(--color-solid),
         -2px 0 0 var(--color-solid),
@@ -22,5 +23,5 @@
         0 2px 0 var(--color-solid),
         2px -2px 0 var(--color-solid),
         2px 0 0 var(--color-solid),
-        2px 2px 0 var(--color-solid);
+        2px 2px 0 var(--color-solid);        
 }
