@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const rangeInput = document.querySelector("#volume-slider");
     const initialValue = rangeInput.value;
     const rangeInputValueContainer = document.querySelector("#range-input-value");
+    localStorage.setItem("mute", 0);
 
     async function updateUI() {
         const volume = await window.electron.getVolume();
@@ -12,6 +13,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
         volumeSlider.value = volume;
         muteIcon.className = muted ? 'fas fa-volume-mute' : 'fas fa-volume-up';
+
+        if(muted){
+            setDisplayedValue('X');
+            localStorage.setItem("mute", 1);
+        }else{
+            setDisplayedValue(rangeInput.value);
+            localStorage.setItem("mute", 0);
+        }
     }
 
     volumeSlider.addEventListener('input', async () => {
@@ -22,6 +31,13 @@ document.addEventListener('DOMContentLoaded', function () {
     muteToggle.addEventListener('click', async () => {
         const muted = await window.electron.getMuted();
         await window.electron.setMuted(!muted);
+        if(localStorage.getItem("mute")==0){
+            setDisplayedValue('X');
+            localStorage.setItem("mute", 1);
+        }else{
+            localStorage.setItem("mute", 0);  
+        }
+        
         updateUI();
     });
 
@@ -35,7 +51,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     setInterval(function () {
         updateUI();
-        setDisplayedValue(rangeInput.value);
     }, 500);
 
 

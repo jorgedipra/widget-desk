@@ -18,6 +18,7 @@ div#myModal09 {
 }
 #title_volumen{
   color: var(--color-solid);
+  margin-left: 25px;
 }
 
 /* Thumb del control deslizante */
@@ -168,4 +169,34 @@ input[type=range]:focus::-moz-range-thumb {
 input[type=range]:focus::-webkit-slider-thumb {
   background-color: rgba(109, 184, 219, 0.5);
   border: 1px solid #b0e5fb;
+}
+
+/*decoración*/
+.volumen_decore {
+  margin-top: 18px !important;
+  margin-left: -12px !important;
+}
+.volumen_decore .app_twd1,
+.volumen_decore .app_twd2,
+.volumen_decore .app_twd3{
+
+  position: absolute;
+}
+.volumen_decore .app_twd1{
+  top: -9px;
+  border: solid 2px var(--color-solid);
+}
+.volumen_decore .app_twd2{
+  width: 20px;
+  margin-top: -15px;
+  margin-left: 21px;
+}
+
+.volumen_decore .app_twd3{
+  border: solid 2px var(--color-solid);
+  margin-top: -22px;
+  margin-left: 37px;
+}
+.volumen_decore .app_twd4{
+  margin-top: -28.5px;
 }

@@ -3,8 +3,8 @@
 /*    #myModal03     */
 /* ---------------- */  
 #myModal03 > .header-circle{
-    left: 49px;
-    top: -70px;
+    left: 48px;
+    top: -91px;
 }
 .usermenu {
     cursor: pointer;
@@ -101,3 +101,110 @@
     background-position: center 2px; /* Ajusta la posición del fondo */
 }
 
+
+/* decoración */
+.lanzador_decore{
+    width: 115px;
+    height: 0px;
+    background: red;
+    top: 15px;
+    left: 0;
+    position: absolute;
+    margin: -170px 60px;
+}
+.circle_twd1,
+.circle_twd2{
+    border: solid 3px var(--color-solid);
+    border-radius: 100%;
+    width: 90px;
+    height: 90px;
+}
+.circle_twd1{
+    margin-left: 11px;
+    margin-top: -7px;
+    shape-outside: circle(50% at 30%);
+    clip-path: circle(50% at 0%);
+}
+.circle_twd2{
+    margin-left: 12px;
+    margin-top: -90px;
+    shape-outside: circle(50% at 70%);
+    clip-path: circle(50% at 100%);
+}
+.line_twd1,
+.line_twd2{
+    background-color: var(--color-solid);
+    width: 35px;
+    height: 3px;
+}
+.line_twd1 {
+    margin-left: -22px;
+    margin-top: -47px;
+}
+
+.line_twd2 {
+    margin-left: 101px;
+    margin-top: -3px;
+}
+
+.lineCo_twd1{
+    background-color: var(--color-solid);
+    width: 15px;
+    height: 3px;
+    margin-left: -22px;
+    margin-top: -26px;
+}
+.linegra_twd1,
+.linegra_twd2,
+.linegra_twd3,
+.linegra_twd4{
+    background-color: var(--color-solid);
+    border-radius: 10px;
+    width: 24px;
+    height: 3px;
+}
+.linegra_twd1 {
+    transform: rotate(-55deg);
+    margin-left: -7px;
+    margin-top: -12px;
+}
+.linegra_twd2 {
+    transform: rotate(55deg);
+    margin-left: 96px;
+    margin-top: -12px;
+}
+.linegra_twd3 {
+    transform: rotate(-55deg);
+    margin-left: 95px;
+    margin-top: 5px;
+}
+.linegra_twd4 {
+    transform: rotate(55deg);
+    margin-left: -6px;
+    margin-top: 6px;
+}
+
+.lineCo_twd1,
+.lineCo_twd2,
+.lineCo_twd3,
+.lineCo_twd4{
+    background-color: var(--color-solid);
+    width: 15px;
+    height: 3px;
+}
+.lineCo_twd1{
+    margin-left: -15px;
+    margin-top: -21px;
+}
+.lineCo_twd2{
+    margin-left: 113px;
+    margin-top: 6px;
+}
+.lineCo_twd3{
+    margin-left: 113px;
+    margin-top: 42px;
+}
+.lineCo_twd4{
+    margin-left: -15px;
+    margin-top: -12px;
+}

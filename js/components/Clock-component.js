@@ -40,13 +40,15 @@ function toggleVisibility(id, condition) {
 } 
 
 
-function toggleButtonVisibility() {
+function toggleButtonVisibility() { 
     const button = document.getElementById('miniPomodoro');
     const win_Pomodoro = document.getElementById('myModal06');
+    const line_Pomodoro = document.querySelector('.line_minitwd3');
     let isButtonVisible = true;
 
 
     button.style.display = 'none'; // Ocultar el botón
+    line_Pomodoro.style.display = 'none'; // Ocultar la linea
     win_Pomodoro.classList.remove('hidden');
     win_Pomodoro.classList.toggle('visible');
     
