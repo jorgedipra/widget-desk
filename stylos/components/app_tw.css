@@ -2,41 +2,49 @@
 /*     app_tw     */
 /* ---------------- */
 #app_tw {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
     border: solid 1px rgba(255, 255, 255, 0.2);
     width: 250px;
     height: 300px;
     display: none;
     position: relative;
     margin: 15% -252px;
+    padding-top: 40px;
     transition: margin-left 0.3s ease;
     cursor: pointer;
-    padding-top: 40px;
-
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
     opacity: 0.9;
 }
 
-
+#app_tw::before,
 #app_tw::after {
     content: '';
     position: absolute;
     top: 0;
     right: -23px;
-    top: 5%;
+    top: 30%;
     width: 10px;
-    height: 90%;
+    height: 50%;
     background-color: var(--color-primario-lite);
     border-radius: 10px;
     transition: background-color 0.3s ease;
     cursor: pointer;
     opacity: .8;
+    
+}
+#app_tw::after{
     box-shadow: 
-                0 0 5px rgba(255, 255, 255, 0.7), /* Sombra blanca clara */
-                0 0 10px rgba(255, 255, 255, 0.5), /* Sombra blanca menos intensa */
-                0 0 15px rgba(255, 255, 255, 0.3); /* Resplandor blanco más suave */
+    0 0 5px rgba(255, 255, 255, 0.7), /* Sombra blanca clara */
+    0 0 10px rgba(255, 255, 255, 0.5), /* Sombra blanca menos intensa */
+    0 0 15px rgba(255, 255, 255, 0.3); /* Resplandor blanco más suave */
+}
+
+#app_tw::before{
+    background-color: rgba(247, 247, 247, 0);
+    right: -40px;
+    width: 50px;
 }
 
 #app_tw:hover {
