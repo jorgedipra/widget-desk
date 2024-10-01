@@ -10,6 +10,8 @@ contextBridge.exposeInMainWorld('electron', {
     setVolume: (volume) => ipcRenderer.invoke('set-volume', volume),
     getMuted: () => ipcRenderer.invoke('get-muted'),
     setMuted: (muted) => ipcRenderer.invoke('set-muted', muted),
+    getBrightness: () => ipcRenderer.invoke('get-brightness'),
+    setBrightness: (brightness) => ipcRenderer.invoke('set-brightness', brightness),
     getSystemUsage: () => ipcRenderer.send('get-system-usage'),
     onSystemUsage: (callback) => ipcRenderer.on('system-usage', (event, usage) => callback(usage)),
     saveNote: (content) => ipcRenderer.send('save-note', content),

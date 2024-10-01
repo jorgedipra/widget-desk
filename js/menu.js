@@ -193,8 +193,8 @@ const modalIds = [
   "myModal08",//component-Dia
   "myModal09",//component-control de volumen
   "myModal10",//component-MonitorSistema
-  "myModal11"//component-Notas
-  // "myModal12"//component-icono-Notas
+  "myModal11",//component-Notas
+  "myModal12"//component-Luz
 ];
 
 // Función para inicializar modales
@@ -228,6 +228,8 @@ const radios = [
   'rf-Day',
   're-volumen',
   'rf-volumen',
+  're-luz',
+  'rf-luz',
   're-ConsumoSys',
   'rf-ConsumoSys'
 ];
@@ -248,6 +250,7 @@ document.addEventListener('DOMContentLoaded', function() {
       toggleVisibility('myModal05', document.getElementById('rf-Lector').checked);
       toggleVisibility('myModal08', document.getElementById('rf-Day').checked);
       toggleVisibility('myModal09', document.getElementById('rf-volumen').checked);
+      toggleVisibility('myModal12', document.getElementById('rf-luz').checked);
       toggleVisibility('myModal10', document.getElementById('rf-ConsumoSys').checked);
   }
 

@@ -6,6 +6,7 @@ div#myModal09 {
   width: 180px;
   height: 48px;
 }
+
 /* Control deslizante de volumen */
 #volume-slider {
   width: 100%;
@@ -16,7 +17,8 @@ div#myModal09 {
   margin: 20px 0;
   transition: background 0.3s;
 }
-#title_volumen{
+
+#title_volumen {
   color: var(--color-solid);
   margin-left: 25px;
 }
@@ -50,7 +52,7 @@ div#myModal09 {
 
 #mute-toggle:hover {
   color: var(--color-primario-lite);
-  
+
 }
 
 /* Transición del botón al hacer clic */
@@ -71,41 +73,51 @@ div#myModal09 {
   padding-left: 8px;
   position: relative;
 }
-.range-control:before, .range-control:after {
+
+.range-control:before,
+.range-control:after {
   background-color: rgba(255, 255, 255, 0.7);
   content: "";
   height: 41px;
   position: absolute;
   width: 2px;
 }
+
 .range-control:before {
   left: 0;
   top: 0;
 }
+
 .range-control:after {
   right: 0;
   top: 0;
 }
+
 .range-control .range-slider-container {
   align-items: center;
   display: flex;
 }
-.range-control .range-slider-container:before, .range-control .range-slider-container:after {
+
+.range-control .range-slider-container:before,
+.range-control .range-slider-container:after {
   background-color: rgba(255, 255, 255, 0.7);
   content: "";
   height: 14px;
   width: 2px;
 }
+
 .range-control .range-slider-container:before {
   left: 5px;
   margin-right: 1px;
   top: 0;
 }
+
 .range-control .range-slider-container:after {
   margin-left: 1px;
   right: 0;
   top: 0;
 }
+
 .range-control .range-value-container {
   align-items: center;
   color: #b0e5fb;
@@ -118,29 +130,34 @@ div#myModal09 {
 
 input[type=range] {
   -moz-appearance: none;
-       appearance: none;
+  appearance: none;
   background: transparent;
   cursor: pointer;
   transition: opacity 300ms ease-in-out;
   -webkit-appearance: none;
   width: 280px;
 }
+
 input[type=range]:focus {
   outline: none;
 }
+
 input[type=range]:disabled {
   opacity: 50%;
 }
+
 input[type=range]::-moz-range-track {
   background-color: #b0e5fb;
   background: linear-gradient(to right, white 3%, #b0e5fb 3%, #b0e5fb 97%, white 97%);
   height: 3px;
 }
+
 input[type=range]::-webkit-slider-runnable-track {
   background-color: #b0e5fb;
   background: linear-gradient(to right, white 3%, #b0e5fb 3%, #b0e5fb 97%, white 97%);
   height: 3px;
 }
+
 input[type=range]::-moz-range-thumb {
   background-color: rgba(255, 255, 255, 0.5);
   border: 1px solid white;
@@ -150,9 +167,10 @@ input[type=range]::-moz-range-thumb {
   transition: all 200ms ease-in-out;
   width: 5px;
 }
+
 input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
-          appearance: none;
+  appearance: none;
   background-color: rgba(255, 255, 255, 0.5);
   border: 1px solid white;
   border-radius: 0;
@@ -162,10 +180,12 @@ input[type=range]::-webkit-slider-thumb {
   transition: all 200ms ease-in-out;
   width: 7px;
 }
+
 input[type=range]:focus::-moz-range-thumb {
   background-color: rgba(109, 184, 219, 0.5);
   border: 1px solid #b0e5fb;
 }
+
 input[type=range]:focus::-webkit-slider-thumb {
   background-color: rgba(109, 184, 219, 0.5);
   border: 1px solid #b0e5fb;
@@ -176,27 +196,34 @@ input[type=range]:focus::-webkit-slider-thumb {
   margin-top: 18px !important;
   margin-left: -12px !important;
 }
+
 .volumen_decore .app_twd1,
 .volumen_decore .app_twd2,
-.volumen_decore .app_twd3{
+.volumen_decore .app_twd3 {
 
   position: absolute;
 }
-.volumen_decore .app_twd1{
+
+.volumen_decore .app_twd1 {
+  background: var(--color-solid);
   top: -9px;
-  border: solid 2px var(--color-solid);
+  left: -5px;
+  height: 3px;
+  width: 30px;
 }
-.volumen_decore .app_twd2{
+
+.volumen_decore .app_twd2 {
   width: 20px;
   margin-top: -15px;
   margin-left: 21px;
 }
 
-.volumen_decore .app_twd3{
+.volumen_decore .app_twd3 {
   border: solid 2px var(--color-solid);
   margin-top: -22px;
   margin-left: 37px;
 }
-.volumen_decore .app_twd4{
+
+.volumen_decore .app_twd4 {
   margin-top: -28.5px;
 }

@@ -25,6 +25,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.6.0",
     "active-windows": "^0.1.14",
+    "brightness": "^3.0.0",
     "electron-win-state": "^1.1.22",
     "electron-window": "^0.8.1",
     "electron-window-manager": "^1.0.6",

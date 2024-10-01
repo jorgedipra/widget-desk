@@ -14,6 +14,7 @@ function loadComponent(url, containerId) {
             console.error('Error loading component:', error);
         });
 }
+
 // Llamar a la función para cargar el componente
 loadComponent('./components/Menu-component.html', 'component-Menu');
 loadComponent('./components/all-component.html', 'component-all');
@@ -23,6 +24,7 @@ loadComponent('./components/Lanzador-component.html', 'component-Lanzador');
 loadComponent('./components/Folders-component.html', 'component-Folders');
 loadComponent('./components/Lector-component.html', 'component-Lector');
 loadComponent('./components/Volumen-component.html', 'component-volumen');
+loadComponent('./components/Luz-component.html', 'component-luz');
 loadComponent('./components/ChildComponent/General-Programas.html', 'Programas-General');
 loadComponent('./components/ProgramComponent/Pomodoro-Program.html', 'Programas-Pomodoro');
 loadComponent('./components/ProgramComponent/Alarma-Program.html', 'Programas-Alarma');
@@ -241,6 +243,16 @@ window.addEventListener('DOMContentLoaded', () => {
 
     document.getElementById('strikethrough').addEventListener('click', () => {
         document.execCommand('strikeThrough');
+    });
+
+    document.getElementById('colorPicker').addEventListener('click', () => {
+        // Mostrar el input de color cuando el usuario hace clic en el botón
+        document.getElementById('colorInput').click();
+    });
+    
+    document.getElementById('colorInput').addEventListener('input', (event) => {
+        const color = event.target.value; // Obtener el color seleccionado
+        document.execCommand('foreColor', false, color); // Aplicar el color al texto seleccionado
     });
 
 

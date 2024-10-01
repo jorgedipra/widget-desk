@@ -196,6 +196,15 @@
     font-style: italic;
 }
 
+.toolbar #colorInput {
+    margin-left: 10px;
+    padding: 0;
+    border: none;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
 /* Estilos para las citas */
 .editor blockquote {
     border-left: 4px solid #ddd;

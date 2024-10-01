@@ -6,6 +6,7 @@ const path = require('path');
 const windowManager = require('electron-window-manager');
 const activeWindows = require('active-windows');
 const loudness = require('loudness'); //volumen
+const brightness = require('brightness');
 
 const positionFilePath = path.join(app.getPath('userData'), 'window-position.json');// Archivo para almacenar la posición de la ventana
 
@@ -255,6 +256,24 @@ ipcMain.handle('get-muted', async () => {
 
 ipcMain.handle('set-muted', async (event, muted) => {
     await loudness.setMuted(muted);
+});
+
+//control de luz
+ipcMain.handle('get-brightness', async () => {
+    try {
+        const currentBrightness = await brightness.get();
+        return currentBrightness * 100; // Devuelve el valor como porcentaje
+    } catch (error) {
+        console.error('Error al obtener el brillo:', error);
+    }
+});
+
+ipcMain.handle('set-brightness', async (event, brightnessValue) => {
+    try {
+        await brightness.set(brightnessValue / 100); // El valor debe estar entre 0 y 1
+    } catch (error) {
+        console.error('Error al establecer el brillo:', error);
+    }
 });
 
 // Escuchar evento del frontend para obtener datos
