@@ -3,7 +3,7 @@
 /*    #myModal12      */
 /*  ----------------  */
 div#myModal12 {
-    width: 180px;
+    width: 210px;
     height: 48px;
 }
 
@@ -12,7 +12,7 @@ div#myModal12 {
     height: 5px;
     background: #ddd;
     outline: none;
-    border-radius: 5px;
+    border-radius: 0  5px  5px  0;
     margin: 20px 0;
     transition: background 0.3s;
   }
