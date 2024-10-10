@@ -3,7 +3,7 @@
 /*    #myModal09      */
 /*  ----------------  */
 div#myModal09 {
-  width: 180px;
+  width: 220px;
   height: 48px;
 }
 
@@ -13,7 +13,7 @@ div#myModal09 {
   height: 5px;
   background: #ddd;
   outline: none;
-  border-radius: 5px;
+  border-radius: 0  5px  5px  0;
   margin: 20px 0;
   transition: background 0.3s;
 }
@@ -43,7 +43,7 @@ div#myModal09 {
   border: none;
   padding: 0;
   font-size: 20px;
-  margin-top: -50px;
+  margin-top: -59px;
   margin-left: -43px;
   width: 35px;
   height: 30px;
@@ -61,41 +61,54 @@ div#myModal09 {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-
 .range-control {
+  appearance: none;
+  border: none;
+  color: #0f1923;
+  background: radial-gradient(60% 17% at 50% -2%, #069cf3 0%, transparent 100%) no-repeat, 0px 0px/75% 100%, 
+              radial-gradient(60% 17% at 50% 102%, #069cf3 0%, transparent 100%) no-repeat, 0px 0px/75% 100%, 
+              linear-gradient(rgba(102, 127, 150, 0.15) 3px, transparent 3px) 8px 4px/16px 16px, 
+              linear-gradient(to right, rgba(102, 127, 150, 0.15) 3px, transparent 3px) 8px 4px/16px 16px, rgba(43, 43, 44, 0.75);
+              /* linear-gradient(to right, rgba(94, 100, 111, 0.25) 3px, transparent 3px) 8px 4px/16px 16px, rgba(43, 43, 44, 0.75); */
+  text-transform: uppercase;
+  font-size: 20px;
+  transition: all .15s ease;
   align-items: center;
-  background: radial-gradient(60% 17% at 50% -2%, #96dded 0%, transparent 100%) no-repeat, 0px 0px/75% 100%, radial-gradient(60% 17% at 50% 102%, #96dded 0%, transparent 100%) no-repeat, 0px 0px/75% 100%, linear-gradient(rgba(94, 100, 111, 0.25) 3px, transparent 3px) 8px 4px/16px 16px, linear-gradient(to right, rgba(94, 100, 111, 0.25) 3px, transparent 3px) 8px 4px/16px 16px, rgba(43, 44, 43, 0.75);
-  border-bottom: 2px solid #b0e5fb;
-  border-top: 2px solid #b0e5fb;
+  position: relative;
   display: flex;
   height: 45px;
   justify-content: space-between;
+  margin-bottom: 10px;
   padding-left: 8px;
-  position: relative;
 }
 
-.range-control:before,
-.range-control:after {
-  background-color: rgba(255, 255, 255, 0.7);
-  content: "";
-  height: 41px;
+.range-control::before,
+.range-control::after {
+  content: '';
+  display: block;
   position: absolute;
-  width: 2px;
-}
-
-.range-control:before {
-  left: 0;
-  top: 0;
-}
-
-.range-control:after {
   right: 0;
-  top: 0;
+  left: 0;
+  height: calc(40% - 5px);
+  border: 2px solid var(--color-solid);
+  transition: all .15s ease;
 }
+
+.range-control::before {
+  top: 0;
+  border-bottom-width: 0;
+}
+
+.range-control::after {
+  bottom: 0;
+  border-top-width: 0;
+}
+
 
 .range-control .range-slider-container {
   align-items: center;
   display: flex;
+  margin-left: 5px;
 }
 
 .range-control .range-slider-container:before,
