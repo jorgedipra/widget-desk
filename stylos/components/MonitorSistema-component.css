@@ -6,45 +6,43 @@
 #MonitorSistema-component {
   background-color: transparent;
   width: 260px;
-  height: 180px; /* Ajustado para espacio adicional */
+  height: 180px;
+  /* Ajustado para espacio adicional */
 }
 
 .usage-container {
   text-align: center;
-  border: 10px solid rgba(255, 255, 255, .7);
   padding: 20px;
-  /* background-color: rgba(255, 255, 255, 0.6); */
-  background-color: #000000af;
-  border-radius: 5px;
   color: #d6d9e0;
-  backdrop-filter: blur(10px);  
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  
 }
 
-.usage-container #title_Sys {
-  font-size: 17px;
-  position: absolute;
-  top: 4px;
-  left: 7px;
-  color: #d6d9e0;
+.title_Sys {
+  font-size: 15px;
+  color: var(--color-solid);
+  margin-left: 30px;
+  margin-top: 4px;
 }
 
 .usage-container p {
-  font-size: 18px;
+  font-size: 16px;
   margin: 0;
 }
 
-#ram-usage, #cpu-usage {
+#ram-usage,
+#cpu-usage {
   margin-bottom: 0px;
 }
-#cpu-usage{
-  margin-top: 10px;
+
+#cpu-usage {
+  margin-top: 5px;
 }
-#ram-usage{
-  margin-top: 30px;
+
+#ram-usage {
+  margin-top: 35px;
 }
+
 progress {
-  width: 100%;
+  width: 85%;
   height: 20px;
   -webkit-appearance: none;
   appearance: none;
@@ -56,11 +54,158 @@ progress::-webkit-progress-bar {
 }
 
 progress::-webkit-progress-value {
-  background: var(--color-primario);
+  background: var(--color-solid);
   border-radius: 5px;
+  opacity: 0.9;
 }
 
 progress::-moz-progress-bar {
-  background: var(--color-primario);
+  background: var(--color-solid);
   border-radius: 5px;
+}
+
+i#minimizar_system {
+  position: absolute;
+  left: 3px;
+  top: 8px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+#has-tooltip-system::after {
+  left: 74px;
+  height: 30px;
+  top: 21px;
+}
+
+
+.card-sys {
+  width: 230px;
+  border-radius: 10px;
+  background: #1b233d;
+  padding: 5px;
+  overflow: hidden;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 20px 0px;
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  clip-path: polygon(0 3%, 60% 3%, 65% 0, 100% 0, 100% 51%, 94% 58%, 94% 70%, 100% 76%, 100% 90%, 90% 100%, 10% 100%, 1% 90%);
+}
+
+
+.card-sys .top-section {
+  height: 150px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(45deg, #2196F3 0%, #2196F3 100%);
+  position: relative;
+}
+
+.card-sys .top-section .border {
+  border-bottom-right-radius: 10px;
+  height: 30px;
+  width: 130px;
+  background: #fff;
+  background: #1b233d;
+  position: absolute;
+  transform: skew(-40deg);
+  box-shadow: -10px -10px 0 0 #1b233d;
+}
+
+.card-sys .top-section .border::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 0;
+  right: -15px;
+  background: rgba(255, 255, 255, 0);
+  border-top-left-radius: 10px;
+  box-shadow: -5px -5px 0 2px #1b233d;
+}
+
+.card-sys .top-section::before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 0;
+  background: rgba(255, 255, 255, 0);
+  height: 15px;
+  width: 15px;
+  border-top-left-radius: 5px;
+  box-shadow: -5px -5px 0 2px #1b233d;
+}
+
+.card-sys .top-section .icons {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-sys .top-section .icons .logo {
+  height: 100%;
+  aspect-ratio: 1;
+  padding: 7px 0 7px 15px;
+}
+
+.card-sys .top-section .icons .logo .top-section {
+  height: 100%;
+}
+
+.card-sys .top-section .icons .accion {
+  height: 100%;
+  padding: 5px 5px;
+  display: flex;
+  gap: 7px;
+}
+
+.card-sys .top-section .icons .accion .svg {
+  height: 100%;
+  fill: #1b233d;
+}
+
+.card-sys .top-section .icons .accion .svg:hover {
+  fill: var(--color-solid);
+}
+
+.card-sys .bottom-section {
+  margin-top: 15px;
+  padding: 10px 5px;
+}
+
+.card-sys .bottom-section .title {
+  display: block;
+  font-size: 17px;
+  font-weight: bolder;
+  color: var(--color-solid);
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.card-sys .bottom-section .row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.card-sys .bottom-section .row .item {
+  flex: 30%;
+  text-align: center;
+  padding: 5px;
+  color: rgba(255, 255, 255, 0.721);
+}
+
+.card-sys .bottom-section .row .item .big-text {
+  font-size: 15px;
+  display: block;
+}
+
+.card-sys .bottom-section .row .item .regular-text {
+  font-size: 12px;
+}
+
+.card-sys .bottom-section .row .item:nth-child(2) {
+  border-left: 1px solid rgba(255, 255, 255, 0.126);
 }

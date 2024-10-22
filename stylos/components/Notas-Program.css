@@ -47,6 +47,14 @@
     display: flex;
     flex-direction: column;
 }
+#has-tooltip-notas::after {
+    left: 59px;
+    height: 30px;
+    top: 14px;
+}
+.has-tooltip::before{
+    border-color: transparent transparent #3330 transparent !important;
+}
 
 /* Styles for the Editable Area */
 /* Estilos para la vista previa de HTML */
