@@ -10,23 +10,18 @@ Finalmente, se pondrá énfasis en una documentación detallada para facilitar s
 ## Captura de pantalla
 
 ![image](https://github.com/user-attachments/assets/be39df49-1752-4014-a126-eae3f0858bd8)
+![image](https://github.com/user-attachments/assets/915e89d2-a846-486e-89f9-715cbc2cb5e9)
+![image](https://github.com/user-attachments/assets/0d59cd63-b910-463a-9ef6-137d057d1eb6)
+![image](https://github.com/user-attachments/assets/31ebd182-b5fe-49d9-8c8c-e039c83c7ffe)
+![image](https://github.com/user-attachments/assets/59b590ab-0488-4c05-99d8-e1a035defbe9)
+![image](https://github.com/user-attachments/assets/9d16c6f2-f53d-4a6d-9255-705ecb8adb81)
+![image](https://github.com/user-attachments/assets/513cf9bc-1fd7-41c8-a5e7-ea88c44e468c)
+![image](https://github.com/user-attachments/assets/14c288cb-ec53-4d7f-88ca-99e1f4c9abf0)
 
-![image](https://github.com/user-attachments/assets/4d85b87f-06d2-441c-9378-40e692a51edf)
 
-![image](https://github.com/user-attachments/assets/dd97a3ba-fffa-4dc4-be25-04ff66faadf3)
 
-![image](https://github.com/user-attachments/assets/da536528-5353-4363-ae40-64783b2c5e46)
 
-![image](https://github.com/user-attachments/assets/ddeddb9b-c432-4d0f-8f7e-36cf1b4b0de4)
 
-![image](https://github.com/user-attachments/assets/2d855bfc-680f-4c6e-a29a-93e6337e8735)
-
-![image](https://github.com/user-attachments/assets/1d9e51d6-8719-4780-9302-604fb37a880b)
-
-![image](https://github.com/user-attachments/assets/8433b70a-1f1d-4943-81fb-31cccbc03e02)
-
-## Mejora de interface:
-![image](https://github.com/user-attachments/assets/331e8b45-4272-41b2-a355-1b75f300f679)
 
 
 

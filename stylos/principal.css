@@ -8,6 +8,7 @@
 /* Definiciones de variables */
 :root {
   --color-primario: #2196F3;
+  --color-secundario:#1b233d;
   --color-solid: #fff;
   --color-primario-lite: #17d4fe;
   --color-dark:rgb(26, 23, 23);

@@ -14,7 +14,7 @@
     color: #fff;
 }
 #Pomodoro-Program {
-    background-color: #1f1f1f;
+    background-color: #1b233d;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -40,7 +40,7 @@
 }
 #settings_pomodoro > button,
 #controls_pomodoro > button {
-    background: #1f1f1f;
+    background: #1b233d;
     border: none;
     color: white;
     padding: 10px;
@@ -50,7 +50,7 @@
 }
 #settings_pomodoro > button:hover,  
 #controls_pomodoro > button:hover {
-    background: #333;
+    background: #111933;
 }
 #settings_pomodoro > input {
     width: 50px;

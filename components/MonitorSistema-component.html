@@ -1,13 +1,45 @@
 <div id="MonitorSistema-component">
     <div class="usage-container">
-        <div id="title_Sys">Uso del Sistema</div>
-        <div id="ram-usage">
-            <p>RAM: <span id="ram-percent">Cargando...</span></p>
-            <progress id="ram-progress" value="0" max="100"></progress>
-        </div>
-        <div id="cpu-usage">
-            <p>CPU: <span id="cpu-percent">Cargando...</span></p>
-            <progress id="cpu-progress" value="0" max="100"></progress>
+        <div class="card-sys">
+            <div class="top-section">
+                <span id="has-tooltip-system"  class="has-tooltip"   data-tooltip="Minimizar System">
+                    <i id="minimizar_system" class="fa-solid fa-window-maximize"></i>
+                </span>
+                <div class="border"></div>
+                <div class="icons">
+                    <div class="title_Sys">⚙ System</div>
+                    <div class="accion">
+                        ⚪ ⚪ ⚪
+                    </div>
+                </div>
+                <div id="ram-usage">
+                    <p>RAM:</p>
+                    <progress id="ram-progress" value="0" max="100"></progress>
+                </div>
+                <div id="cpu-usage">
+                    <p>CPU:</p>
+                    <progress id="cpu-progress" value="0" max="100"></progress>
+                </div>
+            </div>
+            <div class="bottom-section">
+                <span class="title">Uso del Sistema</span>
+                <div class="row row1">
+                    <div class="item">
+                        <span class="big-text"
+                            ><span id="ram-percent">Cargando...</span></span
+                        >
+                        <span class="regular-text">RAM</span>
+                    </div>
+                    <div class="item">
+                        <span class="big-text"
+                            ><span id="cpu-percent">Cargando...</span></span
+                        >
+                        <span class="regular-text">CPU</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+
+

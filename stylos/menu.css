@@ -404,6 +404,7 @@
 }
 .button_general:hover{
   background-color: #fff;
+  border-radius: 10px;
   border: solid 2px var(--color-primario);
   color:var(--color-primario);
   box-shadow: 
@@ -502,12 +503,14 @@
   padding: 0.25rem;
   overflow: hidden;
   transition: 0.25s ease all;
+  clip-path: polygon(13% 0, 88% 0, 100% 30%, 100% 70%, 90% 100%, 12% 100%, 0% 70%, 0% 30%);
 }
 .switch .toggle-inside {
   border-radius: 5rem;
   background: #4a4a4a;
   position: absolute;
   transition: 0.25s ease all;
+  clip-path: polygon(13% 0, 88% 0, 100% 30%, 100% 70%, 90% 100%, 12% 100%, 0% 70%, 0% 30%);
 }
 .switch--horizontal {
   width: 18rem;
@@ -604,6 +607,7 @@
 }
 .switch--no-label input ~ input:checked ~ .toggle-outside .toggle-inside {
   background: #17D4FE;
+  clip-path: polygon(13% 0, 88% 0, 100% 30%, 100% 70%, 90% 100%, 12% 100%, 0% 70%, 0% 30%);
 }
 .switch--no-label.switch--vertical {
   width: 3rem;
