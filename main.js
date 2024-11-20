@@ -7,6 +7,7 @@ const windowManager = require('electron-window-manager');
 const activeWindows = require('active-windows');
 const loudness = require('loudness'); //volumen
 const brightness = require('brightness');
+const { log } = require('console');
 
 const positionFilePath = path.join(app.getPath('userData'), 'window-position.json');// Archivo para almacenar la posición de la ventana
 
@@ -206,6 +207,37 @@ app.on('window-all-closed', () => {
 
 
 ipcMain.on('open-program', (event, programName) => {
+    fs.readFile('programas.json', 'utf8', (err, data) => {
+        if (err) {
+            console.error(`Error al leer el archivo JSON: ${err}`);
+            return;
+        }
+        const programs = JSON.parse(data);
+        const program = programs[programName];
+        if (program && program.path) {
+            // Ejecutar el programa
+            exec(`"${program.path}"`, (error, stdout, stderr) => {
+                if (error) {
+                    console.error(`Error al ejecutar el programa: ${error.message}`);
+                    return;
+                }
+                if (stderr) {
+                    console.error(`stderr: ${stderr}`);
+                    return;
+                }
+                console.log(`stdout: ${stdout}`);
+            });
+
+            // Enviar la imagen asociada al frontend
+            event.sender.send('program-image', program.image);
+
+        } else {
+            console.error(`Programa no encontrado: ${programName}`);
+        }
+    });
+});
+
+ipcMain.on('open-program-lanzador', (event, programName) => {
     fs.readFile('programs.json', 'utf8', (err, data) => {
         if (err) {
             console.error(`Error al leer el archivo JSON: ${err}`);
@@ -316,4 +348,32 @@ ipcMain.handle('load-note', () => {
         return fs.readFileSync(filePath, 'utf-8');
     }
     return '';
+});
+
+
+ipcMain.on('saveJson', (event, data) => {
+    const { name, file, img } = data; // Datos enviados desde el renderizador
+    const filePath = path.join(__dirname, 'programs.json'); // Ruta del archivo JSON
+
+    let jsonData = {};
+    if (fs.existsSync(filePath)) {
+        // Leer el archivo si existe
+        const fileContent = fs.readFileSync(filePath, 'utf-8');
+        try {
+            jsonData = JSON.parse(fileContent);
+        } catch (error) {
+            console.error('Error al parsear programs.json:', error);
+        }
+    }
+
+    // Agregar o actualizar la entrada
+    jsonData[name] = { name, path: file, image: img };
+
+    // Escribir el archivo JSON
+    try {
+        fs.writeFileSync(filePath, JSON.stringify(jsonData, null, 4), 'utf-8');
+        console.log('programs.json actualizado correctamente.');
+    } catch (error) {
+        console.error('Error al escribir en programs.json:', error);
+    }
 });

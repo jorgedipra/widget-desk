@@ -1,122 +1,62 @@
 {
-    "ChromeDev": {
-        "name": "Chrome Dev",
-        "path": "D:\\www\\Python\\gadgets\\panelAplicaiones.py\\chrome.bat",
-        "image": "./images/Component-lanzador/google_chrome_dev.png"
-    },
-    "Opera": {
-        "name": "Opera GX",
-        "path": "E:\\Users\\User\\AppData\\Local\\Programs\\Opera GX\\opera.exe",
-        "image": "./images/Component-lanzador/opera.png"
-    },
-    "Brave": {
-        "name": "Brave Browser",
-        "path": "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe",
-        "image": "./images/Component-lanzador/brave.png"
-    },
-    "SublimeText": {
-        "name": "Sublime Text",
-        "path": "E:\\Program Files\\Sublime Text\\sublime_text.exe",
-        "image": "./images/Component-lanzador/sublime_text.png"
-    },
-    "VisualCode": {
-        "name": "Visual Studio Code",
-        "path": "E:\\Users\\User\\AppData\\Local\\Programs\\Microsoft VS Code\\code.exe",
-        "image": "./images/Component-lanzador/visual_code.png"
-    },
-    "DBeaver": {
-        "name": "DBeaver",
-        "path": "E:\\Users\\User\\AppData\\Local\\DBeaver\\dbeaver.exe",
-        "image": "./images/Component-lanzador/DBeaver.png"
-    },
-    "Sourcetree": {
-        "name": "SourceTree",
-        "path": "C:\\Users\\User\\AppData\\Local\\SourceTree\\SourceTree.exe",
-        "image": "./images/Component-lanzador/Sourcetree.png"
-    },
-    "OpenVPN": {
-        "name": "OpenVPN",
-        "path": "C:\\Program Files\\OpenVPN Connect\\OpenVPNConnect.exe",
-        "image": "./images/Component-lanzador/OpenVPN.png"
-    },
-    "WinSCP": {
-        "name": "WinSCP",
-        "path": "E:\\Users\\User\\AppData\\Local\\Programs\\WinSCP\\WinSCP.exe",
-        "image": "./images/Component-lanzador/WinSCP.png"
-    },
-    "UwAmp": {
-        "name": "UwAmp",
-        "path": "E:\\UwAmp\\UwAmp.exe",
-        "image": "./images/Component-lanzador/UwAmp.png"
-    },
-    "lectorVoz_30": {
-        "name": "Lector Voz 30",
-        "path": "./gadget/General/lector_30.py",
-        "image": "./images/Component-lanzador/LectorVoz.png"
-    },
-    "lectorVoz": {
-        "name": "Lector Voz",
-        "path": "./gadget/General/lector.py",
-        "image": "./images/Component-lanzador/LectorVoz.png"
-    },
-    "Folder-www": {
-        "name": "Folder WWW",
-        "path": "./gadget/Folders/www.bat",
-        "image": ""
-    },
-    "Folder-document": {
-        "name": "Folder Document",
-        "path": "./gadget/Folders/document.bat",
-        "image": ""
-    },
-    "Folder-descargas": {
-        "name": "Folder Descargas",
-        "path": "./gadget/Folders/descargas.bat",
-        "image": ""
-    },
-    "Folder-imagenes": {
-        "name": "Folder Imágenes",
-        "path": "./gadget/Folders/imagenes.bat",
-        "image": ""
-    },
-    "Folder-musica": {
-        "name": "Folder Música",
-        "path": "./gadget/Folders/musica.bat",
-        "image": ""
-    },
-    "Folder-video": {
-        "name": "Folder Video",
-        "path": "./gadget/Folders/video.bat",
-        "image": ""
-    },
-    "Folder-trabajo": {
-        "name": "Folder Trabajo",
-        "path": "D:\\www\\Electron\\trabajo.bat",
-        "image": ""
-    },
-    "Acceso-desk": {
-        "name": "Acceso Desk",
-        "path": "./gadget/Folders/desk.bat",
-        "image": ""
-    },
-    "Gestor": {
-        "name": "Gestor de Ventanas",
-        "path": "D:\\www\\Python\\gadgets\\gestor de ventanas\\gestor.pyw",
-        "image": ""
-    },
-    "CerrarApp": {
-        "name": "Cerrar App",
-        "path": "./gadget/General/CerrarApp.bat",
-        "image": ""
-    },
-    "re-power": {
-        "name": "Re-Power",
-        "path": "./gadget/General/re-power.bat",
-        "image": ""
-    },
     "Add": {
         "name": "nuevo programa",
         "path": "",
         "image": "./images/Component-lanzador/add.png"
+    },
+    "sublime_text": {
+        "name": "sublime_text",
+        "path": "E:\\Program Files\\Sublime Text\\sublime_text.exe",
+        "image": "D:\\Imágenes\\iconos\\png-ico\\program\\sublime_text_macos_bigsur_icon_189685.png"
+    },
+    "Code": {
+        "name": "Code",
+        "path": "E:\\Users\\User\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe",
+        "image": "D:\\Imágenes\\iconos\\png-ico\\program\\microsoft_visual_studio_code_alt_macos_bigsur_icon_189952.png"
+    },
+    "dbeaver": {
+        "name": "dbeaver",
+        "path": "E:\\Users\\User\\AppData\\Local\\DBeaver\\dbeaver.exe",
+        "image": "D:\\Imágenes\\iconos\\png-ico\\program\\DBeaver_logo.svg.png"
+    },
+    "UwAmp": {
+        "name": "UwAmp",
+        "path": "E:\\UwAmp\\UwAmp.exe",
+        "image": "D:\\Imágenes\\iconos\\png-ico\\program\\UwAmp.png"
+    },
+    "WinSCP": {
+        "name": "WinSCP",
+        "path": "E:\\Users\\User\\AppData\\Local\\Programs\\WinSCP\\WinSCP.exe",
+        "image": "D:\\Imágenes\\iconos\\png-ico\\program\\WinSCP.png"
+    },
+    "opera": {
+        "name": "opera",
+        "path": "E:\\Users\\User\\AppData\\Local\\Programs\\Opera GX\\opera.exe",
+        "image": "D:\\Imágenes\\iconos\\png-ico\\program\\opera.png"
+    },
+    "brave": {
+        "name": "brave",
+        "path": "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe",
+        "image": "D:\\Imágenes\\iconos\\png-ico\\program\\brave.png"
+    },
+    "OpenVPNConnect": {
+        "name": "OpenVPNConnect",
+        "path": "C:\\Program Files\\OpenVPN Connect\\OpenVPNConnect.exe",
+        "image": "D:\\Imágenes\\iconos\\png-ico\\program\\OpenVPN.png"
+    },
+    "chrome": {
+        "name": "chrome",
+        "path": "D:\\www\\Python\\gadgets\\panelAplicaiones.py\\chrome.bat",
+        "image": "D:\\Imágenes\\iconos\\png-ico\\program\\google_chrome_dev.png"
+    },
+    "gestor": {
+        "name": "gestor",
+        "path": "D:\\www\\Python\\gadgets\\gestor de ventanas\\gestor.pyw",
+        "image": "D:\\Imágenes\\iconos\\png-ico\\program\\mxmacromediaextensionmanager_11781.png"
+    },
+    "SourceTree": {
+        "name": "SourceTree",
+        "path": "C:\\Users\\User\\AppData\\Local\\SourceTree\\SourceTree.exe",
+        "image": "C:\\Users\\User\\AppData\\Local\\SourceTree\\app.ico"
     }
 }
