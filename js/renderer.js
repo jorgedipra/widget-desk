@@ -30,6 +30,7 @@ loadComponent('./components/ProgramComponent/Pomodoro-Program.html', 'Programas-
 loadComponent('./components/ProgramComponent/Alarma-Program.html', 'Programas-Alarma');
 loadComponent('./components/ProgramComponent/Notas-Program.html', 'Programas-Notas');
 loadComponent('./components/MonitorSistema-component.html', 'component-MonitorSistema');
+loadComponent('./components/ChildComponent/win-Lanzador.html', 'component-winLanzador');
 
 
 /**
@@ -43,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
         'openChrome': 'ChromeDev',
         'openOpera': 'Opera',
         'openBrave': 'Brave',
-        'openSublime': 'SublimeText',
+        'sublime_text': 'sublime_text',
         'openVisualCode': 'VisualCode',
         'openDBeaver': 'DBeaver',
         'openSourcetree': 'Sourcetree',
@@ -59,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
         'openGestor': 'Gestor',
         'openOpenVPN': 'OpenVPN',
         'openWinSCP': 'WinSCP',
-        'openUwAmp': 'UwAmp',
+        'UwAmp': 'UwAmp',
 
         'openLectorVoz_30': 'lectorVoz_30',
         'openLectorVoz': 'lectorVoz',
