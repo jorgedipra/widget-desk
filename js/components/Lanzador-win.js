@@ -48,6 +48,24 @@ window.addEventListener('DOMContentLoaded', () => {
         toggleVisibility('myModal13', false);
         label.innerHTML = "Elige el Programa";
         document.getElementById('app_name').innerHTML = "App_Name";
+        if(document.getElementById('file').value==""){
+            mostrarModal('ERROR','Falta selecionar el Programa a llamar','off').then(resultado => {
+                if (resultado) {
+                    toggleVisibility('myModal13', true);
+                } 
+            });
+
+            return false;
+        }
+        const img_ = document.querySelector(".image_container img");
+        if(img_==null){
+            mostrarModal('ERROR','Falta selecionar la imagen','off').then(resultado => {
+                if (resultado) {
+                    toggleVisibility('myModal13', true);
+                } 
+            });
+            return false;
+        }      
 
         // Selecciona el contenedor con la clase "usermenu"
         const usermenu = document.querySelector(".usermenu");
@@ -168,9 +186,9 @@ function json_local(name, file, img) {
 
     // json_local(namefile,localStorage.getItem('fileName'), localStorage.getItem('imgName'))
     const lanzador = localStorage.getItem('lanzador');
-
-    localStorage.setItem('lanzador', lanzador + '<a href="#/settings7" id ="' + name + '" class="' + name + '"></a>')
-    console.log(name, file, img);
+    if(name!="x")
+        localStorage.setItem('lanzador', lanzador + '\n<a href="/#' + name + '" id ="' + name + '" class="' + name + '"></a>\n')
+    // console.log(name, file, img);
     window.electron.jsonUtils(name, file, img);
 }
 

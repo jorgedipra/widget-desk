@@ -31,6 +31,7 @@ loadComponent('./components/ProgramComponent/Alarma-Program.html', 'Programas-Al
 loadComponent('./components/ProgramComponent/Notas-Program.html', 'Programas-Notas');
 loadComponent('./components/MonitorSistema-component.html', 'component-MonitorSistema');
 loadComponent('./components/ChildComponent/win-Lanzador.html', 'component-winLanzador');
+loadComponent('./components/ChildComponent/win-LanzadorConfig.html', 'component-winLanzadorConfig');
 
 
 /**
@@ -101,6 +102,10 @@ document.addEventListener('DOMContentLoaded', () => {
      * Cerrar APP
      *  */
     const closeBtn = document.getElementById('CerrarApp');
+    const ConfigLanzadorBtn = document.getElementById('ConfigLanzador');
+    const cerrarModa14 = document.getElementById('cerrarModa14');
+    const myModal14 = document.getElementById('myModal14');
+    
     if (closeBtn) {
         closeBtn.addEventListener('click', () => {
             setTimeout(() => {
@@ -109,6 +114,37 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 500); // Espera 500 milisegundos, que es igual a 0.5 segundos
         });
     }
+
+            myModal14.classList.remove('hidden');
+            myModal14.classList.toggle('visible');
+            toggleVisibility('myModal14', false);
+            makeDraggable('#myModal14', false);
+
+
+    if(ConfigLanzadorBtn){
+        ConfigLanzadorBtn.addEventListener('click', () => {
+        
+            const navIcon2 = document.getElementById('nav-icon2');
+            setTimeout(() => {
+                navIcon2.click();
+            }, 1000);
+
+            myModal14.classList.remove('hidden');
+            myModal14.classList.toggle('visible');
+            toggleVisibility('myModal14', true);
+            makeDraggable('#myModal14', false);
+        });
+    }
+    if(cerrarModa14){
+        cerrarModa14.addEventListener('click', () => {
+            myModal14.classList.remove('visible');
+            myModal14.classList.toggle('hidden');
+            toggleVisibility('myModal14', false);
+            makeDraggable('#myModal14', true);
+        });
+
+    }
+    
 
     /**
      * pasar al fondo la aplicación

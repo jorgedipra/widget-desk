@@ -303,6 +303,7 @@
   overflow: auto;
   margin-top: -10px;
 }
+.gadget-config-lanzador,
 .gadget-config{
   background-color: rgba(255, 255, 255, 0.45);
   display: flex;
@@ -322,6 +323,9 @@
   /* display: none; */
   z-index: 2;
 }
+
+
+
 .win-all{
   width: 80%;
   height: 70%;
@@ -330,6 +334,7 @@
   cursor: auto;
 }
 
+.gadget-config-lanzador .header,
 .gadget-config .header{
   clip-path: polygon(0.25em 0, calc(89% - 1em) 0, 100% 100%, 0.33em 100%, 0 100%, 0 0.25em);
   font-weight: bold;
@@ -424,7 +429,9 @@
   transform: translateY(2px); /* Efecto de presionado con movimiento hacia abajo */
 }
 
-
+div#Programas-General {
+  margin-top: -20px;
+}
 /* Opcional: Animación de entrada y salida personalizada */
 @keyframes slideIn {
   0% {
