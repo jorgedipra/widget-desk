@@ -1,0 +1,118 @@
+/*       ---[Componente]---    */
+/* son of: Lanzador-component */
+/*component-winLanzadorConfig*/
+/*  ----------------------- */
+#myModal14{
+    display: none; 
+}
+.gadget-config-lanzador{
+    width: 319px!important;
+    height: 380px !important;
+    top: 290px;
+    left: 70px;
+  
+    display: none;
+  }
+
+.lista_lanzador{
+    background-color: var(--color-solid);
+    margin: -20px;
+    height: 270px;
+    cursor: auto;
+}
+
+
+.sortable-container {
+    width: 290px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.sortable-container > h3 {
+    text-align: center;
+    color: #333;
+}
+
+.sortable-container > ul {
+    list-style: none;
+    padding: 0;
+    margin: -10px 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 200px;
+    cursor: move;
+}
+
+.sortable-container>ul>li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 30px;
+    margin: 5px 10px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    color: black;
+    border-radius: 5px;
+    cursor: grab;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+.sortable-container > ul > li.dragging {
+    opacity: 0.5;
+    background: #e0e0e0;
+}
+span.drag-handle {
+    color: black;
+    padding-right: 20px;
+    margin-left: -10px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: n-resize;
+}
+
+.sortable-container > ul > li:hover {
+    background: #f1f1f1;
+}
+section.cell.is-col-span-5.grid {
+    display: flex;
+}
+.botonera_lan{
+    margin-top: -23px;
+}
+
+
+.lanzador-button {
+    display: block;
+    margin: 5px auto 0;
+    padding: 10px 20px;
+    font-size: 16px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.lanzador-button:hover {
+    background: #0056b3;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: #ff3860;
+    font-size: 17px;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 10px;
+    align-self: center;
+}
+
+.delete-btn:hover {
+    color: #ff2a68;
+}

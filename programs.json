@@ -39,8 +39,8 @@
         "path": "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe",
         "image": "D:\\Imágenes\\iconos\\png-ico\\program\\brave.png"
     },
-    "OpenVPNConnect": {
-        "name": "OpenVPNConnect",
+    "OpenVPN": {
+        "name": "OpenVPN",
         "path": "C:\\Program Files\\OpenVPN Connect\\OpenVPNConnect.exe",
         "image": "D:\\Imágenes\\iconos\\png-ico\\program\\OpenVPN.png"
     },
@@ -58,5 +58,10 @@
         "name": "SourceTree",
         "path": "C:\\Users\\User\\AppData\\Local\\SourceTree\\SourceTree.exe",
         "image": "C:\\Users\\User\\AppData\\Local\\SourceTree\\app.ico"
+    },
+    "x": {
+        "name": "x",
+        "path": "",
+        "image": ""
     }
 }
